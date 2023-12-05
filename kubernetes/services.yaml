@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fastapi-depl
+  labels:
+    app: fastapi-app
+spec:
+  replicas: 2
+  selector:
+    # selector to match the pod
+    matchLabels:
+      app: fastapi-app
+  template:
+    metadata:
+      labels:
+        app: fastapi-app
+    spec:
+      containers:
+        - name: fastapi-app
+          image: fastapi-app
+          # never pull the image (because it's local)
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 8001
+          resources:
+            limits:
+              memory: "600Mi"
+              cpu: "1000m"
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: fastapi-app-service
+spec:
+  selector:
+    app: fastapi-app
+  ports:
+    - protocol: TCP
+      port: 8001
+      targetPort: 8001
