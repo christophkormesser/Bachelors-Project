@@ -1,0 +1,59 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fastapi1
+  labels:
+    app: fastapi1
+spec:
+  replicas: 1
+  selector:
+    # selector to match the pod
+    matchLabels:
+      app: fastapi1
+  template:
+    metadata:
+      labels:
+        app: fastapi1
+    spec:
+      containers:
+        - name: fastapi
+          image: fastapi
+          # never pull the image (because it's local)
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 8001
+          resources:
+            limits:
+              memory: "600Mi"
+              cpu: "1000m"
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fastapi2
+  labels:
+    app: fastapi2
+spec:
+  replicas: 1
+  selector:
+    # selector to match the pod
+    matchLabels:
+      app: fastapi2
+  template:
+    metadata:
+      labels:
+        app: fastapi2
+    spec:
+      containers:
+        - name: fastapi
+          image: fastapi
+          # never pull the image (because it's local)
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 8001
+          resources:
+            limits:
+              memory: "600Mi"
+              cpu: "1000m"
