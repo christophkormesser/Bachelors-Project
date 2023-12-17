@@ -6,7 +6,8 @@ spec:
   selector:
     app: fastapi1
   ports:
-    - protocol: TCP
+    - name: http
+      protocol: TCP
       port: 8001
       targetPort: 8001
 
@@ -20,6 +21,7 @@ spec:
   selector:
     app: fastapi2
   ports:
-    - protocol: TCP
+    - name: http
+      protocol: TCP
       port: 8001
       targetPort: 8001

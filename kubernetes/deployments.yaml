@@ -4,16 +4,19 @@ metadata:
   name: fastapi1
   labels:
     app: fastapi1
+    version: v1
 spec:
   replicas: 1
   selector:
     # selector to match the pod
     matchLabels:
       app: fastapi1
+      version: v1
   template:
     metadata:
       labels:
         app: fastapi1
+        version: v1
     spec:
       containers:
         - name: fastapi
@@ -35,16 +38,19 @@ metadata:
   name: fastapi2
   labels:
     app: fastapi2
+    version: v1
 spec:
   replicas: 1
   selector:
     # selector to match the pod
     matchLabels:
       app: fastapi2
+      version: v1
   template:
     metadata:
       labels:
         app: fastapi2
+        version: v1
     spec:
       containers:
         - name: fastapi
