@@ -1,0 +1,25 @@
+# allows no traffic
+apiVersion: security.istio.io/v1
+kind: AuthorizationPolicy
+metadata:
+  name: allow-nothing
+spec:
+  action: ALLOW
+  # the rules field is not specified, and the policy will never match.
+
+---
+# allows traffic from fastapi1 to fastapi2
+apiVersion: security.istio.io/v1
+kind: AuthorizationPolicy
+metadata:
+  name: allow-workload1-to-workload2
+  namespace: default
+spec:
+  selector:
+    matchLabels:
+      app: fastapi2
+  action: ALLOW
+  rules:
+  - from:
+    - source:
+        principals: ["cluster.local/ns/default/sa/service-account1"]
