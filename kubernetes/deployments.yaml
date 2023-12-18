@@ -18,6 +18,7 @@ spec:
         app: fastapi1
         version: v1
     spec:
+      serviceAccountName: service-account1
       containers:
         - name: fastapi
           image: fastapi
@@ -52,6 +53,42 @@ spec:
         app: fastapi2
         version: v1
     spec:
+      serviceAccountName: service-account2
+      containers:
+        - name: fastapi
+          image: fastapi
+          # never pull the image (because it's local)
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 8001
+          resources:
+            limits:
+              memory: "600Mi"
+              cpu: "1000m"
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fastapi3
+  labels:
+    app: fastapi3
+    version: v1
+spec:
+  replicas: 1
+  selector:
+    # selector to match the pod
+    matchLabels:
+      app: fastapi3
+      version: v1
+  template:
+    metadata:
+      labels:
+        app: fastapi3
+        version: v1
+    spec:
+      serviceAccountName: service-account3
       containers:
         - name: fastapi
           image: fastapi
