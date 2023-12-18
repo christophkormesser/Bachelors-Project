@@ -25,3 +25,18 @@ spec:
       protocol: TCP
       port: 8001
       targetPort: 8001
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: fastapi3
+spec:
+  selector:
+    app: fastapi3
+  ports:
+    - name: http
+      protocol: TCP
+      port: 8001
+      targetPort: 8001
