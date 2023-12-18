@@ -25,22 +25,25 @@ The primary objective of this project is to gain proficiency in utilizing Docker
 * Docker 24.0.6 (Desktop)
 * Istioctl 1.20.0 (brew)
 * Prometheus
-  * gathers metrics
+  * gathers general metrics
+* Jaeger
+  * gathers metrics for traces
 * Kiali
-  * Dashboard for Prometheus metrics
+  * Dashboard for all gathered metrics
 
 ## Setting up the cluster
 
 1. Start Docker (Desktop)
 2. ```minikube start --memory=8192mb --cpus=4``` -> istio requires more ressources
-3. To use a local image: Issue following command: ```eval $(minikube docker-env)```
+3. To use a local image for the applications running in the cluster, issue following command: ```eval $(minikube docker-env)```
 4. Now build the image: ```docker build -t fastapi .```
 
-### Create Deployments & Services
+### Create Deployments, Services & Service Accounts
 
 ```sh
 kubectl create -f kubernetes/deployments.yaml
 kubectl create -f kubernetes/services.yaml
+kubectl create -f kubernetes/service-accounts.yaml
 ```
 
 ### Setup Istio & its requirements
@@ -50,15 +53,22 @@ minikube addons enable istio-provisioner
 minikube addons enable istio
 ```
 
-To apply Istio to the target namespace you need to create a label:
+To apply Istio to the target namespace and inject the sidecar proxies you need to create a label and restart the pods:
 
 ```sh
 kubectl label namespace default istio-injection=enabled
+kubectl delete pods --all -n default
 ```
 
  [Documentation](https://minikube.sigs.k8s.io/docs/handbook/addons/istio/)
 
-#### (Optional) Prometheus, Jaeger & Kiali
+ Apply the policies:
+
+ ```sh
+ kubectl apply -f kubernetes/istio/
+ ```
+
+#### (Istio) Obersavbility with Prometheus, Jaeger & Kiali
 
 Get Prometheus up and running
 
@@ -87,10 +97,28 @@ helm install \
   kiali-server
 ```
 
+## Test
+
+Open dashboards
+
+```sh
+minikube dashboard
+k9s
+istioctl d kiali
+```
+
+Open the terminal of a pod and send a request to a different workload
+
+```sh
+kubectl exec -it fastapi1 -- /bin/bash
+curl -H 'Cache-Control: no-cache, no-store' fastapi2:8001/action
+```
+
 ## Notes
 
 ### 17.12.2023
 
+* installed observability tools (jaeger, prometheus & kiali)
 * tried GCP in the mean while, but since you need GCP Enterprise for a service mesh like Istio I chose to work with minikube again
 * updating my documentation
 
