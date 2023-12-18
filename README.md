@@ -33,6 +33,8 @@ The primary objective of this project is to gain proficiency in utilizing Docker
 
 ## Setting up the cluster
 
+Fetch the git [repository](https://github.com/christophkormesser/Individualprojekt)
+
 1. Start Docker (Desktop)
 2. ```minikube start --memory=8192mb --cpus=4``` -> istio requires more ressources
 3. To use a local image for the applications running in the cluster, issue following command: ```eval $(minikube docker-env)```
@@ -46,7 +48,9 @@ kubectl create -f kubernetes/services.yaml
 kubectl create -f kubernetes/service-accounts.yaml
 ```
 
-### Setup Istio & its requirements
+### Istio
+
+Enable the addons
 
 ```sh
 minikube addons enable istio-provisioner
