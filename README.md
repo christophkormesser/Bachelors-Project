@@ -29,7 +29,7 @@ The primary objective of this project is to gain proficiency in utilizing Docker
 * Jaeger
   * gathers metrics for traces
 * Kiali
-  * Dashboard for all gathered metrics
+  * Dashboard for all gathered metrics (Istio specific)
 
 ## Setting up the cluster
 
@@ -101,6 +101,14 @@ helm install \
   kiali-server
 ```
 
+## Kong
+
+Enable the addon
+
+```sh
+minikube addons enable kong
+```
+
 ## Test
 
 Open dashboards
@@ -119,6 +127,12 @@ curl -H 'Cache-Control: no-cache, no-store' fastapi2:8001/action
 ```
 
 ## Notes
+
+### 18.12.2023
+
+* Istio works properly
+* Observability tools work properly
+* Might transition from Kiali to Grafana
 
 ### 17.12.2023
 
