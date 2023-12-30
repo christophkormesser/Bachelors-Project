@@ -105,6 +105,16 @@ helm install \
   kiali-server
 ```
 
+Get Grafana up and running
+
+```sh
+kubectl apply -f https://raw.githubusercontent.com/istio/istio/release-1.20/samples/addons/grafana.yaml
+```
+
+[Documentaion](https://istio.io/latest/docs/ops/integrations/grafana/#option-1-quick-start)
+
+Import the dashboard json file from `config/Requests-1703960621987.json`
+
 ## Kong
 
 Enable the addon
