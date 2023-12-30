@@ -1,0 +1,22 @@
+apiVersion: v1
+data:
+  mesh: "defaultConfig:\n  discoveryAddress: istiod.istio-system.svc:15012\n  proxyMetadata:
+    {}\n  tracing:\n    zipkin:\n      address: http://tracing.istio-system.svc.cluster.local:80
+    \ndefaultProviders:\n  metrics:\n  - prometheus\nenablePrometheusMerge: true\nrootNamespace:
+    istio-system\ntrustDomain: cluster.local"
+  meshNetworks: 'networks: {}'
+kind: ConfigMap
+metadata:
+  creationTimestamp: "2023-12-29T17:45:32Z"
+  labels:
+    install.operator.istio.io/owning-resource: example-istiocontrolplane
+    install.operator.istio.io/owning-resource-namespace: istio-system
+    istio.io/rev: default
+    operator.istio.io/component: Pilot
+    operator.istio.io/managed: Reconcile
+    operator.istio.io/version: 1.19.3
+    release: istio
+  name: istio
+  namespace: istio-system
+  resourceVersion: "77394"
+  uid: 5d7b094f-b697-4e68-b554-5dbb683ef526
