@@ -88,6 +88,10 @@ Get Jaeger up and running
 kubectl apply -f https://raw.githubusercontent.com/istio/istio/release-1.20/samples/addons/jaeger.yaml
 ```
 
+query url:
+
+```http://tracing.istio-system.svc.cluster.local:80```
+
 [Documentation](https://istio.io/latest/docs/ops/integrations/jaeger/)
 
 Get Kiali up and running
