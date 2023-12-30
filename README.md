@@ -175,7 +175,6 @@ Configure Grafana to use Prometheus
 4. In the HTTP section, set the URL to `http://prometheus-server.default.svc.cluster.local`.
 5. Save and test the data source.
 
-
 ## Test
 
 Open dashboards
