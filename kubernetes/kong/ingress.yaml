@@ -1,0 +1,57 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: fastapi1-ingress
+  annotations:
+    kubernetes.io/ingress.class: "kong"
+spec:
+  rules:
+  - http:
+      paths:
+      - path: /fastapi1
+        pathType: Prefix
+        backend:
+          service:
+            name: fastapi1
+            port:
+              number: 8001
+
+---
+
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: fastapi2-ingress
+  annotations:
+    kubernetes.io/ingress.class: "kong"
+spec:
+  rules:
+  - http:
+      paths:
+      - path: /fastapi2
+        pathType: Prefix
+        backend:
+          service:
+            name: fastapi2
+            port:
+              number: 8001
+
+---
+
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: fastapi3-ingress
+  annotations:
+    kubernetes.io/ingress.class: "kong"
+spec:
+  rules:
+  - http:
+      paths:
+      - path: /fastapi3
+        pathType: Prefix
+        backend:
+          service:
+            name: fastapi3
+            port:
+              number: 8001
