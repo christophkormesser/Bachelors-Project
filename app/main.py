@@ -1,8 +1,12 @@
 from fastapi import FastAPI, Request
 import requests
 from apscheduler.schedulers.background import BackgroundScheduler
+from prometheus_fastapi_instrumentator import Instrumentator
 
 app = FastAPI()
+
+# Initialize Prometheus Instrumentator
+Instrumentator().instrument(app).expose(app)
 
 def heartbeat():
     # Replace with the URL of the service you want to call
