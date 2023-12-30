@@ -123,6 +123,59 @@ Enable the addon
 minikube addons enable kong
 ```
 
+### (Kong) Observability with Prometheus & Grafana
+
+Add Prometheus & Grafana Helm Repositories
+
+```sh
+helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+helm repo add grafana https://grafana.github.io/helm-charts
+helm repo update
+```
+
+Install Prometheus
+
+```sh
+helm install prometheus prometheus-community/prometheus
+```
+
+Access Prometheus
+
+```sh
+kubectl port-forward svc/prometheus-server 9090:80
+```
+
+`http://localhost:9090`
+
+Install Grafana
+
+```sh
+helm install grafana grafana/grafana
+```
+
+Acquire admin password
+
+```sh
+kubectl get secret --namespace default grafana -o jsonpath="{.data.admin-password}" | base64 --decode ; echo
+```
+
+Access Grafana
+
+```sh
+kubectl port-forward service/grafana 3000:80
+```
+
+`http://localhost:3000`
+
+Configure Grafana to use Prometheus
+
+1. Go to Configuration > Data Sources in Grafana.
+2. Click on "Add data source."
+3. Choose Prometheus.
+4. In the HTTP section, set the URL to `http://prometheus-server.default.svc.cluster.local`.
+5. Save and test the data source.
+
+
 ## Test
 
 Open dashboards
