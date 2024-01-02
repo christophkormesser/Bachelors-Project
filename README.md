@@ -133,16 +133,23 @@ helm repo add grafana https://grafana.github.io/helm-charts
 helm repo update
 ```
 
+Create their own namespaces
+
+```sh
+kubectl create namespace prometheus
+kubectl create namespace grafana
+```
+
 Install Prometheus
 
 ```sh
-helm install prometheus prometheus-community/prometheus
+helm install prometheus prometheus-community/prometheus --namespace prometheus
 ```
 
 Access Prometheus
 
 ```sh
-kubectl port-forward svc/prometheus-server 9090:80
+kubectl port-forward --namespace prometheus svc/prometheus-server 9090:80
 ```
 
 `http://localhost:9090`
@@ -150,7 +157,7 @@ kubectl port-forward svc/prometheus-server 9090:80
 Install Grafana
 
 ```sh
-helm install grafana grafana/grafana
+helm install grafana grafana/grafana --namespace grafana
 ```
 
 Acquire admin password
@@ -172,7 +179,7 @@ Configure Grafana to use Prometheus
 1. Go to Configuration > Data Sources in Grafana.
 2. Click on "Add data source."
 3. Choose Prometheus.
-4. In the HTTP section, set the URL to `http://prometheus-server.default.svc.cluster.local`.
+4. In the HTTP section, set the URL to `http://prometheus-server.prometheus.svc.cluster.local`.
 5. Save and test the data source.
 
 ## Test
