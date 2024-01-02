@@ -117,11 +117,41 @@ Import the dashboard json file from `config/Requests-1703960621987.json`
 
 ## Kong
 
-Enable the addon
+Add Gateway API CRDs
 
 ```sh
-minikube addons enable kong
+kubectl apply -f https://github.com/kubernetes-sigs/gateway-api/releases/download/v1.0.0/standard-install.yaml
 ```
+
+Configure Gatway Class – needed?
+
+```sh
+kubectl apply -f kubernetes/kong/gateway.yaml
+```
+
+Install Kong
+
+```sh
+helm repo add kong https://charts.konghq.com
+helm repo update
+helm install kong kong/ingress -n kong --create-namespace 
+```
+
+Test Installation (after all pods are up)
+
+```sh
+export PROXY_IP=$(kubectl get svc --namespace kong kong-gateway-proxy -o jsonpath={.spec.clusterIP})
+echo $PROXY_IP
+```
+
+Copy the address and start a curl command from a pod
+
+```sh
+kubectl exec -it pod/fastapi1 -- /bin/bash
+curl -i PROXY_IP
+```
+
+[Documentation](https://docs.konghq.com/kubernetes-ingress-controller/3.0.x/get-started/)
 
 ### (Kong) Observability with Prometheus & Grafana
 
