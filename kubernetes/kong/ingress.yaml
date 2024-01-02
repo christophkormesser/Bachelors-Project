@@ -2,6 +2,9 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: fastapi1-ingress
+  namespace: default
+  annotations:
+    konghq.com/plugins: jwt
 spec:
   ingressClassName: "kong"
   rules:
@@ -21,9 +24,11 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: fastapi2-ingress
+  namespace: default
   annotations:
-    kubernetes.io/ingress.class: "kong"
+    konghq.com/plugins: jwt
 spec:
+  ingressClassName: "kong"
   rules:
   - http:
       paths:
@@ -41,9 +46,11 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: fastapi3-ingress
+  namespace: default
   annotations:
-    kubernetes.io/ingress.class: "kong"
+    konghq.com/plugins: jwt
 spec:
+  ingressClassName: "kong"
   rules:
   - http:
       paths:
