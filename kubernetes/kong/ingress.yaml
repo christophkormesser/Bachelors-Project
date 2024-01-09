@@ -10,7 +10,7 @@ spec:
   rules:
   - http:
       paths:
-      - path: /fastapi1
+      - path: /action
         pathType: Prefix
         backend:
           service:
@@ -32,7 +32,7 @@ spec:
   rules:
   - http:
       paths:
-      - path: /fastapi2
+      - path: /action
         pathType: Prefix
         backend:
           service:
@@ -54,7 +54,7 @@ spec:
   rules:
   - http:
       paths:
-      - path: /fastapi3
+      - path: /action
         pathType: Prefix
         backend:
           service:
