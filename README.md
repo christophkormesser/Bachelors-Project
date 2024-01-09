@@ -151,6 +151,16 @@ kubectl exec -it pod/fastapi1 -- /bin/bash
 curl -i PROXY_IP
 ```
 
+Create an http route & ingress controller
+
+```sh
+kubectl apply -f kubernetes/kong/httproute.yaml
+kubectl apply -f kubernetes/kong/ingress.yaml
+```
+
+Test
+`curl -i $PROXY_IP/action`
+
 [Documentation](https://docs.konghq.com/kubernetes-ingress-controller/3.0.x/get-started/)
 
 ### (Kong) Observability with Prometheus & Grafana
@@ -190,19 +200,17 @@ Install Grafana
 helm install grafana grafana/grafana --namespace grafana
 ```
 
-Acquire admin password
+Access Grafana & acquire the admin password
 
 ```sh
-kubectl get secret --namespace default grafana -o jsonpath="{.data.admin-password}" | base64 --decode ; echo
-```
-
-Access Grafana
-
-```sh
-kubectl port-forward service/grafana 3000:80
+kubectl port-forward --namespace grafana service/grafana 3000:80
 ```
 
 `http://localhost:3000`
+
+```sh
+kubectl get secret --namespace grafana grafana -o jsonpath="{.data.admin-password}" | base64 --decode ; echo
+```
 
 Configure Grafana to use Prometheus
 
