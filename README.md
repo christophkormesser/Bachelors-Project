@@ -43,9 +43,9 @@ Fetch the git [repository](https://github.com/christophkormesser/Individualproje
 ### Create Deployments, Services & Service Accounts
 
 ```sh
-kubectl create -f kubernetes/deployments.yaml
 kubectl create -f kubernetes/services.yaml
 kubectl create -f kubernetes/service-accounts.yaml
+kubectl create -f kubernetes/deployments.yaml
 ```
 
 ### Istio
