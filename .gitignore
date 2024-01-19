@@ -3,6 +3,8 @@
 
 ## CUSTOM ##
 *.tar
+notes.yaml
+test.yaml
 
 ### macOS ###
 # General
