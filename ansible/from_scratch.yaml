@@ -10,17 +10,10 @@
       prompt: "Set up and configure Istio? (y/n)"
       private: no
 
-    - name: setup_observability_tools
-      prompt: "Set up observability tools for Istio (Prometheus, Jaeger, Kiali, Grafana)? (y/n)"
-      private: no
-
     - name: setup_kong
       prompt: "Set up and configure Kong? (y/n)"
       private: no
 
-    - name: setup_observability_kong
-      prompt: "Set up observability tools for Kong (Prometheus & Grafana)? (y/n)"
-      private: no
 
   tasks:
     - block:
@@ -117,7 +110,7 @@
         debug:
           msg: Query URL for Jaeger':' http://tracing.istio-system.svc.cluster.local:80
 
-      when: setup_observability_tools == 'y'
+      when: setup_istio == 'y'
 
 
     - block:
@@ -159,6 +152,29 @@
         args:
           chdir: "{{ path }}"
 
+      - name: Wait for Kong pods to be up
+        command: kubectl get pods -l app.kubernetes.io/name=gateway -n kong -o jsonpath='{.items[*].status.containerStatuses[0].ready}'
+        register: kong_pod_status
+        until: kong_pod_status.stdout == 'true'
+        retries: 15
+        delay: 10
+      
+      - name: Get Kong Gateway IP
+        shell: kubectl get svc --namespace kong kong-gateway-proxy -o jsonpath={.spec.clusterIP}
+        register: Gateway_IP
+      
+      - name: Get a Pod Name
+        shell: kubectl get pods -o jsonpath='{.items[0].metadata.name}'
+        register: pod_name
+
+      - name: Test Kong Gateway
+        shell: kubectl exec pod/{{ pod_name.stdout }} -- curl -v http://{{ Gateway_IP.stdout }}/fastapi2
+        register: Kong_Test_Result
+      
+      - name: Show Kong Gateway Test grafana_api_key_response
+        debug:
+          msg: "{{ Kong_Test_Result.stdout }}"
+
       when: setup_kong == 'y'
 
 
@@ -192,9 +208,6 @@
         until: grafana_pod_status.stdout == 'Running'
         retries: 15
         delay: 10
-#      - name: Inform User About Grafana Access
-#        debug:
-#          msg: "Continue with README: Access Grafana"
 
       - name: Port Forward Grafana
         command: kubectl port-forward --namespace grafana service/grafana 3000:80
@@ -241,4 +254,12 @@
             Authorization: "Bearer {{ grafana_api_key }}"
           status_code: 200
 
-      when: setup_observability_kong == 'y'
+      - name: Access Grafana
+        debug:
+          msg: http://localhost:3000
+
+      - name: Grafana Admin Password
+        debug: 
+          msg: "{{ grafana_admin_password.stdout }}"
+
+      when: setup_kong == 'y'
