@@ -123,7 +123,7 @@ Add Gateway API CRDs
 kubectl apply -f https://github.com/kubernetes-sigs/gateway-api/releases/download/v1.0.0/standard-install.yaml
 ```
 
-Configure Gatway Class – needed?
+Apply Gatway Class & Gateway Configuration
 
 ```sh
 kubectl apply -f kubernetes/kong/gateway.yaml
