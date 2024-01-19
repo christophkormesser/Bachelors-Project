@@ -5,11 +5,15 @@ from os import getenv
 # from dotenv import load_dotenv
 from apscheduler.schedulers.background import BackgroundScheduler
 from prometheus_fastapi_instrumentator import Instrumentator
+from prometheus_client import Counter
 
 app = FastAPI()
 
 # Initialize Prometheus Instrumentator
 Instrumentator().instrument(app).expose(app)
+HEARTBEAT_COUNTER = Counter('heartbeat_requests', 
+                            "Number of heartbeat requests sent", 
+                            ["src_pod_name", "dst_service", "handler", "response_code"])
 
 # Get environment variables
 # for local testing uncomment line below
@@ -22,10 +26,14 @@ podIP = getenv("POD_IP", "Error - Not able to fetch env")
 
 # Sends request to a sepecific service
 def heartbeat():
-    url = "http://fastapi2:8001/action"
+    destination_service = "fastapi2"
+    handler = "/action"
+
+    url = "http://" + destination_service + ":8001" + handler
     response = requests.get(url)
-    # You can log the response or perform other actions as needed
-    print(f"Heartbeat response: {response.status_code}")
+    
+    HEARTBEAT_COUNTER.labels(src_pod_name=podName, dst_service=destination_service, handler=handler, response_code=response.status_code).inc()
+    print(f"Heartbeat response: {response.text}")
 
 # Scheduler setup
 scheduler = BackgroundScheduler()
@@ -37,18 +45,19 @@ def shutdown_event():
     scheduler.shutdown()
 
 @app.get("/")
-def read_root():
-    return {"Welcome to my project": "Christoph Kormesser",
-            "Docs:": "http://<servicename>:8001" + app.docs_url,
-            "Node: ": nodeName,
-            "Pod Name: ": podName,
-            "Pod Namespace: ": podNamespace,
-            "Pod IP: ": podIP}
+def read_root(request: Request):
+    return {"Hello " + request.client.host + "!\n",
+            "You have reached:\n",
+            "Node: " + nodeName + "\n",
+            "Pod Name: " + podName + "\n",
+            "Pod Namespace: " + podNamespace + "\n",
+            "Pod IP: " + podIP + "\n\n"}
 
 @app.get("/action")
 def action(request: Request):
-    return {"Request from " + request.client.host + " went through!",
-            "Node: " + nodeName,
-            "Pod Name: " + podName,
-            "Pod Namespace: " + podNamespace,
-            "Pod IP: " + podIP}
+    return {"Request from " + request.client.host + " went through to /action!",
+            "You have reached:\n",
+            "Node: " + nodeName + "\n",
+            "Pod Name: " + podName + "\n",
+            "Pod Namespace: " + podNamespace + "\n",
+            "Pod IP: " + podIP + "\n\n"}
