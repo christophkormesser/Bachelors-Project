@@ -20,8 +20,22 @@
     # Setup minikube cluster
       - name: Stop Minikube Cluster
         command: minikube stop
+        ignore_errors: yes
+        register: minikube_stop_result
+      - name: Check if stopping minikube failed due to it not running
+        fail:
+          msg: "Failed to stop minikube. Error: {{ minikube_stop_result.stdout }}"
+        when: minikube_stop_result.failed and ("Profile \"minikube\" not found" not in minikube_stop_result.stdout)
+
       - name: Delete Minikube Cluster
         command: minikube delete
+        ignore_errors: no
+        register: minikube_delete_result
+      - name: Check if deleten minikube failed due to non existing profile
+        fail:
+          msg: "Failed to delete minikube profile. Error: {{ minikube_delete_result.stdout }}"
+        when: minikube_delete_result.failed and ('No minikube profile was found' not in minikube_delete_result.stdout)
+
       - name: Start Docker Desktop
         command: open -j /Applications/Docker.app
 
