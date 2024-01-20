@@ -18,6 +18,10 @@
   tasks:
     - block:
     # Setup minikube cluster
+      - name: Stop Minikube Cluster
+        command: minikube stop
+      - name: Delete Minikube Cluster
+        command: minikube delete
       - name: Start Docker Desktop
         command: open -j /Applications/Docker.app
 
