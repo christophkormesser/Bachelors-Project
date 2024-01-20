@@ -46,18 +46,18 @@ def shutdown_event():
 
 @app.get("/")
 def read_root(request: Request):
-    return {"Hello " + request.client.host + "!\n",
-            "You have reached:\n",
-            "Node: " + nodeName + "\n",
-            "Pod Name: " + podName + "\n",
-            "Pod Namespace: " + podNamespace + "\n",
-            "Pod IP: " + podIP + "\n\n"}
+    return {"Hello " + request.client.host + "!" +
+            "You have reached:" +
+            "Node: " + nodeName +
+            "Pod Name: " + podName +
+            "Pod Namespace: " + podNamespace +
+            "Pod IP: " + podIP}
 
 @app.get("/action")
 def action(request: Request):
-    return {"Request from " + request.client.host + " went through to /action!",
-            "You have reached:\n",
-            "Node: " + nodeName + "\n",
-            "Pod Name: " + podName + "\n",
-            "Pod Namespace: " + podNamespace + "\n",
-            "Pod IP: " + podIP + "\n\n"}
+    return {"Request from " + request.client.host + " went through to /action!" +
+            "You have reached:" +
+            "Node: " + nodeName +
+            "Pod Name: " + podName +
+            "Pod Namespace: " + podNamespace +
+            "Pod IP: " + podIP}
