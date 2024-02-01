@@ -16,6 +16,7 @@
   ansible.builtin.pause:
     seconds: 3
 
+# this section is not very nice, but I haven't found something better
 - name: Restart Pods in Default Namespace
   command: kubectl delete pods --all -n default
 
@@ -24,21 +25,44 @@
   register: fastapi1_pod_status
   until: fastapi1_pod_status.stdout == 'true true'
   retries: 5
-  delay: 2
+  delay: 3
+  ignore_errors: yes
+
+- name: Delete Pods again if there is still only one container
+  command: kubectl delete pods --all -n default
+  when: fastapi1_pod_status.stdout != 'true true'
 
 - name: Wait for Pod2 to restart with 2/2
   command: kubectl get pods -l app=fastapi2 -n default -o jsonpath='{.items[*].status.containerStatuses[*].ready}'
   register: fastapi2_pod_status
   until: fastapi2_pod_status.stdout == 'true true'
-  retries: 4
-  delay: 2
+  retries: 5
+  delay: 3
+  ignore_errors: yes
+
+- name: Delete Pods again if there is still only one container
+  command: kubectl delete pods --all -n default
+  when: fastapi2_pod_status.stdout != 'true true'
 
 - name: Wait for Pod3 to restart with 2/2
   command: kubectl get pods -l app=fastapi3 -n default -o jsonpath='{.items[*].status.containerStatuses[*].ready}'
   register: fastapi3_pod_status
   until: fastapi3_pod_status.stdout == 'true true'
-  retries: 3
-  delay: 2
+  retries: 5
+  delay: 3
+  ignore_errors: yes
+
+- name: Delete Pods again if there is still only one container
+  command: kubectl delete pods --all -n default
+  when: fastapi3_pod_status.stdout != 'true true'
+
+- name: Final Check for Pod3 with 2/2
+  command: kubectl get pods -l app=fastapi3 -n default -o jsonpath='{.items[*].status.containerStatuses[*].ready}'
+  register: fastapi3_pod_status
+  until: fastapi3_pod_status.stdout == 'true true'
+  retries: 5
+  delay: 3
+  when: fastapi3_pod_status.stdout != 'true true'
 
 - name: Ensure CRDs are available
   command: kubectl get crd authorizationpolicies.security.istio.io
