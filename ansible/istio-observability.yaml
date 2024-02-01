@@ -28,3 +28,7 @@
 - name: Alert user to use Jaeger URL
   debug:
     msg: Query URL for Jaeger':' http://tracing.istio-system.svc.cluster.local:80
+  
+- name: Inform user to open Kiali dashboard
+  debug:
+    msg: command':' istioctl d kiali
