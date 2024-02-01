@@ -1,0 +1,58 @@
+# Istio Setup
+- name: Setup Istio
+  debug:
+    msg: "Setting up Istio..."
+
+- name: Enable Istio Provisioner
+  command: minikube addons enable istio-provisioner
+
+- name: Enable Istio
+  command: minikube addons enable istio
+
+- name: Label Namespace for Istio
+  command: kubectl label namespace default istio-injection=enabled
+
+- name: Pause to establish label
+  ansible.builtin.pause:
+    seconds: 3
+
+- name: Restart Pods in Default Namespace
+  command: kubectl delete pods --all -n default
+
+- name: Wait for Pod1 to restart 2/2
+  command: kubectl get pods -l app=fastapi1 -n default -o jsonpath='{.items[*].status.containerStatuses[*].ready}'
+  register: fastapi1_pod_status
+  until: fastapi1_pod_status.stdout == 'true true'
+  retries: 5
+  delay: 2
+
+- name: Wait for Pod2 to restart with 2/2
+  command: kubectl get pods -l app=fastapi2 -n default -o jsonpath='{.items[*].status.containerStatuses[*].ready}'
+  register: fastapi2_pod_status
+  until: fastapi2_pod_status.stdout == 'true true'
+  retries: 4
+  delay: 2
+
+- name: Wait for Pod3 to restart with 2/2
+  command: kubectl get pods -l app=fastapi3 -n default -o jsonpath='{.items[*].status.containerStatuses[*].ready}'
+  register: fastapi3_pod_status
+  until: fastapi3_pod_status.stdout == 'true true'
+  retries: 3
+  delay: 2
+
+- name: Ensure CRDs are available
+  command: kubectl get crd authorizationpolicies.security.istio.io
+  register: crd_check
+  until: crd_check.stdout.find("authorizationpolicies.security.istio.io") != -1
+  retries: 5
+  delay: 4
+  ignore_errors: yes
+
+- name: Apply Istio Policies
+  command: kubectl apply -f kubernetes/istio/
+  register: istio_apply
+  until: istio_apply is succeeded
+  retries: 5
+  delay: 2
+  args:
+    chdir: "{{ path }}"

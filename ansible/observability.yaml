@@ -1,0 +1,82 @@
+# Observability General/Kong
+- name: Set Up Observability
+  debug:
+    msg: "Setting up Observability"
+
+- name: Add Prometheus Helm Repositories
+  command: helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+
+- name: Add Grafana Helm Repository
+  command: helm repo add grafana https://grafana.github.io/helm-charts
+
+- name: Create Prometheus namespaces
+  command: kubectl create namespace prometheus
+
+- name: Create Grafana namespace
+  command: kubectl create namespace grafana
+
+- name: Install Prometheus
+  command: helm install prometheus prometheus-community/prometheus --namespace prometheus
+
+- name: Install Grafana
+  command: helm install grafana grafana/grafana --namespace grafana
+
+- name: Wait for Grafana pods to be up
+  command: kubectl get pods -l app.kubernetes.io/name=grafana -n grafana -o jsonpath='{.items[*].status.phase}'
+  register: grafana_pod_status
+  until: grafana_pod_status.stdout == 'Running'
+  retries: 15
+  delay: 10
+
+- name: Port Forward Grafana
+  command: kubectl port-forward --namespace grafana service/grafana 3000:80
+  async: 1800
+  poll: 0
+
+- name: Get Grafana Admin Password
+  shell: kubectl get secret --namespace grafana grafana -o jsonpath="{.data.admin-password}" | base64 --decode
+  register: grafana_admin_password
+
+- name: Generate Grafana API Key
+  uri:
+    url: "http://localhost:3000/api/auth/keys"
+    method: POST
+    body: 
+      name: "ansible-generated-key"
+      role: "Admin"
+    body_format: json
+    headers:
+      Content-Type: "application/json"
+      Authorization: "Basic {{ ('admin:' + grafana_admin_password.stdout) | b64encode }}"
+    status_code: 200
+    return_content: yes
+  register: grafana_api_key_response
+
+- name: Extract API Key
+  set_fact:
+    grafana_api_key: "{{ (grafana_api_key_response.content | from_json).key }}"
+
+- name: Add Prometheus data source to Grafana
+  uri:
+    url: "http://localhost:3000/api/datasources"
+    method: POST
+    body: 
+      name: "Prometheus"
+      type: "prometheus"
+      access: "proxy"
+      url: "http://prometheus-server.prometheus.svc.cluster.local"
+      jsonData:
+        timeInterval: "5s"
+    body_format: json
+    headers:
+      Content-Type: "application/json"
+      Authorization: "Bearer {{ grafana_api_key }}"
+    status_code: 200
+
+- name: Access Grafana
+  debug:
+    msg: http://localhost:3000
+
+- name: Grafana Admin Password
+  debug: 
+    msg: "{{ grafana_admin_password.stdout }}"

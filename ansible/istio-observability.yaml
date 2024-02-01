@@ -1,0 +1,30 @@
+# Istio Observability
+- name: Setup Observability for Istio
+  debug:
+    msg: "Setting up Observability for Istio..."
+
+- name: Set Up Prometheus
+  command: kubectl apply -f kubernetes/istio/prometheus.yaml
+  args:
+    chdir: "{{ path }}"
+
+- name: Set Up Jaeger
+  command: kubectl apply -f kubernetes/istio/jaeger.yaml
+  args:
+    chdir: "{{ path }}"
+
+- name: Set Up Kiali
+  command: helm install --namespace istio-system --set auth.strategy="anonymous" --repo https://kiali.org/helm-charts kiali-server kiali-server
+
+- name: Set Up Grafana
+  command: kubectl apply -f kubernetes/istio/grafana.yaml
+  args:
+    chdir: "{{ path }}"
+
+- name: Alert user to import config file in /config into Grafana
+  debug:
+    msg: Import the dashboard json file from config/Requests-1703960621987.json
+
+- name: Alert user to use Jaeger URL
+  debug:
+    msg: Query URL for Jaeger':' http://tracing.istio-system.svc.cluster.local:80

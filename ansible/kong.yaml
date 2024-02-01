@@ -1,0 +1,60 @@
+# Kong Setup
+- name: Setup Kong
+  debug:
+    msg: "Setting up Kong..."
+
+- name: Add Gateway API CRDs
+  command: kubectl apply -f kubernetes/kong/standard-install.yaml
+  args:
+    chdir: "{{ path }}"
+
+- name: Apply Gatway Class & Gateway Configuration
+  command: kubectl apply -f kubernetes/kong/gateway.yaml
+  args:
+    chdir: "{{ path }}"
+
+- name: Add Kong Helm Repo
+  command: helm repo add kong https://charts.konghq.com
+
+- name: Update Helm (Kong)
+  command: helm repo update
+
+- name: Install Kong
+  command: helm install kong kong/ingress -n kong --create-namespace
+
+- name: Alert User to test Kong
+  debug:
+    msg: "Continue with README: Test Installation (after all nodes are up)"
+
+- name: Create HTTPRoute
+  command: kubectl apply -f kubernetes/kong/httproute.yaml
+  args:
+    chdir: "{{ path }}"
+
+- name: Create Ingress
+  command: kubectl apply -f kubernetes/kong/ingress.yaml
+  args:
+    chdir: "{{ path }}"
+
+- name: Wait for Kong pods to be up
+  command: kubectl get pods -l app.kubernetes.io/name=gateway -n kong -o jsonpath='{.items[*].status.containerStatuses[0].ready}'
+  register: kong_pod_status
+  until: kong_pod_status.stdout == 'true'
+  retries: 15
+  delay: 10
+
+- name: Get Kong Gateway IP
+  shell: kubectl get svc --namespace kong kong-gateway-proxy -o jsonpath={.spec.clusterIP}
+  register: Gateway_IP
+
+- name: Get a Pod Name
+  shell: kubectl get pods -o jsonpath='{.items[0].metadata.name}'
+  register: pod_name
+
+- name: Test Kong Gateway
+  shell: kubectl exec pod/{{ pod_name.stdout }} -- curl -v http://{{ Gateway_IP.stdout }}/fastapi2
+  register: Kong_Test_Result
+
+- name: Show Kong Gateway Test grafana_api_key_response
+  debug:
+    msg: "{{ Kong_Test_Result.stdout }}"
