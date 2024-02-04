@@ -41,12 +41,27 @@
       - name: Build Docker Image
         command: docker build -t fastapi .
         args:
-          chdir: "{{ path }}"
+         chdir: "{{ path }}"
+
+      # - name: Build Docker Image
+      #   docker_image:
+      #     name: fastapi
+      #     build:
+      #       path: "{{ path }}"
+      #     source: build
+      #   register: docker_build_result
+
 
       - name: Save to fastapi.tar
         command: docker save --output fastapi.tar fastapi
         args:
-          chdir: "{{ path }}"
+         chdir: "{{ path }}"
+
+      # - name: Save Docker Image
+      #   command: docker save -o fastapi.tar fastapi
+      #   args:
+      #     chdir: "{{ path }}"
+      #   when: docker_build_result.changed
 
       - name: Load Image into Minikube VM
         command: minikube image load fastapi.tar
