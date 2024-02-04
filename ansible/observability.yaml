@@ -33,6 +33,10 @@
   async: 1800
   poll: 0
 
+- name: Port Forward Grafana User prompt
+  debug:
+    msg: kubectl port-forward --namespace grafana service/grafana 3000:80
+
 - name: Get Grafana Admin Password
   shell: kubectl get secret --namespace grafana grafana -o jsonpath="{.data.admin-password}" | base64 --decode
   register: grafana_admin_password
