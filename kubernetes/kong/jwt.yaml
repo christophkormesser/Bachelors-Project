@@ -1,5 +1,6 @@
 apiVersion: configuration.konghq.com/v1
 kind: KongPlugin
 metadata:
-  name: jwt-plugin
+  name: jwt
+  namespace: default
 plugin: jwt
