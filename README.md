@@ -161,6 +161,38 @@ kubectl apply -f kubernetes/kong/ingress.yaml
 Test
 `curl -i $PROXY_IP/action`
 
+## Access Kong Manager
+
+Port Forward for kong gateway pod (not controller!)
+
+```sh
+kubectl port-forward kong-gateway-pod-name :8002 -n kong
+```
+
+Admin, to see info (only works with postman, not browser)
+
+```sh
+kubectl port-forward kong-gateway-pod-name :8444 -n kong  
+```
+
+```http://127.0.0.1:port/```
+
+### JWT
+
+Enable JWT Plugin
+
+```sh
+kubectl apply -f kubernetes/kong/jwt.yaml
+```
+
+!!! Plugin not yet found ???
+
+Create Consumer
+
+```sh
+kubectl apply -f kubernetes/kong/consumer.yaml
+```
+
 [Documentation](https://docs.konghq.com/kubernetes-ingress-controller/3.0.x/get-started/)
 
 ### (Kong) Observability with Prometheus & Grafana
