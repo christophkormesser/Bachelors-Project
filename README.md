@@ -169,13 +169,15 @@ Port Forward for kong gateway pod (not controller!)
 kubectl port-forward kong-gateway-pod-name :8002 -n kong
 ```
 
+```http://127.0.0.1:port/```
+
 Admin, to see info (only works with postman, not browser)
 
 ```sh
 kubectl port-forward kong-gateway-pod-name :8444 -n kong  
 ```
 
-```http://127.0.0.1:port/```
+```https://127.0.0.1:port/```
 
 ### JWT
 
