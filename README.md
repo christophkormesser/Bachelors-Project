@@ -184,7 +184,7 @@ kubectl port-forward kong-gateway-pod-name :8444 -n kong
 Enable key-auth
 
 ```sh
-kubectl apply -f kubernetes/kong/key-auth.yaml
+kubectl apply -f kubernetes/kong/key-auth/key-auth.yaml
 ```
 
 Annotate all services where authorization is needed
@@ -198,13 +198,13 @@ kubectl annotate service app3 konghq.com/plugins=key-auth --overwrite
 Create secret for key
 
 ```sh
-kubectl apply -f kubernetes/kong/secret-key-auth.yaml
+kubectl apply -f kubernetes/kong/key-auth/secret-key-auth.yaml
 ```
 
 Create consumer associated with the key
 
 ```sh
-kubectl apply -f kubernetes/kong/consumer.yaml
+kubectl apply -f kubernetes/kong/key-auth/consumer.yaml
 ```
 
 
@@ -214,15 +214,7 @@ kubectl apply -f kubernetes/kong/consumer.yaml
 Enable JWT Plugin
 
 ```sh
-kubectl apply -f kubernetes/kong/jwt.yaml
-```
-
-!!! Plugin not yet found ???
-
-Create Consumer
-
-```sh
-kubectl apply -f kubernetes/kong/consumer.yaml
+kubectl apply -f kubernetes/kong/jwt/jwt.yaml
 ```
 
 [Documentation](https://docs.konghq.com/kubernetes-ingress-controller/3.0.x/get-started/)
