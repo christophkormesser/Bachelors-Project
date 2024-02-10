@@ -29,7 +29,8 @@ func Heartbeat(env map[string]string, destinationService string, port string, ha
 		}
 	}()
 
-	HeartbeatCounter.With(prometheus.Labels{"src_pod_name": env["POD_NAME"], "dst_service": destinationService, "handler": handler, "response_code": response.Status})
+	// Increase Prometheus Counter
+	HeartbeatCounter.With(prometheus.Labels{"src_pod_name": env["POD_NAME"], "dst_service": destinationService, "handler": handler, "response_code": response.Status}).Inc()
 
 	log.Printf("INFO: Heartbeat response: [%s]\n", response.Status)
 }
