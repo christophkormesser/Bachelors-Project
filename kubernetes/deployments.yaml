@@ -1,27 +1,27 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: fastapi1
+  name: app1
   labels:
-    app: fastapi1
+    app: app1
     version: v1
 spec:
   replicas: 1
   selector:
     # selector to match the pod
     matchLabels:
-      app: fastapi1
+      app: app1
       version: v1
   template:
     metadata:
       labels:
-        app: fastapi1
+        app: app1
         version: v1
     spec:
       serviceAccountName: service-account1
       containers:
-        - name: fastapi
-          image: fastapi
+        - name: app1
+          image: app1
           # never pull the image (because it's local)
           imagePullPolicy: Never
           ports:
@@ -53,27 +53,27 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: fastapi2
+  name: app2
   labels:
-    app: fastapi2
+    app: app2
     version: v1
 spec:
   replicas: 1
   selector:
     # selector to match the pod
     matchLabels:
-      app: fastapi2
+      app: app2
       version: v1
   template:
     metadata:
       labels:
-        app: fastapi2
+        app: app2
         version: v1
     spec:
       serviceAccountName: service-account2
       containers:
-        - name: fastapi
-          image: fastapi
+        - name: app2
+          image: app2
           # never pull the image (because it's local)
           imagePullPolicy: Never
           ports:
@@ -105,27 +105,27 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: fastapi3
+  name: app3
   labels:
-    app: fastapi3
+    app: app3
     version: v1
 spec:
   replicas: 1
   selector:
     # selector to match the pod
     matchLabels:
-      app: fastapi3
+      app: app3
       version: v1
   template:
     metadata:
       labels:
-        app: fastapi3
+        app: app3
         version: v1
     spec:
       serviceAccountName: service-account3
       containers:
-        - name: fastapi
-          image: fastapi
+        - name: app3
+          image: app3
           # never pull the image (because it's local)
           imagePullPolicy: Never
           ports:

@@ -208,7 +208,7 @@
               "options": {
                 "mode": "exclude",
                 "names": [
-                  "{__name__=\"istio_requests_total\", app=\"fastapi3\", connection_security_policy=\"unknown\", destination_app=\"fastapi2\", destination_canonical_revision=\"v1\", destination_canonical_service=\"fastapi2\", destination_cluster=\"Kubernetes\", destination_principal=\"spiffe://cluster.local/ns/default/sa/service-account2\", destination_service=\"fastapi2.default.svc.cluster.local\", destination_service_name=\"fastapi2\", destination_service_namespace=\"default\", destination_version=\"v1\", destination_workload=\"fastapi2\", destination_workload_namespace=\"default\", instance=\"10.244.0.29:15020\", job=\"kubernetes-pods\", namespace=\"default\", pod=\"fastapi3-8565558b65-k8zzk\", pod_template_hash=\"8565558b65\", reporter=\"source\", request_protocol=\"http\", response_code=\"403\", response_flags=\"-\", security_istio_io_tlsMode=\"istio\", service_istio_io_canonical_name=\"fastapi3\", service_istio_io_canonical_revision=\"v1\", source_app=\"fastapi3\", source_canonical_revision=\"v1\", source_canonical_service=\"fastapi3\", source_cluster=\"Kubernetes\", source_principal=\"spiffe://cluster.local/ns/default/sa/service-account3\", source_version=\"v1\", source_workload=\"fastapi3\", source_workload_namespace=\"default\", version=\"v1\"}"
+                  "{__name__=\"istio_requests_total\", app=\"app3\", connection_security_policy=\"unknown\", destination_app=\"app2\", destination_canonical_revision=\"v1\", destination_canonical_service=\"app2\", destination_cluster=\"Kubernetes\", destination_principal=\"spiffe://cluster.local/ns/default/sa/service-account2\", destination_service=\"app2.default.svc.cluster.local\", destination_service_name=\"app2\", destination_service_namespace=\"default\", destination_version=\"v1\", destination_workload=\"app2\", destination_workload_namespace=\"default\", instance=\"10.244.0.29:15020\", job=\"kubernetes-pods\", namespace=\"default\", pod=\"app3-8565558b65-k8zzk\", pod_template_hash=\"8565558b65\", reporter=\"source\", request_protocol=\"http\", response_code=\"403\", response_flags=\"-\", security_istio_io_tlsMode=\"istio\", service_istio_io_canonical_name=\"app3\", service_istio_io_canonical_revision=\"v1\", source_app=\"app3\", source_canonical_revision=\"v1\", source_canonical_service=\"app3\", source_cluster=\"Kubernetes\", source_principal=\"spiffe://cluster.local/ns/default/sa/service-account3\", source_version=\"v1\", source_workload=\"app3\", source_workload_namespace=\"default\", version=\"v1\"}"
                 ],
                 "prefix": "All except:",
                 "readOnly": true
@@ -346,14 +346,14 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "builder",
-          "expr": "istio_requests_total{destination_app=\"fastapi2\"}",
+          "expr": "istio_requests_total{destination_app=\"app2\"}",
           "hide": false,
           "legendFormat": "{{app}} -> {{destination_app}} | Policy: {{connection_security_policy}} | Code: {{response_code}}",
           "range": true,
           "refId": "A"
         }
       ],
-      "title": "Requests fastapi2",
+      "title": "Requests app2",
       "type": "timeseries"
     },
     {

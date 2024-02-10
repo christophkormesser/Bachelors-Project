@@ -38,33 +38,57 @@
       - name: Start Minikube
         command: minikube start --memory=8192mb --cpus=4
 
-      - name: Build Docker Image
-        command: docker build -t fastapi .
+      - name: Build 1st Image
+        command: docker build -f app1/Dockerfile -t app1 .
         args:
-         chdir: "{{ path }}"
+         chdir: "{{ path }}/go"
+      - name: Build 2nd Image
+        command: docker build -f app2/Dockerfile -t app2 .
+        args:
+          chdir: "{{ path }}/go"
+      - name: Build 3rd Image
+        command: docker build -f app3/Dockerfile -t app3 .
+        args:
+          chdir: "{{ path }}/go"
 
       # - name: Build Docker Image
       #   docker_image:
-      #     name: fastapi
+      #     name: app1
       #     build:
       #       path: "{{ path }}"
       #     source: build
       #   register: docker_build_result
 
 
-      - name: Save to fastapi.tar
-        command: docker save --output fastapi.tar fastapi
+      - name: Save to app1.tar
+        command: docker save --output app1.tar app1
         args:
          chdir: "{{ path }}"
+      - name: Save to app2.tar
+        command: docker save --output app2.tar app2
+        args:
+          chdir: "{{ path }}"
+      - name: Save to app3.tar
+        command: docker save --output app3.tar app3
+        args:
+          chdir: "{{ path }}"
 
       # - name: Save Docker Image
-      #   command: docker save -o fastapi.tar fastapi
+      #   command: docker save -o app1.tar app1
       #   args:
       #     chdir: "{{ path }}"
       #   when: docker_build_result.changed
 
-      - name: Load Image into Minikube VM
-        command: minikube image load fastapi.tar
+      - name: Load 1st Image into Minikube VM
+        command: minikube image load app1.tar
+        args:
+          chdir: "{{ path }}"
+      - name: Load 2nd Image into Minikube VM
+        command: minikube image load app2.tar
+        args:
+          chdir: "{{ path }}"
+      - name: Load 3rd Image into Minikube VM
+        command: minikube image load app3.tar
         args:
           chdir: "{{ path }}"
 

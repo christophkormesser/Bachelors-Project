@@ -52,7 +52,7 @@
   register: pod_name
 
 - name: Test Kong Gateway
-  shell: kubectl exec pod/{{ pod_name.stdout }} -- curl -v http://{{ Gateway_IP.stdout }}/fastapi2
+  shell: kubectl exec pod/{{ pod_name.stdout }} -- curl -v http://{{ Gateway_IP.stdout }}/app2
   register: Kong_Test_Result
 
 - name: Show Kong Gateway Test grafana_api_key_response

@@ -8,7 +8,7 @@ spec:
   # the rules field is not specified, and the policy will never match.
 
 ---
-# allows traffic from fastapi1 to fastapi2
+# allows traffic from app1 to app2
 apiVersion: security.istio.io/v1
 kind: AuthorizationPolicy
 metadata:
@@ -17,7 +17,7 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: fastapi2
+      app: app2
   action: ALLOW
   rules:
   - from:

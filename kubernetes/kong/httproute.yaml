@@ -1,7 +1,7 @@
 apiVersion: gateway.networking.k8s.io/v1
 kind: HTTPRoute
 metadata:
-  name: fastapi1
+  name: app1
   annotations:
     konghq.com/strip-path: 'true'
 spec:
@@ -11,18 +11,18 @@ spec:
   - matches:
     - path:
         type: PathPrefix
-        value: /fastapi1
+        value: /app1
     backendRefs:
-    - name: fastapi1
+    - name: app1
       kind: Service
-      port: 8001
+      port: 1323
 
 ---
 
 apiVersion: gateway.networking.k8s.io/v1
 kind: HTTPRoute
 metadata:
-  name: fastapi2
+  name: app2
   annotations:
     konghq.com/strip-path: 'true'
 spec:
@@ -32,18 +32,18 @@ spec:
   - matches:
     - path:
         type: PathPrefix
-        value: /fastapi2
+        value: /app2
     backendRefs:
-    - name: fastapi2
+    - name: app2
       kind: Service
-      port: 8001
+      port: 1323
 
 ---
 
 apiVersion: gateway.networking.k8s.io/v1
 kind: HTTPRoute
 metadata:
-  name: fastapi3
+  name: app3
   annotations:
     konghq.com/strip-path: 'true'
 spec:
@@ -53,8 +53,8 @@ spec:
   - matches:
     - path:
         type: PathPrefix
-        value: /fastapi3
+        value: /app3
     backendRefs:
-    - name: fastapi3
+    - name: app3
       kind: Service
-      port: 8001
+      port: 1323

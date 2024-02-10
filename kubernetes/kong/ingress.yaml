@@ -1,7 +1,7 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: fastapi1-ingress
+  name: app1-ingress
   namespace: default
   annotations:
     konghq.com/plugins: jwt
@@ -14,16 +14,16 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: fastapi1
+            name: app1
             port:
-              number: 8001
+              number: 1323
 
 ---
 
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: fastapi2-ingress
+  name: app2-ingress
   namespace: default
   annotations:
     konghq.com/plugins: jwt
@@ -36,16 +36,16 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: fastapi2
+            name: app2
             port:
-              number: 8001
+              number: 1323
 
 ---
 
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: fastapi3-ingress
+  name: app3-ingress
   namespace: default
   annotations:
     konghq.com/plugins: jwt
@@ -58,6 +58,6 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: fastapi3
+            name: app3
             port:
-              number: 8001
+              number: 1323

@@ -1,4 +1,4 @@
-module app1
+module dummyserver
 
 go 1.21.6
 

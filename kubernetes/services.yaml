@@ -3,16 +3,16 @@ kind: Service
 metadata:
   annotations:
     prometheus.io/scrape: 'true'
-    prometheus.io/port: '8001'
-  name: fastapi1
+    prometheus.io/port: '1323'
+  name: app1
 spec:
   selector:
-    app: fastapi1
+    app: app1
   ports:
     - name: http
       protocol: TCP
-      port: 8001
-      targetPort: 8001
+      port: 1323
+      targetPort: 1323
 
 ---
 
@@ -21,16 +21,16 @@ kind: Service
 metadata:
   annotations:
     prometheus.io/scrape: 'true'
-    prometheus.io/port: '8001'
-  name: fastapi2
+    prometheus.io/port: '1323'
+  name: app2
 spec:
   selector:
-    app: fastapi2
+    app: app2
   ports:
     - name: http
       protocol: TCP
-      port: 8001
-      targetPort: 8001
+      port: 1323
+      targetPort: 1323
 
 ---
 
@@ -39,13 +39,13 @@ kind: Service
 metadata:
   annotations:
     prometheus.io/scrape: 'true'
-    prometheus.io/port: '8001'
-  name: fastapi3
+    prometheus.io/port: '1323'
+  name: app3
 spec:
   selector:
-    app: fastapi3
+    app: app3
   ports:
     - name: http
       protocol: TCP
-      port: 8001
-      targetPort: 8001
+      port: 1323
+      targetPort: 1323
