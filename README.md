@@ -179,7 +179,37 @@ kubectl port-forward kong-gateway-pod-name :8444 -n kong
 
 ```https://127.0.0.1:port/```
 
-### JWT
+### Use Key Auth
+
+Enable key-auth
+
+```sh
+kubectl apply -f kubernetes/kong/key-auth.yaml
+```
+
+Annotate all services where authorization is needed
+
+```sh
+kubectl annotate service app1 konghq.com/plugins=key-auth --overwrite
+kubectl annotate service app2 konghq.com/plugins=key-auth --overwrite
+kubectl annotate service app3 konghq.com/plugins=key-auth --overwrite
+```
+
+Create secret for key
+
+```sh
+kubectl apply -f kubernetes/kong/secret-key-auth.yaml
+```
+
+Create consumer associated with the key
+
+```sh
+kubectl apply -f kubernetes/kong/consumer.yaml
+```
+
+
+
+### JWT – not working yet
 
 Enable JWT Plugin
 
