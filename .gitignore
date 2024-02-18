@@ -5,6 +5,7 @@
 *.tar
 notes.yaml
 test.yaml
+test.go
 
 ### macOS ###
 # General
