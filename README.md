@@ -13,17 +13,17 @@ The primary objective of this project is to gain proficiency in utilizing Docker
 * Graphics AMD Radeon Pro 5500M 8GB
 * Intel UHD Graphics 630 1536 MB
 * Memory 32 GB 2667 MHz DDR4
-* macOS Ventura 13.5.2
+* macOS Ventura 14.2.1
 
 ### Software
 
 * minikube v1.32.0 (brew)
   * quickly sets up a local Kubernetes cluster
 * Kubernetes Server v1.27.4
-* Kubectl v1.28.4 (brew)
+* Kubectl v1.29.1 (brew)
   * manages the cluster
-* Docker 24.0.6 (Desktop)
-* Istioctl 1.20.0 (brew)
+* Docker 25.0.2
+* Istioctl 1.20.2 (brew)
 * Prometheus
   * gathers general metrics
 * Jaeger
@@ -36,7 +36,7 @@ The primary objective of this project is to gain proficiency in utilizing Docker
 Fetch the git [repository](https://github.com/christophkormesser/Individualprojekt)
 
 1. Start Docker (Desktop)
-2. ```minikube start --memory=8192mb --cpus=4``` -> istio requires more ressources
+2. ```minikube start --memory=8192mb --cpus=4``` -> istio requires more resources
 3. To use a local image for the applications running in the cluster, issue following command: ```eval $(minikube docker-env)```
 4. Now build the image: ```docker build -t fastapi .```
 
@@ -111,7 +111,7 @@ Get Grafana up and running
 kubectl apply -f https://raw.githubusercontent.com/istio/istio/release-1.20/samples/addons/grafana.yaml
 ```
 
-[Documentaion](https://istio.io/latest/docs/ops/integrations/grafana/#option-1-quick-start)
+[Documentation](https://istio.io/latest/docs/ops/integrations/grafana/#option-1-quick-start)
 
 Import the dashboard json file from `config/Requests-1703960621987.json`
 
@@ -123,7 +123,7 @@ Add Gateway API CRDs
 kubectl apply -f https://github.com/kubernetes-sigs/gateway-api/releases/download/v1.0.0/standard-install.yaml
 ```
 
-Apply Gatway Class & Gateway Configuration
+Apply Gateway Class & Gateway Configuration
 
 ```sh
 kubectl apply -f kubernetes/kong/gateway.yaml
@@ -151,7 +151,7 @@ kubectl exec -it pod/fastapi1 -- /bin/bash
 curl -i PROXY_IP
 ```
 
-Create an http route & ingress controller
+Create a http route & ingress controller
 
 ```sh
 kubectl apply -f kubernetes/kong/httproute.yaml
@@ -174,7 +174,7 @@ kubectl port-forward kong-gateway-pod-name :8002 -n kong
 Admin, to see info (only works with postman, not browser)
 
 ```sh
-kubectl port-forward kong-gateway-pod-name :8444 -n kong  
+kubectl port-forward kong-gateway-pod-name 8001:8444 -n kong  
 ```
 
 ```https://127.0.0.1:port/```
@@ -304,7 +304,7 @@ curl -H 'Cache-Control: no-cache, no-store' fastapi2:8001/action
 ### 17.12.2023
 
 * installed observability tools (jaeger, prometheus & kiali)
-* tried GCP in the mean while, but since you need GCP Enterprise for a service mesh like Istio I chose to work with minikube again
+* tried GCP in the meanwhile, but since you need GCP Enterprise for a service mesh like Istio I chose to work with minikube again
 * updating my documentation
 
 ### 22.11.2023
