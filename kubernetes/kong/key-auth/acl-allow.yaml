@@ -1,0 +1,22 @@
+apiVersion: configuration.konghq.com/v1
+kind: KongPlugin
+metadata:
+  name: acl-allow-g1
+plugin: acl
+config:
+  allow:
+    - group1
+  hide_groups_header: true
+
+---
+
+apiVersion: configuration.konghq.com/v1
+kind: KongPlugin
+metadata:
+  name: acl-allow-g2
+plugin: acl
+config:
+  allow:
+    - group2
+  hide_groups_header: true
+
