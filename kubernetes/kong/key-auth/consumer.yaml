@@ -1,0 +1,25 @@
+apiVersion: configuration.konghq.com/v1
+kind: KongConsumer
+metadata:
+  name: christoph
+  annotations:
+    kubernetes.io/ingress.class: kong
+username: christoph
+credentials:
+- christoph-key-auth
+consumerGroups:
+  - group1
+
+---
+
+apiVersion: configuration.konghq.com/v1
+kind: KongConsumer
+metadata:
+  name: max
+  annotations:
+    kubernetes.io/ingress.class: kong
+username: max
+credentials:
+  - max-key-auth
+consumerGroups:
+  - group2
