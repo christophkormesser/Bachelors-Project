@@ -7,8 +7,7 @@ metadata:
 username: christoph
 credentials:
 - christoph-key-auth
-consumerGroups:
-  - group1
+
 
 ---
 
@@ -21,5 +20,3 @@ metadata:
 username: max
 credentials:
   - max-key-auth
-consumerGroups:
-  - group2
