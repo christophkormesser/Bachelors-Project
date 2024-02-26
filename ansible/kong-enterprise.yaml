@@ -63,13 +63,13 @@
   command: kubectl port-forward -n kong service/kong-cp-kong-admin 8001
 
 # TODO: Connect Go Services to Kong
-- name: Create Service
-  command: curl -i -X POST --url http://127.0.0.1:8001/services/ --data 'name=<service-name>&url=http://<service-cluster-ip>:<service-port>'
-
-- name: Create Route
-  command: curl -i -X POST --url http://127.0.0.1:8001/services/<example-service>/routes --data 'paths[]=/example'
-
-
-- name: Finished Setup
-  debug:
-    msg: "minikube tunnel"
+#- name: Create Service
+#  command: curl -i -X POST --url http://127.0.0.1:8001/services/ --data 'name=<service-name>&url=http://<service-cluster-ip>:<service-port>'
+#
+#- name: Create Route
+#  command: curl -i -X POST --url http://127.0.0.1:8001/services/<example-service>/routes --data 'paths[]=/example'
+#
+#
+#- name: Finished Setup
+#  debug:
+#    msg: "minikube tunnel"

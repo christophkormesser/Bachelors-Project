@@ -7,7 +7,7 @@
     path: "/Users/christoph/Code/FH/5. Semester/Individualprojekt"
   vars_prompt:
     - name: setup
-      prompt: "Set up and configure Istio, Kong or Vanilla? (i/k/v)"
+      prompt: "Set up and configure Istio, Kong, Kong Enterprise or Vanilla? (i/k/ke/v)"
       private: no
 
 
@@ -122,6 +122,10 @@
     - block:
       - include_tasks: kong.yaml
       when: setup == 'k'
+
+    - block:
+      - include_tasks: kong-enterprise.yaml
+      when: setup == 'ke'
 
     - block:
       - include_tasks: observability.yaml
