@@ -128,5 +128,13 @@
       when: setup == 'ke'
 
     - block:
+      - include_tasks: kong-key-auth.yaml
+      when: setup == 'ke'
+
+    - block:
+      - include_tasks: kong-acl.yaml
+      when: setup == 'ke'
+
+    - block:
       - include_tasks: observability.yaml
-      when: setup == 'k' or setup == 'v'
+      when: setup == 'k' or setup == 'ke' or setup == 'v'
