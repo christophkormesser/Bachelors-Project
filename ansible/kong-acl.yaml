@@ -1,0 +1,36 @@
+- name: Setup ACLs
+  debug:
+    msg: Setting up ACLs
+
+- name: Enable ACL on app1 – allow group1 & group2
+  command: >
+    curl -X POST http://localhost:8001/services/app1/plugins
+      --data name=acl
+      --data config.allow=group1
+      --data config.allow=group2
+      --data config.hide_groups_header=true
+
+- name: Enable ACL on app2 – allow group1
+  command: >
+    curl -X POST http://localhost:8001/services/app2/plugins
+      --data name=acl
+      --data config.allow=group1
+      --data config.hide_groups_header=true
+
+- name: Enable ACL on app3 – allow group2
+  command: >
+    curl -X POST http://localhost:8001/services/app3/plugins
+      --data name=acl
+      --data config.allow=group2
+      --data config.hide_groups_header=true
+
+- name: Associate christoph with ALC group1
+  command: >
+    curl -X POST http://localhost:8001/consumers/christoph/acls
+       --data group=group1
+
+- name: Associate max with ALC group2
+  command: >
+    curl -X POST http://localhost:8001/consumers/max/acls
+       --data group=group2
+
