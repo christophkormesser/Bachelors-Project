@@ -129,7 +129,3 @@
   ansible.builtin.async_status:
     jid: '{{ pf_task.ansible_job_id }}'
     mode: cleanup
-
-- name: Finished Setup
-  debug:
-    msg: "minikube tunnel"
