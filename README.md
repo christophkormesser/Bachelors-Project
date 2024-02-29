@@ -38,7 +38,29 @@ Fetch the git [repository](https://github.com/christophkormesser/Individualproje
 1. Start Docker (Desktop)
 2. ```minikube start --memory=8192mb --cpus=4``` -> istio requires more resources
 3. To use a local image for the applications running in the cluster, issue following command: ```eval $(minikube docker-env)```
-4. Now build the image: ```docker build -t fastapi .```
+4. Now build the images:
+
+   ```shell
+   docker build -f app1/Dockerfile -t app1 .
+   docker build -f app2/Dockerfile -t app2 .
+   docker build -f app3/Dockerfile -t app3 .
+   ```
+
+5. Save images to files:
+
+   ```shell
+   docker save --output app1.tar app1
+   docker save --output app2.tar app2
+   docker save --output app3.tar app3
+   ```
+
+6. Load images into minikube:
+
+  ```shell
+  minikube image load app1.tar
+  minikube image load app2.tar
+  minikube image load app3.tar
+  ```
 
 ### Create Deployments, Services & Service Accounts
 
@@ -222,7 +244,6 @@ kubectl annotate service app1 konghq.com/plugins=key-auth,acl-allow-g1 --overwri
 kubectl annotate service app2 konghq.com/plugins=key-auth,acl-allow-g2 --overwrite
 ```
 
-
 ### JWT – not working yet
 
 Enable JWT Plugin
@@ -289,7 +310,6 @@ Configure Grafana to use Prometheus
 3. Choose Prometheus.
 4. In the HTTP section, set the URL to `http://prometheus-server.prometheus.svc.cluster.local`.
 5. Save and test the data source.
-
 
 ## Notes
 

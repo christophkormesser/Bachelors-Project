@@ -1,0 +1,131 @@
+# Kong Setup
+- name: Setup Kong
+  debug:
+    msg: "Setting up Kong Enterprise..."
+
+- name: Add Gateway API CRDs
+  command: kubectl apply -f kubernetes/kong/standard-install.yaml
+  args:
+    chdir: "{{ path }}"
+
+- name: Apply Gatway Class & Gateway Configuration
+  command: kubectl apply -f kubernetes/kong/gateway.yaml
+  args:
+    chdir: "{{ path }}"
+
+- name: Add Kong Helm Repo
+  command: helm repo add kong https://charts.konghq.com
+
+- name: Update Helm (Kong)
+  command: helm repo update
+
+- name: Create Kong Namespace
+  command: kubectl create namespace kong
+
+- name: Create Secret for Enterprise License Free Mode
+  command: kubectl create secret generic kong-enterprise-license --from-literal=license="'{}'" -n kong
+
+- name: Generate EC parameters
+  command: openssl ecparam -name secp384r1 -out "ecparams.pem"
+  args:
+    chdir: "{{ path }}/kubernetes/kong/tls"
+
+- name: Create Key & Certificate with EC parameters
+  command: openssl req -new -x509 -nodes -newkey ec:./ecparams.pem -keyout ./tls.key -out ./tls.crt -days 1095 -subj "/CN=kong_clustering"
+  args:
+    chdir: "{{ path }}/kubernetes/kong/tls"
+
+- name: Create Secret for Key & Certificate
+  command: kubectl create secret tls kong-cluster-cert --cert=./tls.crt --key=./tls.key -n kong
+  args:
+    chdir: "{{ path }}/kubernetes/kong/tls"
+
+- name: Helm Install Kong Control Plane with values-cp.yaml
+  shell: helm install kong-cp kong/kong -n kong --values ./values-cp.yaml
+  args:
+    chdir: "{{ path }}/kubernetes/kong/values"
+
+- name: Ensure Control Plane is Running
+  command: kubectl get pods -l app=kong-cp-kong -n kong -o jsonpath='{.items[0].status.containerStatuses[0].ready}'
+  register: kong_cp_pod_status
+  until: kong_cp_pod_status.stdout == 'true'
+  retries: 15
+  delay: 10
+
+- name: Helm Install Kong Data Plane with values-dp.yaml
+  command: helm install kong-dp kong/kong -n kong --values ./values-dp.yaml
+  args:
+    chdir: "{{ path }}/kubernetes/kong/values"
+
+- name: Ensure Data Plane is Running
+  command: kubectl get pods -l app=kong-dp-kong -n kong -o jsonpath='{.items[0].status.containerStatuses[0].ready}'
+  register: kong_dp_pod_status
+  until: kong_dp_pod_status.stdout == 'true'
+  retries: 15
+  delay: 5
+
+# Start Port Forward Asynchronously
+- name: Port Forward Admin API
+  ansible.builtin.shell: kubectl port-forward -n kong service/kong-cp-kong-admin 8001
+  async: 120
+  poll: 0
+  register: pf_task
+
+# Get Cluster IPs of my applications
+- name: Get ClusterIP of App1
+  command: kubectl get services --all-namespaces --field-selector metadata.name=app1 -o jsonpath='{.items[0].spec.clusterIP}'
+  register: app1_clusterIP
+
+- name: Get ClusterIP of App2
+  command: kubectl get services --all-namespaces --field-selector metadata.name=app2 -o jsonpath='{.items[0].spec.clusterIP}'
+  register: app2_clusterIP
+
+- name: Get ClusterIP of App3
+  command: kubectl get services --all-namespaces --field-selector metadata.name=app3 -o jsonpath='{.items[0].spec.clusterIP}'
+  register: app3_clusterIP
+
+# Create Services in Kong
+- name: Create Kong Service for App1
+  command: >
+    curl -i -X POST 
+    --url http://127.0.0.1:8001/services/ 
+    --data name=app1
+    --data url=http://{{ app1_clusterIP.stdout }}:1323/action
+
+- name: Create Kong Service for App2
+  command: >
+    curl -i -X POST 
+    --url http://127.0.0.1:8001/services/ 
+    --data name=app2
+    --data url=http://{{ app2_clusterIP.stdout }}:1323/action
+
+- name: Create Kong Service for App3
+  command: >
+    curl -i -X POST 
+    --url http://127.0.0.1:8001/services/ 
+    --data name=app3
+    --data url=http://{{ app3_clusterIP.stdout }}:1323/action
+
+# Create Routes for the Services
+- name: Create Route for App1
+  command: >
+    curl -i -X POST 
+    --url http://127.0.0.1:8001/services/app1/routes 
+    --data paths[]=/app1
+
+- name: Create Route for App2
+  command: >
+    curl -i -X POST 
+    --url http://127.0.0.1:8001/services/app2/routes 
+    --data paths[]=/app2
+
+- name: Create Route for App3
+  command: >
+    curl -i -X POST 
+    --url http://127.0.0.1:8001/services/app3/routes 
+    --data paths[]=/app3
+
+- name: Clean up Port Forward Task if it's still running
+  ansible.builtin.async_status:
+    jid: '{{ pf_task.ansible_job_id }}'
+    mode: cleanup

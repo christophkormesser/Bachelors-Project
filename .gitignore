@@ -6,6 +6,9 @@
 notes.yaml
 test.yaml
 test.go
+*.crt
+*.key
+*.pem
 
 ### macOS ###
 # General

@@ -1,0 +1,50 @@
+- name: Setup Kong Key-Auth
+  debug:
+    msg: "Setting up Key Auth..."
+
+- name: Create Consumer christoph
+  command: >
+    curl -i -X POST
+      --url http://localhost:8001/consumers/
+      --data username=christoph
+
+- name: Create Key for christoph
+  command: curl -X POST http://localhost:8001/consumers/christoph/key-auth
+  register: christoph_key
+
+- name: Show API Key for christoph
+  debug:
+    msg: "{{ (christoph_key.stdout | from_json).key }}"
+
+- name: Create Consumer max
+  command: >
+    curl -i -X POST
+      --url http://localhost:8001/consumers/
+      --data username=max
+
+- name: Create Key for max
+  command: curl -X POST http://localhost:8001/consumers/max/key-auth
+  register: max_key
+
+- name: Show API Key for max
+  debug:
+    msg: "{{ (max_key.stdout | from_json).key }}"
+
+
+- name: Configure Service app1 to use key auth
+  command: >
+    curl -X POST http://localhost:8001/services/app1/plugins
+      --data name=key-auth
+      --data config.key_names=apikey
+
+- name: Configure Service app2 to use key auth
+  command: >
+    curl -X POST http://localhost:8001/services/app2/plugins
+      --data name=key-auth
+      --data config.key_names=apikey
+
+- name: Configure Service app3 to use key auth
+  command: >
+    curl -X POST http://localhost:8001/services/app3/plugins
+      --data name=key-auth
+      --data config.key_names=apikey
