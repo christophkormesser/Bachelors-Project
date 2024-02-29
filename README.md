@@ -2,7 +2,8 @@
 
 ## Abstract
 
-The primary objective of this project is to gain proficiency in utilizing Docker & Kubernetes, while exploring the feasibility of implementing centralized and decentralized security measures within a cluster. To assess the centralized method, I will examine the effectiveness of Kong Gateway (utilizing the Kong Ingress Controller addon for minikube). Meanwhile, to evaluate the decentralized approach, I will utilize the Istio addon for minikube.
+This project's purpose is to accompany my bachelor's thesis with the current working title "A Comparative Analysis of Centralized and Decentralized Security Models in a Microservices Architecture". It consists of three dummy web applications written in Go which expose APIs.
+The current focus lies on Authentication and Authorization on various levels like Service-to-Service Communication as well as User (Human) to Service Communication. To implement these functionalities I use [Istio Service Mesh](https://istio.io/) and [Kong Gateway](https://konghq.com/products/kong-gateway).
 
 ## Host
 
@@ -17,28 +18,27 @@ The primary objective of this project is to gain proficiency in utilizing Docker
 
 ### Software
 
-* minikube v1.32.0 (brew)
+* [minikube](https://minikube.sigs.k8s.io/docs/) v1.32.0 (brew)
   * quickly sets up a local Kubernetes cluster
 * Kubernetes Server v1.27.4
-* Kubectl v1.29.1 (brew)
+* [Kubectl](https://kubernetes.io/docs/reference/kubectl/) v1.29.1 (brew)
   * manages the cluster
-* Docker 25.0.2
-* Istioctl 1.20.2 (brew)
-* Prometheus
+* [Docker](https://www.docker.com/) 25.0.2
+* [Istioctl](https://istio.io/latest/docs/ops/diagnostic-tools/istioctl/) 1.20.2 (brew)
+* [Prometheus](https://prometheus.io/)
   * gathers general metrics
-* Jaeger
+* [Jaeger](https://www.jaegertracing.io/)
   * gathers metrics for traces
-* Kiali
+* [Kiali](https://kiali.io/)
   * Dashboard for all gathered metrics (Istio specific)
 
 ## Setting up the cluster
 
-Fetch the git [repository](https://github.com/christophkormesser/Individualprojekt)
+Fetch the git [repository](https://github.com/christophkormesser/Bachelors-Project)
 
 1. Start Docker (Desktop)
-2. ```minikube start --memory=8192mb --cpus=4``` -> istio requires more resources
-3. To use a local image for the applications running in the cluster, issue following command: ```eval $(minikube docker-env)```
-4. Now build the images:
+2. ```minikube start --memory=8192mb --cpus=4``` -> Istio requires more resources, hence they are set here specifically
+3. Now build the images:
 
    ```shell
    docker build -f app1/Dockerfile -t app1 .
@@ -46,20 +46,20 @@ Fetch the git [repository](https://github.com/christophkormesser/Individualproje
    docker build -f app3/Dockerfile -t app3 .
    ```
 
-5. Save images to files:
+4. Save images to files:
 
    ```shell
-   docker save --output app1.tar app1
-   docker save --output app2.tar app2
-   docker save --output app3.tar app3
+   docker save --output images/app1.tar app1
+   docker save --output images/app2.tar app2
+   docker save --output images/app3.tar app3
    ```
 
-6. Load images into minikube:
+5. Load images into minikube:
 
   ```shell
-  minikube image load app1.tar
-  minikube image load app2.tar
-  minikube image load app3.tar
+  minikube image load images/app1.tar
+  minikube image load images/app2.tar
+  minikube image load iamges/app3.tar
   ```
 
 ### Create Deployments, Services & Service Accounts
@@ -310,22 +310,3 @@ Configure Grafana to use Prometheus
 3. Choose Prometheus.
 4. In the HTTP section, set the URL to `http://prometheus-server.prometheus.svc.cluster.local`.
 5. Save and test the data source.
-
-## Notes
-
-### 18.12.2023
-
-* Istio works properly
-* Observability tools work properly
-* Might transition from Kiali to Grafana
-
-### 17.12.2023
-
-* installed observability tools (jaeger, prometheus & kiali)
-* tried GCP in the meanwhile, but since you need GCP Enterprise for a service mesh like Istio I chose to work with minikube again
-* updating my documentation
-
-### 22.11.2023
-
-* Istio is installed, all pods have a sidecar/proxy
-* an example mTLS policy is applied, but doesn't seem to work properly
