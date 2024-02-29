@@ -112,27 +112,27 @@
 
 
     - block:
-      - include_tasks: istio.yaml
+      - include_tasks: istio/istio.yaml
         when: setup == 'i'
 
     - block:
-      - include_tasks: istio-observability.yaml
+      - include_tasks: istio/istio-observability.yaml
         when: setup == 'i'
 
     - block:
-      - include_tasks: kong.yaml
+      - include_tasks: kong/db-less/kong.yaml
       when: setup == 'k'
 
     - block:
-      - include_tasks: kong-enterprise.yaml
+      - include_tasks: kong/kong-enterprise.yaml
       when: setup == 'ke'
 
     - block:
-      - include_tasks: kong-key-auth.yaml
+      - include_tasks: kong/kong-key-auth.yaml
       when: setup == 'ke'
 
     - block:
-      - include_tasks: kong-acl.yaml
+      - include_tasks: kong/kong-acl.yaml
       when: setup == 'ke'
 
     - block:
