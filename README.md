@@ -5,6 +5,22 @@
 This project's purpose is to accompany my bachelor's thesis with the current working title "A Comparative Analysis of Centralized and Decentralized Security Models in a Microservices Architecture". It consists of three dummy web applications written in Go which expose APIs.
 The current focus lies on Authentication and Authorization on various levels like Service-to-Service Communication as well as User (Human) to Service Communication. To implement these functionalities I use [Istio Service Mesh](https://istio.io/) and [Kong Gateway](https://konghq.com/products/kong-gateway).
 
+## Roadmap
+
+- [x] Functioning Kubernetes Cluster
+- [x] Deployable Working Dummy Applications
+- [x] Istio Running with Envoys attached to Application Pods
+  - [x] Istio Authentication mTLS
+  - [x] Istio Authorization ACL
+  - [x] Istio Observability with Grafana, Jaeger & Prometheus
+  - [ ] Define Metrics to Gather
+- [x] Kong Gateway Running exposing Applications
+  - [x] Kong Authentication Key-Auth
+  - [ ] Kong Authentication JWT/OAuth2
+  - [x] Kong Authorization ACL
+  - [x] Kong Observability with Grafana & Prometheus
+  - [ ] Define Metrics to Gather
+
 ## Host
 
 ### Hardware
