@@ -64,7 +64,7 @@ Fetch the git [repository](https://github.com/christophkormesser/Individualproje
 
 ### Create Deployments, Services & Service Accounts
 
-```sh
+```shell
 kubectl create -f kubernetes/services.yaml
 kubectl create -f kubernetes/service-accounts.yaml
 kubectl create -f kubernetes/deployments.yaml
@@ -74,14 +74,14 @@ kubectl create -f kubernetes/deployments.yaml
 
 Enable the addons
 
-```sh
+```shell
 minikube addons enable istio-provisioner
 minikube addons enable istio
 ```
 
 To apply Istio to the target namespace and inject the sidecar proxies you need to create a label and restart the pods:
 
-```sh
+```shell
 kubectl label namespace default istio-injection=enabled
 kubectl delete pods --all -n default
 ```
@@ -90,7 +90,7 @@ kubectl delete pods --all -n default
 
  Apply the policies:
 
- ```sh
+ ```shell
  kubectl apply -f kubernetes/istio/
  ```
 
@@ -98,7 +98,7 @@ kubectl delete pods --all -n default
 
 Get Prometheus up and running
 
-```sh
+```shell
 kubectl apply -f https://raw.githubusercontent.com/istio/istio/release-1.20/samples/addons/prometheus.yaml
 ```
 
@@ -106,7 +106,7 @@ kubectl apply -f https://raw.githubusercontent.com/istio/istio/release-1.20/samp
 
 Get Jaeger up and running
 
-```sh
+```shell
 kubectl apply -f https://raw.githubusercontent.com/istio/istio/release-1.20/samples/addons/jaeger.yaml
 ```
 
@@ -118,7 +118,7 @@ query url:
 
 Get Kiali up and running
 
-```sh
+```shell
 helm install \
   --namespace istio-system \
   --set auth.strategy="anonymous" \
@@ -129,7 +129,7 @@ helm install \
 
 Get Grafana up and running
 
-```sh
+```shell
 kubectl apply -f https://raw.githubusercontent.com/istio/istio/release-1.20/samples/addons/grafana.yaml
 ```
 
@@ -141,19 +141,19 @@ Import the dashboard json file from `config/Requests-1703960621987.json`
 
 Add Gateway API CRDs
 
-```sh
+```shell
 kubectl apply -f https://github.com/kubernetes-sigs/gateway-api/releases/download/v1.0.0/standard-install.yaml
 ```
 
 Apply Gateway Class & Gateway Configuration
 
-```sh
+```shell
 kubectl apply -f kubernetes/kong/gateway.yaml
 ```
 
 Install Kong
 
-```sh
+```shell
 helm repo add kong https://charts.konghq.com
 helm repo update
 helm install kong kong/ingress -n kong --create-namespace 
@@ -161,21 +161,21 @@ helm install kong kong/ingress -n kong --create-namespace
 
 Test Installation (after all pods are up)
 
-```sh
+```shell
 export PROXY_IP=$(kubectl get svc --namespace kong kong-gateway-proxy -o jsonpath={.spec.clusterIP})
 echo $PROXY_IP
 ```
 
 Copy the address and start a curl command from a pod
 
-```sh
+```shell
 kubectl exec -it pod/fastapi1 -- /bin/bash
 curl -i PROXY_IP
 ```
 
 Create a http route & ingress controller
 
-```sh
+```shell
 kubectl apply -f kubernetes/kong/httproute.yaml
 kubectl apply -f kubernetes/kong/ingress.yaml
 ```
@@ -187,7 +187,7 @@ Test
 
 Port Forward for kong gateway pod (not controller!)
 
-```sh
+```shell
 kubectl port-forward kong-gateway-pod-name :8002 -n kong
 ```
 
@@ -195,7 +195,7 @@ kubectl port-forward kong-gateway-pod-name :8002 -n kong
 
 Admin, to see info (only works with postman, not browser)
 
-```sh
+```shell
 kubectl port-forward kong-gateway-pod-name 8001:8444 -n kong  
 ```
 
@@ -205,13 +205,13 @@ kubectl port-forward kong-gateway-pod-name 8001:8444 -n kong
 
 Enable key-auth
 
-```sh
+```shell
 kubectl apply -f kubernetes/kong/key-auth/key-auth.yaml
 ```
 
 Annotate all services where authorization is needed
 
-```sh
+```shell
 kubectl annotate service app1 konghq.com/plugins=key-auth --overwrite
 kubectl annotate service app2 konghq.com/plugins=key-auth --overwrite
 kubectl annotate service app3 konghq.com/plugins=key-auth --overwrite
@@ -219,21 +219,36 @@ kubectl annotate service app3 konghq.com/plugins=key-auth --overwrite
 
 Create secret for key
 
-```sh
+```shell
 kubectl apply -f kubernetes/kong/key-auth/secret-key-auth.yaml
 ```
 
 Create consumer associated with the key
 
-```sh
+```shell
 kubectl apply -f kubernetes/kong/key-auth/consumer.yaml
+```
+
+#### ACLs
+
+Create ACLs
+
+```shell
+kubectl apply -f kubernetes/kong/key-auth/acl-allow.yaml
+```
+
+Annotate services to use ACLs
+
+```shell
+kubectl annotate service app1 konghq.com/plugins=key-auth,acl-allow-g1 --overwrite
+kubectl annotate service app2 konghq.com/plugins=key-auth,acl-allow-g2 --overwrite
 ```
 
 ### JWT – not working yet
 
 Enable JWT Plugin
 
-```sh
+```shell
 kubectl apply -f kubernetes/kong/jwt/jwt.yaml
 ```
 
@@ -243,7 +258,7 @@ kubectl apply -f kubernetes/kong/jwt/jwt.yaml
 
 Add Prometheus & Grafana Helm Repositories
 
-```sh
+```shell
 helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
 helm repo add grafana https://grafana.github.io/helm-charts
 helm repo update
@@ -251,20 +266,20 @@ helm repo update
 
 Create their own namespaces
 
-```sh
+```shell
 kubectl create namespace prometheus
 kubectl create namespace grafana
 ```
 
 Install Prometheus
 
-```sh
+```shell
 helm install prometheus prometheus-community/prometheus --namespace prometheus
 ```
 
 Access Prometheus
 
-```sh
+```shell
 kubectl port-forward --namespace prometheus svc/prometheus-server 9090:80
 ```
 
@@ -272,19 +287,19 @@ kubectl port-forward --namespace prometheus svc/prometheus-server 9090:80
 
 Install Grafana
 
-```sh
+```shell
 helm install grafana grafana/grafana --namespace grafana
 ```
 
 Access Grafana & acquire the admin password
 
-```sh
+```shell
 kubectl port-forward --namespace grafana service/grafana 3000:80
 ```
 
 `http://localhost:3000`
 
-```sh
+```shell
 kubectl get secret --namespace grafana grafana -o jsonpath="{.data.admin-password}" | base64 --decode ; echo
 ```
 
@@ -295,23 +310,6 @@ Configure Grafana to use Prometheus
 3. Choose Prometheus.
 4. In the HTTP section, set the URL to `http://prometheus-server.prometheus.svc.cluster.local`.
 5. Save and test the data source.
-
-## Test
-
-Open dashboards
-
-```sh
-minikube dashboard
-k9s
-istioctl d kiali
-```
-
-Open the terminal of a pod and send a request to a different workload
-
-```sh
-kubectl exec -it fastapi1 -- /bin/bash
-curl -H 'Cache-Control: no-cache, no-store' fastapi2:8001/action
-```
 
 ## Notes
 
