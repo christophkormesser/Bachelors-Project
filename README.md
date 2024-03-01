@@ -71,7 +71,7 @@ Decide which setup you want implement at the beginning of the playbook:
 
 ### Istio
 
-tbd
+⚙️tbd
 
 ### Kong Enterprise
 After the playbook is finished make the services in the cluster accessible to your host machine
