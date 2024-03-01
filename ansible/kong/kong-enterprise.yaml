@@ -25,6 +25,12 @@
 - name: Create Secret for Enterprise License Free Mode
   command: kubectl create secret generic kong-enterprise-license --from-literal=license="'{}'" -n kong
 
+- name: Create a tls directory if it does not exist
+  file:
+    path: "{{ path }}/kubernetes/kong/tls"
+    state: directory
+    mode: "0755"
+
 - name: Generate EC parameters
   command: openssl ecparam -name secp384r1 -out "ecparams.pem"
   args:
