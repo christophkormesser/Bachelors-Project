@@ -25,36 +25,40 @@ The current focus lies on Authentication and Authorization on various levels lik
 
 ### Hardware
 
-* MacBook Pro 16“ 2019
-* Processor 2,3 GHz 8-Core Intel Core i9
-* Graphics AMD Radeon Pro 5500M 8GB
-* Intel UHD Graphics 630 1536 MB
-* Memory 32 GB 2667 MHz DDR4
-* macOS Ventura 14.2.1
+- MacBook Pro 16“ 2019
+- Processor 2,3 GHz 8-Core Intel Core i9
+- Graphics AMD Radeon Pro 5500M 8GB
+- Intel UHD Graphics 630 1536 MB
+- Memory 32 GB 2667 MHz DDR4
+- macOS Ventura 14.2.1
 
 ### Software
 
-* [minikube](https://minikube.sigs.k8s.io/docs/) v1.32.0 (brew)
-  * quickly sets up a local Kubernetes cluster
-* Kubernetes Server v1.27.4
-* [Kubectl](https://kubernetes.io/docs/reference/kubectl/) v1.29.1 (brew)
-  * manages the cluster
-* [Docker](https://www.docker.com/) 25.0.2
-* [Istioctl](https://istio.io/latest/docs/ops/diagnostic-tools/istioctl/) 1.20.2 (brew)
-* [Prometheus](https://prometheus.io/)
-  * gathers general metrics
-* [Jaeger](https://www.jaegertracing.io/)
-  * gathers metrics for traces
-* [Kiali](https://kiali.io/)
-  * Dashboard for all gathered metrics (Istio specific)
+- [minikube](https://minikube.sigs.k8s.io/docs/) v1.32.0 (brew)
+  - quickly sets up a local Kubernetes cluster
+- Kubernetes Server v1.27.4
+- [Kubectl](https://kubernetes.io/docs/reference/kubectl/) v1.29.1 (brew)
+  - manages the cluster
+- [Docker](https://www.docker.com/) 25.0.2
+- [Istioctl](https://istio.io/latest/docs/ops/diagnostic-tools/istioctl/) 1.20.2 (brew)
+- [Prometheus](https://prometheus.io/)
+  - gathers general metrics
+- [Jaeger](https://www.jaegertracing.io/)
+  - gathers metrics for traces
+- [Kiali](https://kiali.io/)
+  - Dashboard for all gathered metrics (Istio specific)
 
 ## Setting up the cluster
 
-Fetch the git [repository](https://github.com/christophkormesser/Bachelors-Project)
+1. Fetch the git [repository](https://github.com/christophkormesser/Bachelors-Project)
 
-1. Start Docker (Desktop)
-2. ```minikube start --memory=8192mb --cpus=4``` -> Istio requires more resources, hence they are set here specifically
-3. Now build the images:
+   ```shell
+   git clone https://github.com/christophkormesser/Bachelors-Project
+   ```
+
+2. Start Docker (Desktop)
+3. ```minikube start --memory=8192mb --cpus=4``` -> Istio requires more resources, hence they are set here specifically
+4. Now build the images:
 
    ```shell
    docker build -f app1/Dockerfile -t app1 .
@@ -62,7 +66,7 @@ Fetch the git [repository](https://github.com/christophkormesser/Bachelors-Proje
    docker build -f app3/Dockerfile -t app3 .
    ```
 
-4. Save images to files:
+5. Save images to files:
 
    ```shell
    docker save --output images/app1.tar app1
@@ -70,13 +74,13 @@ Fetch the git [repository](https://github.com/christophkormesser/Bachelors-Proje
    docker save --output images/app3.tar app3
    ```
 
-5. Load images into minikube:
+6. Load images into minikube:
 
-  ```shell
-  minikube image load images/app1.tar
-  minikube image load images/app2.tar
-  minikube image load iamges/app3.tar
-  ```
+   ```shell
+   minikube image load images/app1.tar
+   minikube image load images/app2.tar
+   minikube image load iamges/app3.tar
+   ```
 
 ### Create Deployments, Services & Service Accounts
 
