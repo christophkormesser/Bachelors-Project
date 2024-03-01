@@ -4,7 +4,7 @@
   gather_facts: no
   vars:
     # Root Path
-    path: "/Users/christoph/Code/FH/5. Semester/Individualprojekt"
+    path: "{{ playbook_dir }}/.."
   vars_prompt:
     - name: setup
       prompt: "Set up and configure Istio, Kong, Kong Enterprise or Vanilla? (i/k/ke/v)"
@@ -55,10 +55,15 @@
       #   docker_image:
       #     name: app1
       #     build:
-      #       path: "{{ path }}"
+      #       path: "{{ path }}/go/app1"
       #     source: build
       #   register: docker_build_result
 
+      - name: Create a directory if it does not exist
+        file:
+          path: "{{ path }}/images"
+          state: directory
+          mode: "0755"
 
       - name: Save to app1.tar
         command: docker save --output images/app1.tar app1
@@ -76,7 +81,7 @@
       # - name: Save Docker Image
       #   command: docker save -o app1.tar app1
       #   args:
-      #     chdir: "{{ path }}"
+      #     chdir: "{{ path }}/images"
       #   when: docker_build_result.changed
 
       - name: Load 1st Image into Minikube VM
