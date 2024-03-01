@@ -62,12 +62,12 @@ ansible-playbook ansible/main-setup.yaml
 
 Decide which setup you want implement at the beginning of the playbook:
 
-| Option               | Applications | Istio | Kong DB-less | Kong with DB | Observability | Authentication | Authorization | Comments                                                 |
-|----------------------|--------------|-------|--------------|--------------|---------------|----------------|---------------|----------------------------------------------------------|
-| (i) Istio            | x            | x     |              |              | x             | x              | x             |                                                          |
-| (k) Kong OSS         | x            |       | x            |              | x             |                |               | No support for Consumer Groups which are needed for ACLs |
-| (ke) Kong Enterprise | x            |       |              | x            | x             | x              | x             |                                                          |
-| (v) Vanilla          | x            |       |              |              | x             |                |               |                                                          |
+| Option               | Applications | Istio | Kong DB-less | Kong with DB | Observability | Authentication | Authorization |
+|----------------------|--------------|-------|--------------|--------------|---------------|----------------|---------------|
+| (i) Istio            | x            | x     |              |              | x             | x              | x             |
+| (k) Kong OSS         | x            |       | x            |              | x             |                |               |
+| (ke) Kong Enterprise | x            |       |              | x            | x             | x              | x             |
+| (v) Vanilla          | x            |       |              |              | x             |                |               |
 
 ### Istio
 
