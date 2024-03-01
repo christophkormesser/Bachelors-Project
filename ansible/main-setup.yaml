@@ -61,39 +61,39 @@
 
       - name: Create a directory if it does not exist
         file:
-          path: "{{ path }}/images"
+          path: "{{ path }}/artifacts"
           state: directory
           mode: "0755"
 
       - name: Save to app1.tar
-        command: docker save --output images/app1.tar app1
+        command: docker save --output artifacts/app1.tar app1
         args:
          chdir: "{{ path }}"
       - name: Save to app2.tar
-        command: docker save --output images/app2.tar app2
+        command: docker save --output artifacts/app2.tar app2
         args:
           chdir: "{{ path }}"
       - name: Save to app3.tar
-        command: docker save --output images/app3.tar app3
+        command: docker save --output artifacts/app3.tar app3
         args:
           chdir: "{{ path }}"
 
       # - name: Save Docker Image
       #   command: docker save -o app1.tar app1
       #   args:
-      #     chdir: "{{ path }}/images"
+      #     chdir: "{{ path }}/artifacts"
       #   when: docker_build_result.changed
 
       - name: Load 1st Image into Minikube VM
-        command: minikube image load images/app1.tar
+        command: minikube image load artifacts/app1.tar
         args:
           chdir: "{{ path }}"
       - name: Load 2nd Image into Minikube VM
-        command: minikube image load images/app2.tar
+        command: minikube image load artifacts/app2.tar
         args:
           chdir: "{{ path }}"
       - name: Load 3rd Image into Minikube VM
-        command: minikube image load images/app3.tar
+        command: minikube image load artifacts/app3.tar
         args:
           chdir: "{{ path }}"
 
