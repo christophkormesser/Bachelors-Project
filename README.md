@@ -30,23 +30,15 @@ The current focus lies on Authentication and Authorization on various levels lik
 - Graphics AMD Radeon Pro 5500M 8GB
 - Intel UHD Graphics 630 1536 MB
 - Memory 32 GB 2667 MHz DDR4
-- macOS Ventura 14.2.1
+- macOS Sonoma 14.2.1
 
 ### Software
 
-- [minikube](https://minikube.sigs.k8s.io/docs/) v1.32.0 (brew)
-  - quickly sets up a local Kubernetes cluster
-- Kubernetes Server v1.27.4
-- [Kubectl](https://kubernetes.io/docs/reference/kubectl/) v1.29.1 (brew)
-  - manages the cluster
+- [minikube](https://minikube.sigs.k8s.io/docs/) 1.32.0
+- [Kubectl](https://kubernetes.io/docs/reference/kubectl/) 1.29.1
 - [Docker](https://www.docker.com/) 25.0.2
-- [Istioctl](https://istio.io/latest/docs/ops/diagnostic-tools/istioctl/) 1.20.2 (brew)
-- [Prometheus](https://prometheus.io/)
-  - gathers general metrics
-- [Jaeger](https://www.jaegertracing.io/)
-  - gathers metrics for traces
-- [Kiali](https://kiali.io/)
-  - Dashboard for all gathered metrics (Istio specific)
+- [Istioctl](https://istio.io/latest/docs/ops/diagnostic-tools/istioctl/) 1.20.2
+- [Ansible](https://www.ansible.com) 9.2.0
 
 # Getting Started
 
@@ -70,12 +62,12 @@ ansible-playbook ansible/main-setup.yaml
 
 Decide which setup you want implement at the beginning of the playbook:
 
-| Option               | Applications | Istio | Kong DB-less | Kong with DB | Observability | Authentication | Authorization | Comments                                                  |
-|----------------------|--------------|-------|--------------|--------------|---------------|----------------|---------------|-----------------------------------------------------------|
-| (i) Istio            | x            | x     |              |              | x             | x              | x             |                                                           |
-| (k) Kong OSS         | x            |       | x            |              | x             |                |               | Doesn't support Consumer Groups which are needed for ACLs |
-| (ke) Kong Enterprise | x            |       |              | x            | x             | x              | x             |                                                           |
-| (v) Vanilla          | x            |       |              |              | x             |                |               |                                                           |
+| Option               | Applications | Istio | Kong DB-less | Kong with DB | Observability | Authentication | Authorization | Comments                                                 |
+|----------------------|--------------|-------|--------------|--------------|---------------|----------------|---------------|----------------------------------------------------------|
+| (i) Istio            | x            | x     |              |              | x             | x              | x             |                                                          |
+| (k) Kong OSS         | x            |       | x            |              | x             |                |               | No support for Consumer Groups which are needed for ACLs |
+| (ke) Kong Enterprise | x            |       |              | x            | x             | x              | x             |                                                          |
+| (v) Vanilla          | x            |       |              |              | x             |                |               |                                                          |
 
 ### Istio
 
