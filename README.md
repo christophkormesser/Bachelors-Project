@@ -65,7 +65,7 @@ Decide which setup you want implement at the beginning of the playbook:
 | Option               | Applications | Istio | Kong DB-less | Kong with DB | Observability | Authentication | Authorization |
 |----------------------|--------------|-------|--------------|--------------|---------------|----------------|---------------|
 | (i) Istio            | x            | x     |              |              | x             | x              | x             |
-| (k) Kong OSS         | x            |       | x            |              | x             |                |               |
+| (k) Kong OSS         | x            |       | x            |              | x             | x              |               |
 | (ke) Kong Enterprise | x            |       |              | x            | x             | x              | x             |
 | (v) Vanilla          | x            |       |              |              | x             |                |               |
 
