@@ -48,17 +48,57 @@ The current focus lies on Authentication and Authorization on various levels lik
 - [Kiali](https://kiali.io/)
   - Dashboard for all gathered metrics (Istio specific)
 
-## Setting up the cluster
+# Getting Started
 
-1. Fetch the git [repository](https://github.com/christophkormesser/Bachelors-Project)
+Clone the [git repository](https://github.com/christophkormesser/Bachelors-Project)
 
-   ```shell
-   git clone https://github.com/christophkormesser/Bachelors-Project
-   ```
+```shell
+git clone https://github.com/christophkormesser/Bachelors-Project
+```
 
-2. Start Docker (Desktop)
-3. ```minikube start --memory=8192mb --cpus=4``` -> Istio requires more resources, hence they are set here specifically
-4. Now build the images:
+## Run the Ansible Playbook
+
+Install Ansible (macOS)
+```shell
+brew install ansible
+```
+
+Change to the root directory of this repository and run the main playbook with
+```shell
+ansible-playbook ansible/main-setup.yaml
+```
+
+Decide which setup you want implement at the beginning of the playbook:
+
+| Option               | Applications | Istio | Kong DB-less | Kong with DB | Observability | Authentication | Authorization | Comments                                                  |
+|----------------------|--------------|-------|--------------|--------------|---------------|----------------|---------------|-----------------------------------------------------------|
+| (i) Istio            | x            | x     |              |              | x             | x              | x             |                                                           |
+| (k) Kong OSS         | x            |       | x            |              | x             |                |               | Doesn't support Consumer Groups which are needed for ACLs |
+| (ke) Kong Enterprise | x            |       |              | x            | x             | x              | x             |                                                           |
+| (v) Vanilla          | x            |       |              |              | x             |                |               |                                                           |
+
+### Kong
+After the playbook is finished make the services in the cluster accessible to your host machine
+
+```shell
+minikube tunnel
+```
+
+To make changes to Kong, you might need to forward the port to the Admin API
+
+```shell
+kubectl port-forward -n kong service/kong-cp-kong-admin 8001
+```
+
+## Manual Installation
+
+1. Start Docker (Desktop)
+2. Start the minikube cluster
+    ```shell
+    minikube start --memory=8192mb --cpus=4
+    ``` 
+
+3. Now build the images:
 
    ```shell
    docker build -f app1/Dockerfile -t app1 .
@@ -66,7 +106,7 @@ The current focus lies on Authentication and Authorization on various levels lik
    docker build -f app3/Dockerfile -t app3 .
    ```
 
-5. Save images to files:
+4. Save images to files:
 
    ```shell
    docker save --output images/app1.tar app1
@@ -74,7 +114,7 @@ The current focus lies on Authentication and Authorization on various levels lik
    docker save --output images/app3.tar app3
    ```
 
-6. Load images into minikube:
+5. Load images into minikube:
 
    ```shell
    minikube image load images/app1.tar
