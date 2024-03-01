@@ -50,9 +50,9 @@ git clone https://github.com/christophkormesser/Bachelors-Project
 
 ## Run the Ansible Playbook
 
-Install Ansible (macOS)
+Install Minikube, Kubectl, Docker, Istioctl & Ansible (macOS)
 ```shell
-brew install ansible
+brew install minikube kubectl docker istioctl ansible
 ```
 
 Change to the root directory of this repository and run the main playbook with
