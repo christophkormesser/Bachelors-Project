@@ -88,4 +88,4 @@ kubectl port-forward -n kong service/kong-cp-kong-admin 8001
 
 ## Manual Installation
 
-see [Manual Installation](docs/Manual-Installation-Start)
+see [Manual Installation](docs/Manual-Installation-Start.md)
