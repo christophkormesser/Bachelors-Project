@@ -24,6 +24,7 @@ func main() {
 	// Expose Prometheus Metrics
 	e.GET("/metrics", echo.WrapHandler(promhttp.Handler()))
 
+	// Expose Test Endpoint
 	e.GET("/action", func(c echo.Context) error {
 
 		shared.ReceivedRequestCounter.With(prometheus.Labels{"dst_pod": env["POD_NAME"], "handler": "/action", "source": strings.Split(c.Request().RemoteAddr, ":")[0], "response_code": strconv.Itoa(c.Response().Status)}).Inc()
@@ -34,6 +35,8 @@ func main() {
 			"Pod Namespace: "+env["POD_NAMESPACE"]+"\n"+
 			"Pod IP: "+env["POD_IP"]+"\n")
 	})
+
+	// Expose Root Endpoint
 	e.GET("/", func(c echo.Context) error {
 		return c.String(http.StatusOK, "Welcome to APP1!\n")
 	})
@@ -42,6 +45,7 @@ func main() {
 	heartbeatTask := func() {
 		shared.Heartbeat(env, "app2", "1323", "/action")
 	}
+	// Starts the scheduler with the above heartbeatTask function
 	go shared.StartScheduler(1*time.Minute, heartbeatTask)
 
 	e.Logger.Fatal(e.Start(":1323"))
