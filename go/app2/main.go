@@ -42,7 +42,7 @@ func main() {
 	heartbeatTask := func() {
 		shared.Heartbeat(env, "app2", "1323", "/action")
 	}
-	go shared.StartScheduler(1*time.Minute, heartbeatTask)
+	go shared.StartScheduler(10*time.Second, heartbeatTask)
 
 	e.Logger.Fatal(e.Start(":1323"))
 }
