@@ -21,6 +21,21 @@
   args:
     chdir: "{{ path }}"
 
+- name: Enable tracing and set sample rate to 100%
+  command: istioctl install -f kubernetes/istio/istioctl/tracing.yaml -y
+  args:
+    chdir: "{{ path }}"
+
+# Restart pods again one after the other instead of simultaneously to distribute request times
+- name: Restart Pod 1
+  command: kubectl delete pod -l app=app1 -n default
+
+- name: Restart Pod 2
+  command: kubectl delete pod -l app=app2 -n default
+
+- name: Restart Pod 3
+  command: kubectl delete pod -l app=app3 -n default
+
 - name: Alert user to import config file in /config into Grafana
   debug:
     msg: Import the dashboard json file from config/Requests-1703960621987.json
