@@ -24,12 +24,12 @@ def extract_trace_info(data):
     for trace in data["data"]:
         for span in trace['spans']:
             if any(tag['key'] == 'span.kind' and tag['value'] == 'client' for tag in span['tags']):
-                source_service = trace['processes'][span['processID']]['serviceName']
+                source_service = (trace['processes'][span['processID']]['serviceName']).split('.', 1)[0]
 
                 # Attempt to determine the destination service more accurately
                 # This example still uses operationName as part of the approach
                 # For a more precise method, consider analyzing the trace structure, references, or other span-specific data
-                destination_service = span['operationName'].split(':')[0]  # Placeholder for a more accurate extraction method
+                destination_service = (span['operationName'].split(':')[0]).split('.', 1)[0]  # Placeholder for a more accurate extraction method
 
                 # Extract other required data
                 status_code = int(next((tag['value'] for tag in span['tags'] if tag['key'] == 'http.status_code'), '0'))
