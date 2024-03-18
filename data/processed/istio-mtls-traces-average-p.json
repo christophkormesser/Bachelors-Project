@@ -1,0 +1,17 @@
+[
+    {
+        "source": "app3",
+        "destination": "app2",
+        "average_duration": 0.7367055555555562
+    },
+    {
+        "source": "app1",
+        "destination": "app2",
+        "average_duration": 1.2461499999999992
+    },
+    {
+        "source": "app2",
+        "destination": "app2",
+        "average_duration": 0.4852416666666668
+    }
+]
