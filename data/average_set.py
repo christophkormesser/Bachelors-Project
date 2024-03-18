@@ -8,22 +8,24 @@ def load_data(file_path):
 file_path = 'data/processed/istio-mtls-traces-p.json'
 data = load_data(file_path)
 
-# Calculate the average duration for each source/destination combination
-average_durations = {}
+# Calculate the average duration and response size for each source/destination combination
+average_metrics = {}
 for entry in data:
     key = (entry['source'], entry['destination'])
-    if key not in average_durations:
-        average_durations[key] = {'total_duration': 0, 'count': 0}
-    average_durations[key]['total_duration'] += entry['duration']
-    average_durations[key]['count'] += 1
+    if key not in average_metrics:
+        average_metrics[key] = {'total_duration': 0, 'total_response_size': 0, 'count': 0}
+    average_metrics[key]['total_duration'] += entry['duration']
+    average_metrics[key]['total_response_size'] += entry['response_size']
+    average_metrics[key]['count'] += 1
 
-# Compute the average and store it in a new list
+# Compute the average duration and response size, and store it in a new list
 averaged_data = []
-for key, value in average_durations.items():
+for key, value in average_metrics.items():
     averaged_data.append({
         'source': key[0],
         'destination': key[1],
-        'average_duration': value['total_duration'] / value['count']
+        'average_duration': value['total_duration'] / value['count'],
+        'average_response_size': value['total_response_size'] / value['count']
     })
 
 print(averaged_data)

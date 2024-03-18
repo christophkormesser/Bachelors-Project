@@ -2,16 +2,19 @@
     {
         "source": "app3",
         "destination": "app2",
-        "average_duration": 0.7367055555555562
+        "average_duration": 0.7367055555555562,
+        "average_response_size": 19.0
     },
     {
         "source": "app1",
         "destination": "app2",
-        "average_duration": 1.2461499999999992
+        "average_duration": 1.2461499999999992,
+        "average_response_size": 144.0
     },
     {
         "source": "app2",
         "destination": "app2",
-        "average_duration": 0.4852416666666668
+        "average_duration": 0.4852416666666668,
+        "average_response_size": 19.0
     }
 ]
