@@ -22,4 +22,4 @@ spec:
   rules:
   - from:
     - source:
-        principals: ["cluster.local/ns/default/sa/service-account1"]
+        principals: ["cluster.local/ns/default/sa/service-account1", "cluster.local/ns/default/sa/service-account2", "cluster.local/ns/default/sa/service-account3"]
