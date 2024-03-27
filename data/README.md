@@ -14,7 +14,14 @@
 
 ### /raw
 
-* Exported unprocessed data
+Exported unprocessed data
+
+* istio-mtls-traces.json
+  * mtls enabled (STRICT mode)
+  * authorization policy enabled (only app1 authorized to call app2)
+* istio-no-mtls-traces.json
+  * mtls disabled (DISABLE mode)
+  * authorization policy removed (all traffic is allowed)
 
 ### /processed
 
