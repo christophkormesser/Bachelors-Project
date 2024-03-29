@@ -75,6 +75,7 @@ def get_node_metrics():
 
         except client.ApiException as e:
             print("Exception when calling CustomObjectsApi->list_cluster_custom_object: %s\n" % e)
+            sleep(1)
             start_time = datetime.now().timestamp()
         except KeyboardInterrupt as e:
             print("\n\nScript will stop, data will be saved to: /metrics.")
