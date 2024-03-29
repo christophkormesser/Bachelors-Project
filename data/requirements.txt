@@ -1,0 +1,2 @@
+pydantic==2.6.4
+kubernetes==29.0.0
