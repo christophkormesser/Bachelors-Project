@@ -3,6 +3,9 @@
   debug:
     msg: "Setting up Observability"
 
+- name: Enable metrics-server Addon
+  command: minikube addons enable metrics-server
+
 - name: Add Prometheus Helm Repositories
   command: helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
 
