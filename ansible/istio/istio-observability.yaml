@@ -3,6 +3,9 @@
   debug:
     msg: "Setting up Observability for Istio..."
 
+- name: Enable metrics-server Addon
+  command: minikube addons enable metrics-server
+
 - name: Set Up Prometheus
   command: kubectl apply -f kubernetes/istio/prometheus.yaml
   args:
@@ -47,3 +50,8 @@
 - name: Inform user to open Kiali dashboard
   debug:
     msg: command':' istioctl d kiali
+
+- name: Start metric gathering script (10 minutes)
+  command: python data/node_metrics.py 10
+  args:
+    chdir: "{{ path }}"
