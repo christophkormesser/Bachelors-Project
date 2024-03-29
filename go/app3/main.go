@@ -47,7 +47,7 @@ func main() {
 		shared.Heartbeat(env, "app2", "1323", "/action")
 	}
 	// Starts the scheduler with the above heartbeatTask function
-	go shared.StartScheduler(time.Duration(shared.REQUEST_INTERVAL)*time.Second, heartbeatTask)
+	go shared.StartScheduler(time.Duration(shared.REQUEST_INTERVAL)*time.Millisecond, heartbeatTask)
 
 	e.Logger.Fatal(e.Start(":1323"))
 }

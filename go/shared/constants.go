@@ -1,3 +1,4 @@
 package shared
 
-const REQUEST_INTERVAL int = 1
+// 1000 = 1s
+const REQUEST_INTERVAL int = 100
