@@ -1,9 +1,19 @@
 from kubernetes import client, config
 from datetime import datetime
+from time import sleep
+from sys import argv
 
 def get_node_metrics():
     # Load kubeconfig file
     config.load_kube_config()
+    elapsing_time = 10
+
+    try:
+        elapsing_time = int(argv[1])
+    except Exception as e:
+        print("Warning: Time interval for how many minutes this script shall run not provided: ", e)
+        print("Will use default time of 10 minutes.")
+
 
     # Get CPU and Memory capacity from minikube node
     total_cpu, total_memory = get_node_capacities()
@@ -11,30 +21,38 @@ def get_node_metrics():
     # Creating instance of for the custom objects api
     api_instance = client.CustomObjectsApi()
 
-    try:
-        api_response = api_instance.list_cluster_custom_object(
-            group="metrics.k8s.io",
-            version="v1beta1",
-            plural="nodes",
-        )
+    start_time = datetime.now().timestamp()
+    current_time = start_time
 
-        for node in api_response['items']:
-            node_name = node['metadata']['name']
+    while current_time < (start_time + elapsing_time * 60):
+        try:
+            api_response = api_instance.list_cluster_custom_object(
+                group="metrics.k8s.io",
+                version="v1beta1",
+                plural="nodes",
+            )
 
-            # CPU Usage Calculation
-            cpu_usage_nano = int(node['usage']['cpu'].rstrip('n'))
-            cpu_usage_percentage = (cpu_usage_nano / (total_cpu * 10**9)) * 100
+            for node in api_response['items']:
+                node_name = node['metadata']['name']
 
-            # Memory Usage Calculation
-            memory_usage_ki = int(node['usage']['memory'].rstrip('Ki'))
-            #memory_usage_mi = memory_usage_ki / 1024  # Convert Ki to MiB
-            memory_usage_percentage = (memory_usage_ki / total_memory) * 100
+                # CPU Usage Calculation
+                cpu_usage_nano = int(node['usage']['cpu'].rstrip('n'))
+                cpu_usage_percentage = (cpu_usage_nano / (total_cpu * 10**9)) * 100
 
-            print(f"Node: {node_name}, CPU Usage: {cpu_usage_nano}n ({cpu_usage_percentage:.2f}%), Memory Usage: {memory_usage_ki:.2f}Ki ({memory_usage_percentage:.2f}%), Timestamp: {datetime.now().timestamp()}")
+                # Memory Usage Calculation
+                memory_usage_ki = int(node['usage']['memory'].rstrip('Ki'))
+                #memory_usage_mi = memory_usage_ki / 1024  # Convert Ki to MiB
+                memory_usage_percentage = (memory_usage_ki / total_memory) * 100
+
+                print(f"Node: {node_name}, CPU Usage: {cpu_usage_nano}n ({cpu_usage_percentage:.2f}%), Memory Usage: {memory_usage_ki:.2f}Ki ({memory_usage_percentage:.2f}%), Timestamp: {datetime.now().timestamp()}")
+
+                sleep(10)
+                current_time = datetime.now().timestamp()
 
 
-    except client.ApiException as e:
-        print("Exception when calling CustomObjectsApi->list_cluster_custom_object: %s\n" % e)
+        except client.ApiException as e:
+            print("Exception when calling CustomObjectsApi->list_cluster_custom_object: %s\n" % e)
+            start_time = datetime.now().timestamp()
 
 
 def get_node_capacities():
