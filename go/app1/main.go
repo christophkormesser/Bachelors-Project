@@ -2,19 +2,20 @@ package main
 
 import (
 	"dummyserver/shared"
-	"github.com/prometheus/client_golang/prometheus"
-	"github.com/prometheus/client_golang/prometheus/promhttp"
 	"net/http"
 	"strconv"
 	"strings"
 	"time"
+
+	"github.com/prometheus/client_golang/prometheus"
+	"github.com/prometheus/client_golang/prometheus/promhttp"
 
 	"github.com/labstack/echo/v4"
 )
 
 func main() {
 
-	// Init Environment Variables
+	// Init Kubernetes Environment Variables
 	var envVars = []string{"NODE_NAME", "POD_NAME", "POD_NAMESPACE", "POD_IP"}
 	env := shared.EnvHandler(envVars)
 
@@ -45,8 +46,8 @@ func main() {
 	heartbeatTask := func() {
 		shared.Heartbeat(env, "app2", "1323", "/action")
 	}
-	// Starts the scheduler with the above heartbeatTask function
-	go shared.StartScheduler(10*time.Second, heartbeatTask)
+
+	go shared.StartScheduler(time.Duration(shared.REQUEST_INTERVAL)*time.Second, heartbeatTask)
 
 	e.Logger.Fatal(e.Start(":1323"))
 }
