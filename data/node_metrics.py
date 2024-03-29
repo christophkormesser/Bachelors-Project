@@ -1,7 +1,10 @@
 from kubernetes import client, config
 from datetime import datetime
 from time import sleep
-from sys import argv
+from sys import argv, exit
+import json
+from pydantic import BaseModel
+import os
 
 def get_node_metrics():
     # Load kubeconfig file
@@ -17,7 +20,16 @@ def get_node_metrics():
 
     # Get CPU and Memory capacity from minikube node
     total_cpu, total_memory = get_node_capacities()
+
+    class MetricsClass(BaseModel):
+        cpu_usage_nano: int
+        cpu_usage_percentage: float
+        memory_usage_ki: float
+        memory_usage_percentage: float
+        timestamp: float
     
+    metrics_instances = []
+
     # Creating instance of for the custom objects api
     api_instance = client.CustomObjectsApi()
 
@@ -44,7 +56,18 @@ def get_node_metrics():
                 #memory_usage_mi = memory_usage_ki / 1024  # Convert Ki to MiB
                 memory_usage_percentage = (memory_usage_ki / total_memory) * 100
 
-                print(f"Node: {node_name}, CPU Usage: {cpu_usage_nano}n ({cpu_usage_percentage:.2f}%), Memory Usage: {memory_usage_ki:.2f}Ki ({memory_usage_percentage:.2f}%), Timestamp: {datetime.now().timestamp()}")
+                timestamp = datetime.now().timestamp()
+                print(f"Node: {node_name}, CPU Usage: {cpu_usage_nano}n ({cpu_usage_percentage:.2f}%), Memory Usage: {memory_usage_ki:.2f}Ki ({memory_usage_percentage:.2f}%), Timestamp: {timestamp}")
+
+                metrics_instances.append(MetricsClass(
+                    cpu_usage_nano=cpu_usage_nano,
+                    cpu_usage_percentage=cpu_usage_percentage,
+                    memory_usage_ki=memory_usage_ki,
+                    memory_usage_percentage=memory_usage_percentage,
+                    timestamp=timestamp
+                ))
+
+                save_to_file(metrics_instances=metrics_instances, start_time=start_time)
 
                 sleep(10)
                 current_time = datetime.now().timestamp()
@@ -53,6 +76,11 @@ def get_node_metrics():
         except client.ApiException as e:
             print("Exception when calling CustomObjectsApi->list_cluster_custom_object: %s\n" % e)
             start_time = datetime.now().timestamp()
+        except KeyboardInterrupt as e:
+            print("\n\nScript will stop, data will be saved to: /metrics.")
+            save_to_file(metrics_instances=metrics_instances, start_time=start_time)
+            exit(-1)
+            
 
 
 def get_node_capacities():
@@ -78,6 +106,16 @@ def get_node_capacities():
 
     return total_cpu, total_memory
 
+def save_to_file(metrics_instances, start_time):
+    # convert list to dict
+    metrics_instances_dict = [instance.dict() for instance in metrics_instances]
+    
+    # check if metrics folder exists
+    if not os.path.exists("data/metrics"):
+        os.mkdir(os.getcwd() + "/data/metrics")
+    # save to file
+    with open("data/metrics/node_metrics-" + str(start_time) +".json", 'w') as file:
+        json.dump(metrics_instances_dict, file, ensure_ascii=False, indent=4)
 
 if __name__ == "__main__":
     get_node_metrics()
