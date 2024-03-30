@@ -51,7 +51,22 @@
   debug:
     msg: command':' istioctl d kiali
 
+- name: Portforward Jaeger for the traces script
+  ansible.builtin.shell: istioctl d jaeger
+  async: 1200
+  poll: 0
+  register: pf_task
+
 - name: Start metric gathering script (10 minutes)
   command: python data/node_metrics.py 10
+  register: script_output
   args:
     chdir: "{{ path }}"
+- name: Result from metric gathering & trace fetching
+  debug:
+    msg: "{{ script_output.stdout }}"
+
+- name: Clean up Port Forward Task if it's still running
+  ansible.builtin.async_status:
+    jid: '{{ pf_task.ansible_job_id }}'
+    mode: cleanup
