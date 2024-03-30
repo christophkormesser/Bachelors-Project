@@ -1,32 +1,38 @@
 import requests
 import json
-from datetime import datetime, timedelta
 
-LOOKBACK_MINUTES = 10
 
-url = "http://localhost:16686/jaeger/api/traces"
 
-# Calculate the time window
-end_time = datetime.now()
-start_time = end_time - timedelta(minutes=LOOKBACK_MINUTES)
-# Format timestamps in microseconds as expected by Jaeger
-end_timestamp = int(end_time.timestamp() * 1e6)
-start_timestamp = int(start_time.timestamp() * 1e6)
+def fetch_traces(start_time, end_time):
 
-params = {
-    "end": end_timestamp,
-    "start": start_timestamp,
-    "service": "app2.default",
-    "limit": 2000
-    }
+    url = "http://localhost:16686/jaeger/api/traces"
 
-r = requests.get(url=url, params=params)
-print(r.status_code)
+    # Format timestamps in microseconds as expected by Jaeger
+    end_timestamp = int(end_time * 1e6)
+    start_timestamp = int(start_time * 1e6)
 
-traces = r.json()
+    params = {
+        "end": end_timestamp,
+        "start": start_timestamp,
+        "service": "app2.default",
+        "limit": 150000
+        }
 
-filename = f"data/raw/traces_{start_timestamp}_{end_timestamp}.json"
+    print("Fetchting traces from Jaeger...")
+    r = requests.get(url=url, params=params)
+    if r.status_code == 200:
+        print("Successfully fetched traces.")
+    else:
+        print("Failed to feftch traces, Status Code: ", r.status_code, r.reason)
 
-with open(filename, 'w') as f:
-    json.dump(traces, f, indent=4)
-print(f"Saved {len(traces.get('data', []))} traces to {filename}")
+    traces = r.json()
+
+    filename = f"data/raw/traces_{start_timestamp}_{end_timestamp}.json"
+
+    print("Saving traces to file...")
+    with open(filename, 'w') as f:
+        json.dump(traces, f, indent=4)
+    print(f"Saved {len(traces.get('data', []))} traces to {filename}")
+
+# for direct call
+fetch_traces(start_time=0, end_time=0)

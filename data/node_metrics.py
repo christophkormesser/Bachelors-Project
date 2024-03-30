@@ -5,6 +5,7 @@ from sys import argv, exit
 import json
 from pydantic import BaseModel
 import os
+import fetch_traces
 
 def get_node_metrics():
     # Load kubeconfig file
@@ -35,8 +36,9 @@ def get_node_metrics():
 
     start_time = datetime.now().timestamp()
     current_time = start_time
+    end_time = start_time + elapsing_time * 60
 
-    while current_time < (start_time + elapsing_time * 60):
+    while current_time < (end_time):
         try:
             api_response = api_instance.list_cluster_custom_object(
                 group="metrics.k8s.io",
@@ -78,10 +80,22 @@ def get_node_metrics():
             sleep(1)
             start_time = datetime.now().timestamp()
         except KeyboardInterrupt as e:
-            print("\n\nScript will stop, data will be saved to: /metrics.")
+            print("\n\nScript will stop, applications will be downsized and metric data will be saved to: /metrics.")
+            deployments_to_scale_down = ['app1', 'app2', 'app3']
+            for deployment_name in deployments_to_scale_down:
+                scale_down_deployment(deployment_name)
+            # 
             save_to_file(metrics_instances=metrics_instances, start_time=start_time)
+            fetch_traces.fetch_traces(start_time=start_time, end_time=end_time)
+
             exit(-1)
-            
+
+    # downscale application replicas to 0 -> gives jaeger a break and hopefully saves memory/disk space
+    deployments_to_scale_down = ['app1', 'app2', 'app3']
+    for deployment_name in deployments_to_scale_down:
+        scale_down_deployment(deployment_name)
+    fetch_traces.fetch_traces(start_time=start_time, end_time=end_time)
+    print("Done.")
 
 
 def get_node_capacities():
@@ -117,6 +131,17 @@ def save_to_file(metrics_instances, start_time):
     # save to file
     with open("data/metrics/node_metrics-" + str(start_time) +".json", 'w') as file:
         json.dump(metrics_instances_dict, file, ensure_ascii=False, indent=4)
+
+def scale_down_deployment(deployment_name, namespace='default'):
+    apps_v1 = client.AppsV1Api()
+    patch = {
+        "spec": {
+            "replicas": 0
+        }
+    } 
+    apps_v1.patch_namespaced_deployment(name=deployment_name, namespace=namespace, body=patch)
+    print(f"Deployment {deployment_name} scaled down to 0 replicas.")
+
 
 if __name__ == "__main__":
     get_node_metrics()
