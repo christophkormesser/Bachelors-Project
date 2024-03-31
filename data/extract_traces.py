@@ -2,7 +2,7 @@ import json
 from pydantic import BaseModel
 
 # Jaeger exported data
-file_path = 'data/raw/istio-mtls-traces.json'
+file_path = 'data/raw/traces_1711907323418568_1711907923418568.json'
 
 class TraceClass(BaseModel):
     source: str
@@ -10,6 +10,7 @@ class TraceClass(BaseModel):
     status_code: int
     response_size: int
     duration: float
+    startTime: float
 
 
 # Function to load trace data
@@ -35,6 +36,7 @@ def extract_trace_info(data):
                 status_code = int(next((tag['value'] for tag in span['tags'] if tag['key'] == 'http.status_code'), '0'))
                 response_size = int(next((tag['value'] for tag in span['tags'] if tag['key'] == 'response_size'), '0'))
                 duration = float(span['duration']) / 1000.0  # Convert microseconds to milliseconds
+                startTime = span['startTime']
 
                 # Create and append TraceClass instance
                 trace_instances.append(TraceClass(
@@ -42,7 +44,8 @@ def extract_trace_info(data):
                     destination=destination_service,
                     status_code=status_code,
                     response_size=response_size,
-                    duration=duration
+                    duration=duration,
+                    startTime=startTime
                 ))
     else:
         print("no spans", )
@@ -63,5 +66,9 @@ trace_instances_dicts = [instance.dict() for instance in trace_instances]
 
 print("Lenght of list: ", len(trace_instances_dicts))
 
-with open('data/processed/istio-mtls-traces-p.json', 'w', encoding='utf-8') as f:
+print("Writing to file...")
+
+with open('data/processed/traces_1711907323418568_1711907923418568.json', 'w', encoding='utf-8') as f:
     json.dump(trace_instances_dicts, f, ensure_ascii=False, indent=4)
+    
+print("Done.")
