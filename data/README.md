@@ -14,6 +14,15 @@
   * mtls enabled (STRICT mode)
   * authorization policy set (all traffic is allowed)
 
+### /archived
+
+* istio-mtls-traces.json
+  * mtls enabled (STRICT mode)
+  * authorization policy enabled (only app1 authorized to call app2)
+* istio-no-mtls-traces.json
+  * mtls disabled (DISABLE mode)
+  * authorization policy removed (all traffic is allowed)
+
 ## Folder structure
 
 ### /examples
@@ -24,15 +33,6 @@
 
 Exported unprocessed data
 
-#### /archived
-
-* istio-mtls-traces.json
-  * mtls enabled (STRICT mode)
-  * authorization policy enabled (only app1 authorized to call app2)
-* istio-no-mtls-traces.json
-  * mtls disabled (DISABLE mode)
-  * authorization policy removed (all traffic is allowed)
-
 ### /traces/processed
 
 Processed data, ready for visualization/calculations
@@ -40,3 +40,7 @@ Processed data, ready for visualization/calculations
 ### /traces/averages
 
 Calculated average and min/max durations for all three combinations (app1, app2 / app2, app2 / app3, app2)
+
+### .../archived
+
+Data that I no longer perceive as relevant, but might be interesting anyways
