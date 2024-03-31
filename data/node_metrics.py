@@ -10,13 +10,13 @@ import fetch_traces
 def get_node_metrics():
     # Load kubeconfig file
     config.load_kube_config()
-    elapsing_time = 10
+    elapsing_time = 8
 
     try:
         elapsing_time = int(argv[1])
     except Exception as e:
         print("Warning: Time interval for how many minutes this script shall run not provided: ", e)
-        print("Will use default time of 10 minutes.")
+        print("Will use default time of 8 minutes.")
 
 
     # Get CPU and Memory capacity from minikube node
@@ -34,7 +34,7 @@ def get_node_metrics():
     # Creating instance of for the custom objects api
     api_instance = client.CustomObjectsApi()
 
-    start_time = datetime.now().timestamp()
+    start_time = int(datetime.now().timestamp())
     current_time = start_time
     end_time = start_time + elapsing_time * 60
 
@@ -71,7 +71,7 @@ def get_node_metrics():
 
                 save_to_file(metrics_instances=metrics_instances, start_time=start_time)
 
-                sleep(10)
+                sleep(1)
                 current_time = datetime.now().timestamp()
 
 
