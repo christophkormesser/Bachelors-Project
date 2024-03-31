@@ -57,8 +57,8 @@
   poll: 0
   register: pf_task
 
-- name: Start metric gathering script (10 minutes)
-  command: python data/node_metrics.py 10
+- name: Start metric gathering script (8 minutes)
+  command: python data/node_metrics.py 8
   register: script_output
   args:
     chdir: "{{ path }}"
