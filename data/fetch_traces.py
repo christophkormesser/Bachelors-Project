@@ -15,7 +15,7 @@ def fetch_traces(start_time, end_time):
         "end": end_timestamp,
         "start": start_timestamp,
         "service": "app2.default",
-        "limit": 150000
+        "limit": 160000
         }
 
     print("Fetchting traces from Jaeger...")
@@ -35,4 +35,4 @@ def fetch_traces(start_time, end_time):
     print(f"Saved {len(traces.get('data', []))} traces to {filename}")
 
 # for direct call
-fetch_traces(start_time=0, end_time=0)
+#fetch_traces(start_time=0, end_time=0)
