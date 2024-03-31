@@ -18,7 +18,7 @@ def fetch_traces(start_time, end_time):
         "limit": 160000
         }
 
-    print("Fetchting traces from Jaeger...")
+    print(f"Attempting to fetch {params['limit']} traces from Jaeger...")
     r = requests.get(url=url, params=params)
     if r.status_code == 200:
         print("Successfully fetched traces.")
@@ -27,7 +27,7 @@ def fetch_traces(start_time, end_time):
 
     traces = r.json()
 
-    filename = f"data/raw/traces_{start_timestamp}_{end_timestamp}.json"
+    filename = f"data/traces/raw/traces_{start_time}.json"
 
     print("Saving traces to file...")
     with open(filename, 'w') as f:
