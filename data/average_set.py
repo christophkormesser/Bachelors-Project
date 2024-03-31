@@ -5,8 +5,8 @@ def load_data(file_path):
     with open(file_path, 'r') as file:
         return json.load(file)
 
-file_path = 'data/processed/traces_1711907323418568_1711907923418568.json'
-data = load_data(file_path)
+processed_file = input("Provide the relative file path to the processed file: ") # to be set manually!
+data = load_data(processed_file)
 
 # Calculate the average duration, response size and track min/max durations for each source/destination combination
 average_metrics = {}
@@ -61,8 +61,8 @@ status_code_consistency = {key: len(codes) == 1 for key, codes in status_codes.i
 print(status_code_consistency)
 
 print("Writing to file...")
-
-with open('data/averages/traces_1711907323418568_1711907923418568.json', 'w', encoding='utf-8') as f:
+average_file = processed_file.replace("processed", "averages")
+with open(file=average_file, mode='w', encoding='utf-8') as f:
     json.dump(averaged_data, f, ensure_ascii=False, indent=4)
 
 print("Done.")
