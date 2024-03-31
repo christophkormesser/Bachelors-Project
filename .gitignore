@@ -10,7 +10,7 @@ test.go
 *.key
 *.pem
 .idea
-data/raw/*.json
+data/traces/raw/*.json
 
 ### macOS ###
 # General
