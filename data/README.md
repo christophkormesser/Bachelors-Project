@@ -2,9 +2,17 @@
 
 ## What happens here?
 
-1. Metrics are gathered and exported by Prometheus and Jaeger.
-2. Exported data is processed
-3. Processed data is visualized
+1. Metrics like cpu usage and memory usage are collected by prometheus and exported to `/metrics`
+2. After the metrics have been collected, the applications are stopped so cluster activity is reduced to a minimum so metric and trace collectors are relieved
+3. Traces are fetched and saved to `/traces/raw` starting with the same timestamp and ending with the same ending timestamp from the metrics, though with a limit to 160.000 traces, due to the response size causing issues while fetching
+4. These traces are processed and saved to `/traces/processed` by stripping data that's not needed to keep the data set slim and easier to work with
+5. The processed data is then used to calculate the average, min & max response times which is then saved to `/traces/averages`
+
+## Files
+
+* traces_1711907323418568_1711907923418568.json
+  * mtls enabled (STRICT mode)
+  * authorization policy set (all traffic is allowed)
 
 ## Folder structure
 
@@ -12,9 +20,11 @@
 
 * Small portions of raw data to understand the general structure better for processing
 
-### /raw
+### /traces/raw
 
 Exported unprocessed data
+
+#### /archived
 
 * istio-mtls-traces.json
   * mtls enabled (STRICT mode)
@@ -23,6 +33,10 @@ Exported unprocessed data
   * mtls disabled (DISABLE mode)
   * authorization policy removed (all traffic is allowed)
 
-### /processed
+### /traces/processed
 
-* Processed data, ready for visualization
+Processed data, ready for visualization/calculations
+
+### /traces/averages
+
+Calculated average and min/max durations for all three combinations (app1, app2 / app2, app2 / app3, app2)
