@@ -149,7 +149,7 @@ def save_to_file(metrics_instances, start_time):
     if not os.path.exists("data/metrics"):
         os.mkdir(os.getcwd() + "/data/metrics")
     # save to file
-    with open("data/metrics/node_metrics-" + str(start_time) +".json", 'w') as file:
+    with open("data/istio/metrics/node_metrics-" + str(start_time) +".json", 'w') as file:
         json.dump(metrics_instances_dict, file, ensure_ascii=False, indent=4)
 
 
