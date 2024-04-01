@@ -10,7 +10,7 @@ test.go
 *.key
 *.pem
 .idea
-data/istio/logs/*
+*.log
 data/istio/traces/raw/*.json
 
 ### macOS ###
