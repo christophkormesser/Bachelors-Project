@@ -1,0 +1,32 @@
+[
+    {
+        "source": "app1",
+        "destination": "app2",
+        "average_duration": 2.6559677260781434,
+        "average_response_size": 144.0,
+        "min_duration": 0.691,
+        "timestamp_min_duration": 1711907659319187.0,
+        "max_duration": 77.13,
+        "timestamp_max_duration": 1711907911304411.0
+    },
+    {
+        "source": "app2",
+        "destination": "app2",
+        "average_duration": 2.294270754974105,
+        "average_response_size": 144.0,
+        "min_duration": 0.564,
+        "timestamp_min_duration": 1711907742206017.0,
+        "max_duration": 79.131,
+        "timestamp_max_duration": 1711907703205784.0
+    },
+    {
+        "source": "app3",
+        "destination": "app2",
+        "average_duration": 2.748100414794315,
+        "average_response_size": 144.0,
+        "min_duration": 0.782,
+        "timestamp_min_duration": 1711907671945394.0,
+        "max_duration": 78.253,
+        "timestamp_max_duration": 1711907784301621.0
+    }
+]
