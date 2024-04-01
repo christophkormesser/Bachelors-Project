@@ -52,5 +52,8 @@ def execute_pipeline(raw_file=None):
 
 
 if __name__ == '__main__':
-    raw_file = input("Provide the relative file path to the raw file: ")
-    execute_pipeline(raw_file)
+    # uncomment following lines if this script will be executed directly 
+    #raw_file = input("Provide the relative file path to the raw file: ")
+    #execute_pipeline(raw_file)
+
+    execute_pipeline()
