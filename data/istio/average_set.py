@@ -2,16 +2,16 @@ import json
 from utils.load_data import load_data
 import logging
 from datetime import datetime
-
-logger = logging.getLogger(__name__)
-temp_name = f"data/istio/logs/average_{datetime.now().timestamp()}.log"
-logging.basicConfig(filename=temp_name, encoding="utf-8", level=logging.DEBUG)
     
 
 def calc_averages(processed_file):
+
+    logger = logging.getLogger(__name__)
+    temp_name = f"data/istio/logs/average_{int(datetime.now().timestamp())}.log"
+    logging.basicConfig(filename=temp_name, encoding="utf-8", level=logging.DEBUG)
+
     data = load_data(processed_file)
 
-    # Calculate the average duration, response size and track min/max durations for each source/destination combination
     average_metrics = {}
     for entry in data:
         key = (entry['source'], entry['destination'])
@@ -21,51 +21,60 @@ def calc_averages(processed_file):
                 'total_response_size': 0, 
                 'count': 0,
                 'min_duration': float('inf'),
-                'timestamp_min_duration': float,
-                'max_duration': float('-inf'),
-                'timestamp_max_duration': float
-                }
+                'max_duration': float('-inf')
+            }
         average_metrics[key]['total_duration'] += entry['duration']
         average_metrics[key]['total_response_size'] += entry['response_size']
         average_metrics[key]['count'] += 1
         # Update min and max durations
         if entry['duration'] < average_metrics[key]['min_duration']:
             average_metrics[key]['min_duration'] = entry['duration']
-            average_metrics[key]['timestamp_min_duration'] = entry['startTime']
         if entry['duration'] > average_metrics[key]['max_duration']:
             average_metrics[key]['max_duration'] = entry['duration']
-            average_metrics[key]['timestamp_max_duration'] = entry['startTime']
-    # Compute the average duration, response size and  and store it in a new list
-    averaged_data = []
+
+    # Prepare averaged_data structure
+    averaged_data = {'details': [], 'overall': {}}
     for key, value in average_metrics.items():
-        averaged_data.append({
+        averaged_data['details'].append({
             'source': key[0],
             'destination': key[1],
             'average_duration': value['total_duration'] / value['count'],
             'average_response_size': value['total_response_size'] / value['count'],
             'min_duration': value['min_duration'],
-            'timestamp_min_duration': value['timestamp_min_duration'],
-            'max_duration': value['max_duration'],
-            'timestamp_max_duration': value['timestamp_max_duration']
+            'max_duration': value['max_duration']
         })
 
-    logger.debug(averaged_data)
+    # Calculate overall averages
+    total_duration = 0
+    total_response_size = 0
+    total_count = 0
+    overall_min_duration = float('inf')
+    overall_max_duration = float('-inf')
 
-    # Check if the status code for every same source/destination combination was the same
-    status_codes = {}
-    for entry in data:
-        key = (entry['source'], entry['destination'])
-        if key not in status_codes:
-            status_codes[key] = set()
-        status_codes[key].add(entry['status_code'])
+    for detail in averaged_data['details']:
+        count = average_metrics[(detail['source'], detail['destination'])]['count']
+        total_duration += detail['average_duration'] * count
+        total_response_size += detail['average_response_size'] * count
+        total_count += count
 
-    # Determine if each combination has the same status code
-    status_code_consistency = {key: len(codes) == 1 for key, codes in status_codes.items()}
-    logger.debug(status_code_consistency)
+        if detail['min_duration'] < overall_min_duration:
+            overall_min_duration = detail['min_duration']
+        
+        if detail['max_duration'] > overall_max_duration:
+            overall_max_duration = detail['max_duration']
+
+    averaged_data['overall'] = {
+        'average_duration': total_duration / total_count if total_count else 0,
+        'average_response_size': total_response_size / total_count if total_count else 0,
+        'min_duration': overall_min_duration,
+        'max_duration': overall_max_duration
+    }
+
+    logger.debug(json.dumps(averaged_data, ensure_ascii=False, indent=4))
 
     logger.info("Writing to file...")
     average_file = processed_file.replace("processed", "averages")
-    with open(file=average_file, mode='w', encoding='utf-8') as f:
+    with open(average_file, 'w', encoding='utf-8') as f:
         json.dump(averaged_data, f, ensure_ascii=False, indent=4)
     logger.info("Done.")
 
