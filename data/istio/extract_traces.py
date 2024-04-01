@@ -5,7 +5,7 @@ from datetime import datetime
 import logging
 
 logger = logging.getLogger(__name__)
-temp_name = f"data/istio/logs/extract_traces_{datetime.now().timestamp()}.log"
+temp_name = f"data/istio/logs/extract_traces_{int(datetime.now().timestamp())}.log"
 logging.basicConfig(filename=temp_name, encoding="utf-8", level=logging.DEBUG)
 
 class TraceClass(BaseModel):
