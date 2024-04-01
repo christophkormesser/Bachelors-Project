@@ -7,6 +7,11 @@ from pydantic import BaseModel
 import os
 import fetch_traces
 from utils.scale_down_deployment import scale_down_deployment
+import logging
+
+logger = logging.getLogger(__name__)
+temp_name = f"data/istio/logs/metrics_{datetime.now().timestamp()}.log"
+logging.basicConfig(filename=temp_name, encoding="utf-8", level=logging.DEBUG)
 
 def get_node_metrics():
     # Load kubeconfig file
@@ -16,8 +21,8 @@ def get_node_metrics():
     try:
         elapsing_time = int(argv[1])
     except Exception as e:
-        print("Warning: Time interval for how many minutes this script shall run not provided: ", e)
-        print("Will use default time of 8 minutes.")
+        logger.warning("Time interval for how many minutes this script shall run not provided: ", e)
+        logger.warning("Will use default time of 8 minutes.")
 
 
     # Get CPU and Memory capacity from minikube node
@@ -79,7 +84,7 @@ def get_node_metrics():
                 memory_usage_percentage = (memory_usage / (total_memory * 1024)) * 100  # Assuming total_memory in Ki
 
                 timestamp = datetime.now().timestamp()
-                print(f"Node: {node_name}, CPU Usage: {cpu_usage}{cpu_usage_unit} ({cpu_usage_percentage:.2f}%), Memory Usage: {memory_usage:.2f}{memory_usage_unit} ({memory_usage_percentage:.2f}%), Timestamp: {timestamp}")
+                logger.debug(f"Node: {node_name}, CPU Usage: {cpu_usage}{cpu_usage_unit} ({cpu_usage_percentage:.2f}%), Memory Usage: {memory_usage:.2f}{memory_usage_unit} ({memory_usage_percentage:.2f}%), Timestamp: {timestamp}")
 
                 metrics_instances.append(MetricsClass(
                     cpu_usage=cpu_usage,
@@ -98,26 +103,19 @@ def get_node_metrics():
 
 
         except client.ApiException as e:
-            print("Exception when calling CustomObjectsApi->list_cluster_custom_object: %s\n" % e)
+            logger.warning(f"Exception when calling CustomObjectsApi->list_cluster_custom_object: {e}\n")
             sleep(1)
             start_time = datetime.now().timestamp()
         except KeyboardInterrupt as e:
-            print("\n\nScript will stop, applications will be downsized and metric data will be saved to: /metrics.")
+            logger.warning("\n\nScript will stop, applications will be downsized and metric data will be saved to: /metrics.")
             deployments_to_scale_down = ['app1', 'app2', 'app3']
             for deployment_name in deployments_to_scale_down:
                 scale_down_deployment(deployment_name)
             # 
             save_to_file(metrics_instances=metrics_instances, start_time=start_time)
-            fetch_traces.fetch_traces(start_time=start_time, end_time=end_time)
-
             exit(-1)
 
-    # downscale application replicas to 0 -> gives jaeger a break and hopefully saves memory/disk space
-    deployments_to_scale_down = ['app1', 'app2', 'app3']
-    for deployment_name in deployments_to_scale_down:
-        scale_down_deployment(deployment_name)
-    fetch_traces.fetch_traces(start_time=start_time, end_time=end_time)
-    print("Done.")
+    return start_time, end_time
 
 
 def get_node_capacities():
@@ -136,7 +134,7 @@ def get_node_capacities():
         cpu = capacity.get("cpu")
         memory = capacity.get("memory")
 
-        print(f"Node: {node.metadata.name}, CPU: {cpu}, Memory: {memory}")
+        logger.debug(f"Node: {node.metadata.name}, CPU: {cpu}, Memory: {memory}")
 
         total_cpu += int(cpu)
         total_memory += int(memory[:-2])

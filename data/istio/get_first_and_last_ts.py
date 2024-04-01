@@ -1,4 +1,10 @@
-from utlis.load_data import load_data
+from utils.load_data import load_data
+from datetime import datetime
+import logging
+
+logger = logging.getLogger(__name__)
+temp_name = f"data/istio/logs/interval_{datetime.now().timestamp()}.log"
+logging.basicConfig(filename=temp_name, encoding="utf-8", level=logging.DEBUG)
 
 
 def get_trace_interval(processed_file):
@@ -14,9 +20,9 @@ def get_trace_interval(processed_file):
             oldest_timestamp = entry['startTime']
 
 
-    print(f"First Timestamp: {first_timestamp}")
-    print(f"Oldest Timestamp: {oldest_timestamp}")
-    print(f"Time difference: {(oldest_timestamp-first_timestamp)/1000000/60:.2f} minutes")
+    logger.info(f"First Timestamp: {first_timestamp}")
+    logger.info(f"Oldest Timestamp: {oldest_timestamp}")
+    logger.info(f"Time difference: {(oldest_timestamp-first_timestamp)/1000000/60:.2f} minutes")
 
 if __name__ == '__main__':
     processed_file = input("Provide the relative file path to the processed file: ")

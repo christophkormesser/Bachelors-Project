@@ -57,12 +57,12 @@
   poll: 0
   register: pf_task
 
-- name: Start metric gathering script (8 minutes)
-  command: python data/node_metrics.py 8
+- name: Start pipeline (~10 minutes)
+  command: python data/istio/pipeline.py
   register: script_output
   args:
     chdir: "{{ path }}"
-- name: Result from metric gathering & trace fetching
+- name: Result from pipeline
   debug:
     msg: "{{ script_output.stdout }}"
 

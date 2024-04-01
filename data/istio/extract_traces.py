@@ -1,6 +1,12 @@
 import json
 from pydantic import BaseModel
 from utils.load_data import load_data
+from datetime import datetime
+import logging
+
+logger = logging.getLogger(__name__)
+temp_name = f"data/istio/logs/extract_traces_{datetime.now().timestamp()}.log"
+logging.basicConfig(filename=temp_name, encoding="utf-8", level=logging.DEBUG)
 
 class TraceClass(BaseModel):
     source: str
@@ -24,13 +30,13 @@ def extract_traces(raw_file):
     #for instance in trace_instances:
     #    print(instance)
 
-    print("Lenght of list: ", len(trace_instances_dicts))
+    logger.info(f"Lenght of list: {len(trace_instances_dicts)}")
 
-    print("Writing to file...")
+    logger.info("Writing to file...")
     processed_file = raw_file.replace("raw", "processed")
     with open(processed_file, 'w', encoding='utf-8') as f:
         json.dump(trace_instances_dicts, f, ensure_ascii=False, indent=4)
-    print("Done.")
+    logger.info("Done.")
 
 
 # Extract information to build TraceClass instances
@@ -63,7 +69,7 @@ def extract_trace_info(data):
                     startTime=startTime
                 ))
     else:
-        print("no spans", )
+        logger.info("no spans", )
     return trace_instances
 
 

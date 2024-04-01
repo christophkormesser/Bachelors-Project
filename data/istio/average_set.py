@@ -1,5 +1,11 @@
 import json
 from utils.load_data import load_data
+import logging
+from datetime import datetime
+
+logger = logging.getLogger(__name__)
+temp_name = f"data/istio/logs/average_{datetime.now().timestamp()}.log"
+logging.basicConfig(filename=temp_name, encoding="utf-8", level=logging.DEBUG)
     
 
 def calc_averages(processed_file):
@@ -43,7 +49,7 @@ def calc_averages(processed_file):
             'timestamp_max_duration': value['timestamp_max_duration']
         })
 
-    print(averaged_data)
+    logger.debug(averaged_data)
 
     # Check if the status code for every same source/destination combination was the same
     status_codes = {}
@@ -55,13 +61,13 @@ def calc_averages(processed_file):
 
     # Determine if each combination has the same status code
     status_code_consistency = {key: len(codes) == 1 for key, codes in status_codes.items()}
-    print(status_code_consistency)
+    logger.debug(status_code_consistency)
 
-    print("Writing to file...")
+    logger.info("Writing to file...")
     average_file = processed_file.replace("processed", "averages")
     with open(file=average_file, mode='w', encoding='utf-8') as f:
         json.dump(averaged_data, f, ensure_ascii=False, indent=4)
-    print("Done.")
+    logger.info("Done.")
 
 
 if __name__ == '__main__':

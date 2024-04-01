@@ -1,6 +1,11 @@
 import requests
 import json
 from datetime import datetime
+import logging
+
+logger = logging.getLogger(__name__)
+temp_name = f"data/istio/logs/fetch_traces_{datetime.now().timestamp()}.log"
+logging.basicConfig(filename=temp_name, encoding="utf-8", level=logging.DEBUG)
 
 
 def fetch_traces(start_time, end_time):
@@ -18,21 +23,21 @@ def fetch_traces(start_time, end_time):
         "limit": 160000
         }
 
-    print(f"Attempting to fetch {params['limit']} traces from Jaeger...")
+    logger.info(f"Attempting to fetch {params['limit']} traces from Jaeger...")
     r = requests.get(url=url, params=params)
-    if r.status_code == 200:
-        print("Successfully fetched traces.")
+    if r.status_code >= 200 or r.status_code < 219:
+        logger.info("Successfully fetched traces.")
     else:
-        print("Failed to feftch traces, Status Code: ", r.status_code, r.reason)
+        logger.error("Failed to feftch traces, Status Code: ", r.status_code, r.reason)
 
     traces = r.json()
 
-    filename = f"data/traces/raw/traces_{start_time}.json"
+    filename = f"data/istio/traces/raw/traces_{start_time}.json"
 
-    print("Saving traces to file...")
+    logger.info("Saving traces to file...")
     with open(filename, 'w') as f:
         json.dump(traces, f, indent=4)
-    print(f"Saved {len(traces.get('data', []))} traces to {filename}")
+    logger.info(f"Saved {len(traces.get('data', []))} traces to {filename}")
 
 
 if __name__ == "__main__":
