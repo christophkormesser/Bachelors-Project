@@ -71,7 +71,7 @@
   poll: 0
   register: pf_task
 
-- name: Start pipeline (~10 minutes)
+- name: Start pipeline (~6 minutes)
   command: python data/istio/pipeline.py
   register: script_output
   args:
