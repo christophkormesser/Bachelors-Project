@@ -88,7 +88,7 @@
   debug: 
     msg: "{{ grafana_admin_password.stdout }}"
 
-- name: Start metric gathering script (10 minutes)
-  command: python data/node_metrics.py 10
-  args:
-    chdir: "{{ path }}"
+#- name: Start metric gathering script (10 minutes)
+#  command: python data/node_metrics.py 10
+#  args:
+#    chdir: "{{ path }}"
