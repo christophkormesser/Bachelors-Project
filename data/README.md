@@ -10,9 +10,33 @@
 
 ## Files
 
-* traces_1711907323418568_1711907923418568.json
+### Set A1
+
+* node_metrics-1712003058.json
+* traces_1712003058.json
   * mtls enabled (STRICT mode)
   * authorization policy set (all traffic is allowed)
+
+### Set A2 (same configs as Set 1)
+
+* node_metrics-1712092645.json
+* traces_1712092645.json
+  * mtls enabled (STRICT mode)
+  * authorization policy set (all traffic is allowed)
+
+### Set A3 (same config as Set 1 & 2)
+
+* node_metrics-1712093943.json
+* traces_1712093943.json
+  * mtls enabled (STRICT mode)
+  * authorization policy set (all traffic is allowed)
+
+### Set B1
+
+*
+*
+  * mtls disabled
+  * authorization policy unset
 
 ### /archived
 
