@@ -3,25 +3,25 @@ from datetime import datetime
 from time import sleep
 from sys import argv, exit
 import json
-from pydantic import BaseModel
 import os
-import fetch_traces
-from utils.scale_down_deployment import scale_down_deployment
 import logging
+from dotenv import load_dotenv
+
+load_dotenv()
 
 logger = logging.getLogger(__name__)
-temp_name = f"data/istio/logs/metrics_{int(datetime.now().timestamp())}.log"
+temp_name = f"data/istio/logs/{os.getenv('PREFIX')}_metrics_{int(datetime.now().timestamp())}.log"
 logging.basicConfig(filename=temp_name, encoding="utf-8", level=logging.DEBUG)
 
 def get_node_metrics():
     config.load_kube_config()
-    elapsing_time = 8
+    elapsing_time = 6
 
     try:
         elapsing_time = int(argv[1])
     except Exception as e:
         logger.warning(f"Time interval for how many minutes this script shall run not provided: {e}")
-        logger.warning("Will use default time of 8 minutes.")
+        logger.warning("Will use default time of 6 minutes.")
 
     total_cpu, total_memory_ki = get_node_capacities()  # total_memory is in Ki
 
@@ -100,7 +100,7 @@ def save_to_file(metrics_instances, start_time):
     metrics_folder = "data/istio/metrics"
     if not os.path.exists(metrics_folder):
         os.makedirs(metrics_folder)
-    file_path = os.path.join(metrics_folder, f"node_metrics-{start_time}.json")
+    file_path = os.path.join(metrics_folder, f"{os.getenv('PREFIX')}_node_metrics-{start_time}.json")
     with open(file_path, 'w') as file:
         json.dump(metrics_instances, file, ensure_ascii=False, indent=4)
 

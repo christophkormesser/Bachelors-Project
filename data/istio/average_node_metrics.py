@@ -3,6 +3,9 @@ import os
 from utils.load_data import load_data
 from datetime import datetime
 import logging
+from dotenv import load_dotenv
+
+load_dotenv()
 
 def read_trace_timestamps(trace_filename):
     trace_data = load_data(trace_filename)
@@ -14,7 +17,7 @@ def read_trace_timestamps(trace_filename):
 def calculate_averages(metrics_filename, trace_filename):
 
     logger = logging.getLogger(__name__)
-    temp_name = f"data/istio/logs/average_node_metrics_{int(datetime.now().timestamp())}.log"
+    temp_name = f"data/istio/logs/{os.getenv('PREFIX')}_average_node_metrics_{int(datetime.now().timestamp())}.log"
     logging.basicConfig(filename=temp_name, encoding="utf-8", level=logging.DEBUG)
 
     # get time frame from collected traces
@@ -73,7 +76,7 @@ def save_to_file(metrics_instances, start_time):
     average_metrics_folder = "data/istio/metrics/averages"
     if not os.path.exists(average_metrics_folder):
         os.makedirs(average_metrics_folder)
-    file_path = os.path.join(average_metrics_folder, f"node_metrics-{start_time}.json")
+    file_path = os.path.join(average_metrics_folder, f"{os.getenv('PREFIX')}_node_metrics-{start_time}.json")
     with open(file_path, 'w') as file:
         json.dump(metrics_instances, file, ensure_ascii=False, indent=4)
 

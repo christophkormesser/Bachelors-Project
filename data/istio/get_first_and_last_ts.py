@@ -1,9 +1,13 @@
 from utils.load_data import load_data
 from datetime import datetime
 import logging
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
 
 logger = logging.getLogger(__name__)
-temp_name = f"data/istio/logs/interval_{int(datetime.now().timestamp())}.log"
+temp_name = f"data/istio/logs/{os.getenv('PREFIX')}_interval_{int(datetime.now().timestamp())}.log"
 logging.basicConfig(filename=temp_name, encoding="utf-8", level=logging.DEBUG)
 
 

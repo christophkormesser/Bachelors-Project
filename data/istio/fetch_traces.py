@@ -2,9 +2,13 @@ import requests
 import json
 from datetime import datetime
 import logging
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 logger = logging.getLogger(__name__)
-temp_name = f"data/istio/logs/fetch_traces_{int(datetime.now().timestamp())}.log"
+temp_name = f"data/istio/logs/{os.getenv('PREFIX')}_fetch_traces_{int(datetime.now().timestamp())}.log"
 logging.basicConfig(filename=temp_name, encoding="utf-8", level=logging.DEBUG)
 
 
@@ -32,7 +36,7 @@ def fetch_traces(start_time, end_time):
 
     traces = r.json()
 
-    filename = f"data/istio/traces/raw/traces_{start_time}.json"
+    filename = f"data/istio/traces/raw/{os.getenv('PREFIX')}_traces_{start_time}.json"
 
     logger.info("Saving traces to file...")
     with open(filename, 'w') as f:

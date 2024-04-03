@@ -2,12 +2,16 @@ import json
 from utils.load_data import load_data
 import logging
 from datetime import datetime
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
     
 
 def calc_averages(processed_file):
 
     logger = logging.getLogger(__name__)
-    temp_name = f"data/istio/logs/average_{int(datetime.now().timestamp())}.log"
+    temp_name = f"data/istio/logs/{os.getenv('PREFIX')}_average_{int(datetime.now().timestamp())}.log"
     logging.basicConfig(filename=temp_name, encoding="utf-8", level=logging.DEBUG)
 
     data = load_data(processed_file)
