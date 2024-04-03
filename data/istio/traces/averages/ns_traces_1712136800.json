@@ -1,0 +1,34 @@
+{
+    "details": [
+        {
+            "source": "app1",
+            "destination": "app2",
+            "average_duration": 1.8258513104648075,
+            "average_response_size": 144.0,
+            "min_duration": 0.488,
+            "max_duration": 73.443
+        },
+        {
+            "source": "app3",
+            "destination": "app2",
+            "average_duration": 1.7976279968483573,
+            "average_response_size": 144.0,
+            "min_duration": 0.5,
+            "max_duration": 74.767
+        },
+        {
+            "source": "app2",
+            "destination": "app2",
+            "average_duration": 1.5771088948786973,
+            "average_response_size": 144.0,
+            "min_duration": 0.377,
+            "max_duration": 74.03
+        }
+    ],
+    "overall": {
+        "average_duration": 1.7328066107023745,
+        "average_response_size": 144.0,
+        "min_duration": 0.377,
+        "max_duration": 74.767
+    }
+}

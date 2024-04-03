@@ -1,0 +1,4241 @@
+[
+    {
+        "cpu_usage": 3.770779925,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 31.42316604166667,
+        "memory_usage": 2004668,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 12.240596809908014,
+        "timestamp": 1712093943.112552
+    },
+    {
+        "cpu_usage": 3.770779925,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 31.42316604166667,
+        "memory_usage": 2004668,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 12.240596809908014,
+        "timestamp": 1712093944.117859
+    },
+    {
+        "cpu_usage": 3.770779925,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 31.42316604166667,
+        "memory_usage": 2004668,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 12.240596809908014,
+        "timestamp": 1712093945.12779
+    },
+    {
+        "cpu_usage": 3.770779925,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 31.42316604166667,
+        "memory_usage": 2004668,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 12.240596809908014,
+        "timestamp": 1712093946.132745
+    },
+    {
+        "cpu_usage": 3.770779925,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 31.42316604166667,
+        "memory_usage": 2004668,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 12.240596809908014,
+        "timestamp": 1712093947.140909
+    },
+    {
+        "cpu_usage": 3.770779925,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 31.42316604166667,
+        "memory_usage": 2004668,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 12.240596809908014,
+        "timestamp": 1712093948.151099
+    },
+    {
+        "cpu_usage": 3.770779925,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 31.42316604166667,
+        "memory_usage": 2004668,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 12.240596809908014,
+        "timestamp": 1712093949.158882
+    },
+    {
+        "cpu_usage": 3.770779925,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 31.42316604166667,
+        "memory_usage": 2004668,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 12.240596809908014,
+        "timestamp": 1712093950.177378
+    },
+    {
+        "cpu_usage": 3.969832289,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.08193574166667,
+        "memory_usage": 2057436,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 12.562800692279172,
+        "timestamp": 1712093951.186071
+    },
+    {
+        "cpu_usage": 3.969832289,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.08193574166667,
+        "memory_usage": 2057436,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 12.562800692279172,
+        "timestamp": 1712093952.195687
+    },
+    {
+        "cpu_usage": 3.969832289,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.08193574166667,
+        "memory_usage": 2057436,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 12.562800692279172,
+        "timestamp": 1712093953.2042
+    },
+    {
+        "cpu_usage": 3.969832289,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.08193574166667,
+        "memory_usage": 2057436,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 12.562800692279172,
+        "timestamp": 1712093954.211475
+    },
+    {
+        "cpu_usage": 3.969832289,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.08193574166667,
+        "memory_usage": 2057436,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 12.562800692279172,
+        "timestamp": 1712093955.216362
+    },
+    {
+        "cpu_usage": 3.969832289,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.08193574166667,
+        "memory_usage": 2057436,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 12.562800692279172,
+        "timestamp": 1712093956.223382
+    },
+    {
+        "cpu_usage": 3.969832289,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.08193574166667,
+        "memory_usage": 2057436,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 12.562800692279172,
+        "timestamp": 1712093957.2294
+    },
+    {
+        "cpu_usage": 3.969832289,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.08193574166667,
+        "memory_usage": 2057436,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 12.562800692279172,
+        "timestamp": 1712093958.238983
+    },
+    {
+        "cpu_usage": 3.969832289,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.08193574166667,
+        "memory_usage": 2057436,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 12.562800692279172,
+        "timestamp": 1712093959.245464
+    },
+    {
+        "cpu_usage": 3.969832289,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.08193574166667,
+        "memory_usage": 2057436,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 12.562800692279172,
+        "timestamp": 1712093960.280494
+    },
+    {
+        "cpu_usage": 3.973067231,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.108893591666664,
+        "memory_usage": 2145384,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 13.099815304293625,
+        "timestamp": 1712093961.28983
+    },
+    {
+        "cpu_usage": 3.973067231,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.108893591666664,
+        "memory_usage": 2145384,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 13.099815304293625,
+        "timestamp": 1712093962.296159
+    },
+    {
+        "cpu_usage": 3.973067231,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.108893591666664,
+        "memory_usage": 2145384,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 13.099815304293625,
+        "timestamp": 1712093963.3053
+    },
+    {
+        "cpu_usage": 3.973067231,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.108893591666664,
+        "memory_usage": 2145384,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 13.099815304293625,
+        "timestamp": 1712093964.315229
+    },
+    {
+        "cpu_usage": 3.973067231,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.108893591666664,
+        "memory_usage": 2145384,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 13.099815304293625,
+        "timestamp": 1712093965.323258
+    },
+    {
+        "cpu_usage": 3.973067231,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.108893591666664,
+        "memory_usage": 2145384,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 13.099815304293625,
+        "timestamp": 1712093966.332081
+    },
+    {
+        "cpu_usage": 3.973067231,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.108893591666664,
+        "memory_usage": 2145384,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 13.099815304293625,
+        "timestamp": 1712093967.343049
+    },
+    {
+        "cpu_usage": 3.973067231,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.108893591666664,
+        "memory_usage": 2145384,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 13.099815304293625,
+        "timestamp": 1712093968.353489
+    },
+    {
+        "cpu_usage": 3.973067231,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.108893591666664,
+        "memory_usage": 2145384,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 13.099815304293625,
+        "timestamp": 1712093969.363504
+    },
+    {
+        "cpu_usage": 3.973067231,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.108893591666664,
+        "memory_usage": 2145384,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 13.099815304293625,
+        "timestamp": 1712093970.377713
+    },
+    {
+        "cpu_usage": 3.971343245,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.094527041666666,
+        "memory_usage": 2200784,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 13.438090302083236,
+        "timestamp": 1712093971.389263
+    },
+    {
+        "cpu_usage": 3.971343245,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.094527041666666,
+        "memory_usage": 2200784,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 13.438090302083236,
+        "timestamp": 1712093972.398988
+    },
+    {
+        "cpu_usage": 3.971343245,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.094527041666666,
+        "memory_usage": 2200784,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 13.438090302083236,
+        "timestamp": 1712093973.407928
+    },
+    {
+        "cpu_usage": 3.971343245,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.094527041666666,
+        "memory_usage": 2200784,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 13.438090302083236,
+        "timestamp": 1712093974.41609
+    },
+    {
+        "cpu_usage": 3.971343245,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.094527041666666,
+        "memory_usage": 2200784,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 13.438090302083236,
+        "timestamp": 1712093975.423294
+    },
+    {
+        "cpu_usage": 3.971343245,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.094527041666666,
+        "memory_usage": 2200784,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 13.438090302083236,
+        "timestamp": 1712093976.431912
+    },
+    {
+        "cpu_usage": 3.971343245,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.094527041666666,
+        "memory_usage": 2200784,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 13.438090302083236,
+        "timestamp": 1712093977.442398
+    },
+    {
+        "cpu_usage": 3.971343245,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.094527041666666,
+        "memory_usage": 2200784,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 13.438090302083236,
+        "timestamp": 1712093978.477476
+    },
+    {
+        "cpu_usage": 3.971343245,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.094527041666666,
+        "memory_usage": 2200784,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 13.438090302083236,
+        "timestamp": 1712093979.487573
+    },
+    {
+        "cpu_usage": 3.971343245,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.094527041666666,
+        "memory_usage": 2200784,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 13.438090302083236,
+        "timestamp": 1712093980.494749
+    },
+    {
+        "cpu_usage": 3.970184143,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.08486785833333,
+        "memory_usage": 2495104,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 15.235222023192232,
+        "timestamp": 1712093981.503412
+    },
+    {
+        "cpu_usage": 3.970184143,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.08486785833333,
+        "memory_usage": 2495104,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 15.235222023192232,
+        "timestamp": 1712093982.512612
+    },
+    {
+        "cpu_usage": 3.970184143,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.08486785833333,
+        "memory_usage": 2495104,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 15.235222023192232,
+        "timestamp": 1712093983.520492
+    },
+    {
+        "cpu_usage": 3.970184143,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.08486785833333,
+        "memory_usage": 2495104,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 15.235222023192232,
+        "timestamp": 1712093984.528805
+    },
+    {
+        "cpu_usage": 3.970184143,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.08486785833333,
+        "memory_usage": 2495104,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 15.235222023192232,
+        "timestamp": 1712093985.536603
+    },
+    {
+        "cpu_usage": 3.970184143,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.08486785833333,
+        "memory_usage": 2495104,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 15.235222023192232,
+        "timestamp": 1712093986.546854
+    },
+    {
+        "cpu_usage": 3.970184143,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.08486785833333,
+        "memory_usage": 2495104,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 15.235222023192232,
+        "timestamp": 1712093987.557913
+    },
+    {
+        "cpu_usage": 3.970184143,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.08486785833333,
+        "memory_usage": 2495104,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 15.235222023192232,
+        "timestamp": 1712093988.574773
+    },
+    {
+        "cpu_usage": 3.970184143,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.08486785833333,
+        "memory_usage": 2495104,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 15.235222023192232,
+        "timestamp": 1712093989.586022
+    },
+    {
+        "cpu_usage": 3.970184143,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.08486785833333,
+        "memory_usage": 2495104,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 15.235222023192232,
+        "timestamp": 1712093990.598912
+    },
+    {
+        "cpu_usage": 3.970184143,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.08486785833333,
+        "memory_usage": 2495104,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 15.235222023192232,
+        "timestamp": 1712093991.611974
+    },
+    {
+        "cpu_usage": 3.970184143,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.08486785833333,
+        "memory_usage": 2495104,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 15.235222023192232,
+        "timestamp": 1712093992.622838
+    },
+    {
+        "cpu_usage": 3.970184143,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.08486785833333,
+        "memory_usage": 2495104,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 15.235222023192232,
+        "timestamp": 1712093993.675675
+    },
+    {
+        "cpu_usage": 3.970184143,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.08486785833333,
+        "memory_usage": 2495104,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 15.235222023192232,
+        "timestamp": 1712093994.687613
+    },
+    {
+        "cpu_usage": 3.970184143,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.08486785833333,
+        "memory_usage": 2495104,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 15.235222023192232,
+        "timestamp": 1712093995.700978
+    },
+    {
+        "cpu_usage": 3.970184143,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.08486785833333,
+        "memory_usage": 2495104,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 15.235222023192232,
+        "timestamp": 1712093996.713643
+    },
+    {
+        "cpu_usage": 3.970184143,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.08486785833333,
+        "memory_usage": 2495104,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 15.235222023192232,
+        "timestamp": 1712093997.7255
+    },
+    {
+        "cpu_usage": 3.970184143,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.08486785833333,
+        "memory_usage": 2495104,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 15.235222023192232,
+        "timestamp": 1712093998.735768
+    },
+    {
+        "cpu_usage": 3.970184143,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.08486785833333,
+        "memory_usage": 2495104,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 15.235222023192232,
+        "timestamp": 1712093999.74458
+    },
+    {
+        "cpu_usage": 3.965284837,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.04404030833334,
+        "memory_usage": 2250712,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 13.742953011282511,
+        "timestamp": 1712094000.776004
+    },
+    {
+        "cpu_usage": 3.965284837,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.04404030833334,
+        "memory_usage": 2250712,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 13.742953011282511,
+        "timestamp": 1712094001.784693
+    },
+    {
+        "cpu_usage": 3.965284837,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.04404030833334,
+        "memory_usage": 2250712,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 13.742953011282511,
+        "timestamp": 1712094002.792415
+    },
+    {
+        "cpu_usage": 3.965284837,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.04404030833334,
+        "memory_usage": 2250712,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 13.742953011282511,
+        "timestamp": 1712094003.801366
+    },
+    {
+        "cpu_usage": 3.965284837,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.04404030833334,
+        "memory_usage": 2250712,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 13.742953011282511,
+        "timestamp": 1712094004.808032
+    },
+    {
+        "cpu_usage": 3.965284837,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.04404030833334,
+        "memory_usage": 2250712,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 13.742953011282511,
+        "timestamp": 1712094005.816754
+    },
+    {
+        "cpu_usage": 3.965284837,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.04404030833334,
+        "memory_usage": 2250712,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 13.742953011282511,
+        "timestamp": 1712094006.826388
+    },
+    {
+        "cpu_usage": 3.965284837,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.04404030833334,
+        "memory_usage": 2250712,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 13.742953011282511,
+        "timestamp": 1712094007.835653
+    },
+    {
+        "cpu_usage": 3.965284837,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.04404030833334,
+        "memory_usage": 2250712,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 13.742953011282511,
+        "timestamp": 1712094008.846561
+    },
+    {
+        "cpu_usage": 3.965284837,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.04404030833334,
+        "memory_usage": 2250712,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 13.742953011282511,
+        "timestamp": 1712094009.874881
+    },
+    {
+        "cpu_usage": 3.967067221,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.058893508333334,
+        "memory_usage": 2782808,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 16.991956138067003,
+        "timestamp": 1712094010.886258
+    },
+    {
+        "cpu_usage": 3.967067221,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.058893508333334,
+        "memory_usage": 2782808,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 16.991956138067003,
+        "timestamp": 1712094011.896071
+    },
+    {
+        "cpu_usage": 3.967067221,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.058893508333334,
+        "memory_usage": 2782808,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 16.991956138067003,
+        "timestamp": 1712094012.904872
+    },
+    {
+        "cpu_usage": 3.967067221,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.058893508333334,
+        "memory_usage": 2782808,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 16.991956138067003,
+        "timestamp": 1712094013.915156
+    },
+    {
+        "cpu_usage": 3.967067221,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.058893508333334,
+        "memory_usage": 2782808,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 16.991956138067003,
+        "timestamp": 1712094014.926713
+    },
+    {
+        "cpu_usage": 3.967067221,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.058893508333334,
+        "memory_usage": 2782808,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 16.991956138067003,
+        "timestamp": 1712094015.932777
+    },
+    {
+        "cpu_usage": 3.967067221,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.058893508333334,
+        "memory_usage": 2782808,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 16.991956138067003,
+        "timestamp": 1712094016.943337
+    },
+    {
+        "cpu_usage": 3.967067221,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.058893508333334,
+        "memory_usage": 2782808,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 16.991956138067003,
+        "timestamp": 1712094017.952242
+    },
+    {
+        "cpu_usage": 3.967067221,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.058893508333334,
+        "memory_usage": 2782808,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 16.991956138067003,
+        "timestamp": 1712094018.974171
+    },
+    {
+        "cpu_usage": 3.967067221,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.058893508333334,
+        "memory_usage": 2782808,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 16.991956138067003,
+        "timestamp": 1712094019.984948
+    },
+    {
+        "cpu_usage": 3.960631594,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.005263283333335,
+        "memory_usage": 2681772,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 16.375025584336473,
+        "timestamp": 1712094020.994081
+    },
+    {
+        "cpu_usage": 3.960631594,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.005263283333335,
+        "memory_usage": 2681772,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 16.375025584336473,
+        "timestamp": 1712094022.005255
+    },
+    {
+        "cpu_usage": 3.960631594,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.005263283333335,
+        "memory_usage": 2681772,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 16.375025584336473,
+        "timestamp": 1712094023.015605
+    },
+    {
+        "cpu_usage": 3.960631594,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.005263283333335,
+        "memory_usage": 2681772,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 16.375025584336473,
+        "timestamp": 1712094024.025777
+    },
+    {
+        "cpu_usage": 3.960631594,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.005263283333335,
+        "memory_usage": 2681772,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 16.375025584336473,
+        "timestamp": 1712094025.031857
+    },
+    {
+        "cpu_usage": 3.960631594,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.005263283333335,
+        "memory_usage": 2681772,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 16.375025584336473,
+        "timestamp": 1712094026.042666
+    },
+    {
+        "cpu_usage": 3.960631594,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.005263283333335,
+        "memory_usage": 2681772,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 16.375025584336473,
+        "timestamp": 1712094027.074738
+    },
+    {
+        "cpu_usage": 3.960631594,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.005263283333335,
+        "memory_usage": 2681772,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 16.375025584336473,
+        "timestamp": 1712094028.08468
+    },
+    {
+        "cpu_usage": 3.960631594,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.005263283333335,
+        "memory_usage": 2681772,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 16.375025584336473,
+        "timestamp": 1712094029.094972
+    },
+    {
+        "cpu_usage": 3.960631594,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.005263283333335,
+        "memory_usage": 2681772,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 16.375025584336473,
+        "timestamp": 1712094030.104143
+    },
+    {
+        "cpu_usage": 3.970158591,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.084654925,
+        "memory_usage": 2617812,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 15.984482825155547,
+        "timestamp": 1712094031.115223
+    },
+    {
+        "cpu_usage": 3.970158591,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.084654925,
+        "memory_usage": 2617812,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 15.984482825155547,
+        "timestamp": 1712094032.126776
+    },
+    {
+        "cpu_usage": 3.970158591,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.084654925,
+        "memory_usage": 2617812,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 15.984482825155547,
+        "timestamp": 1712094033.138017
+    },
+    {
+        "cpu_usage": 3.970158591,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.084654925,
+        "memory_usage": 2617812,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 15.984482825155547,
+        "timestamp": 1712094034.14453
+    },
+    {
+        "cpu_usage": 3.970158591,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.084654925,
+        "memory_usage": 2617812,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 15.984482825155547,
+        "timestamp": 1712094035.173125
+    },
+    {
+        "cpu_usage": 3.970158591,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.084654925,
+        "memory_usage": 2617812,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 15.984482825155547,
+        "timestamp": 1712094036.183977
+    },
+    {
+        "cpu_usage": 3.970158591,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.084654925,
+        "memory_usage": 2617812,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 15.984482825155547,
+        "timestamp": 1712094037.192032
+    },
+    {
+        "cpu_usage": 3.970158591,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.084654925,
+        "memory_usage": 2617812,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 15.984482825155547,
+        "timestamp": 1712094038.20139
+    },
+    {
+        "cpu_usage": 3.970158591,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.084654925,
+        "memory_usage": 2617812,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 15.984482825155547,
+        "timestamp": 1712094039.212369
+    },
+    {
+        "cpu_usage": 3.970158591,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.084654925,
+        "memory_usage": 2617812,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 15.984482825155547,
+        "timestamp": 1712094040.220384
+    },
+    {
+        "cpu_usage": 3.974692179,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.122434825,
+        "memory_usage": 2600892,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 15.88116851175121,
+        "timestamp": 1712094041.274214
+    },
+    {
+        "cpu_usage": 3.974692179,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.122434825,
+        "memory_usage": 2600892,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 15.88116851175121,
+        "timestamp": 1712094042.286509
+    },
+    {
+        "cpu_usage": 3.974692179,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.122434825,
+        "memory_usage": 2600892,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 15.88116851175121,
+        "timestamp": 1712094043.295972
+    },
+    {
+        "cpu_usage": 3.974692179,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.122434825,
+        "memory_usage": 2600892,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 15.88116851175121,
+        "timestamp": 1712094044.303219
+    },
+    {
+        "cpu_usage": 3.974692179,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.122434825,
+        "memory_usage": 2600892,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 15.88116851175121,
+        "timestamp": 1712094045.315575
+    },
+    {
+        "cpu_usage": 3.974692179,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.122434825,
+        "memory_usage": 2600892,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 15.88116851175121,
+        "timestamp": 1712094046.32592
+    },
+    {
+        "cpu_usage": 3.974692179,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.122434825,
+        "memory_usage": 2600892,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 15.88116851175121,
+        "timestamp": 1712094047.333766
+    },
+    {
+        "cpu_usage": 3.974692179,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.122434825,
+        "memory_usage": 2600892,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 15.88116851175121,
+        "timestamp": 1712094048.344144
+    },
+    {
+        "cpu_usage": 3.974692179,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.122434825,
+        "memory_usage": 2600892,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 15.88116851175121,
+        "timestamp": 1712094049.367099
+    },
+    {
+        "cpu_usage": 3.974692179,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.122434825,
+        "memory_usage": 2600892,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 15.88116851175121,
+        "timestamp": 1712094050.378599
+    },
+    {
+        "cpu_usage": 3.986678606,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.22232171666666,
+        "memory_usage": 2625912,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 16.03394180497677,
+        "timestamp": 1712094051.390358
+    },
+    {
+        "cpu_usage": 3.986678606,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.22232171666666,
+        "memory_usage": 2625912,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 16.03394180497677,
+        "timestamp": 1712094052.402456
+    },
+    {
+        "cpu_usage": 3.986678606,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.22232171666666,
+        "memory_usage": 2625912,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 16.03394180497677,
+        "timestamp": 1712094053.412823
+    },
+    {
+        "cpu_usage": 3.986678606,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.22232171666666,
+        "memory_usage": 2625912,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 16.03394180497677,
+        "timestamp": 1712094054.42467
+    },
+    {
+        "cpu_usage": 3.986678606,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.22232171666666,
+        "memory_usage": 2625912,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 16.03394180497677,
+        "timestamp": 1712094055.435157
+    },
+    {
+        "cpu_usage": 3.986678606,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.22232171666666,
+        "memory_usage": 2625912,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 16.03394180497677,
+        "timestamp": 1712094056.445465
+    },
+    {
+        "cpu_usage": 3.986678606,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.22232171666666,
+        "memory_usage": 2625912,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 16.03394180497677,
+        "timestamp": 1712094057.473728
+    },
+    {
+        "cpu_usage": 3.986678606,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.22232171666666,
+        "memory_usage": 2625912,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 16.03394180497677,
+        "timestamp": 1712094058.484226
+    },
+    {
+        "cpu_usage": 3.986678606,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.22232171666666,
+        "memory_usage": 2625912,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 16.03394180497677,
+        "timestamp": 1712094059.575689
+    },
+    {
+        "cpu_usage": 3.986678606,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.22232171666666,
+        "memory_usage": 2625912,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 16.03394180497677,
+        "timestamp": 1712094060.589068
+    },
+    {
+        "cpu_usage": 3.983040584,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.192004866666664,
+        "memory_usage": 2453632,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 14.98199204650756,
+        "timestamp": 1712094061.602946
+    },
+    {
+        "cpu_usage": 3.983040584,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.192004866666664,
+        "memory_usage": 2453632,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 14.98199204650756,
+        "timestamp": 1712094062.683661
+    },
+    {
+        "cpu_usage": 3.983040584,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.192004866666664,
+        "memory_usage": 2453632,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 14.98199204650756,
+        "timestamp": 1712094063.69712
+    },
+    {
+        "cpu_usage": 3.983040584,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.192004866666664,
+        "memory_usage": 2453632,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 14.98199204650756,
+        "timestamp": 1712094064.709132
+    },
+    {
+        "cpu_usage": 3.983040584,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.192004866666664,
+        "memory_usage": 2453632,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 14.98199204650756,
+        "timestamp": 1712094065.720743
+    },
+    {
+        "cpu_usage": 3.983040584,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.192004866666664,
+        "memory_usage": 2453632,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 14.98199204650756,
+        "timestamp": 1712094066.776015
+    },
+    {
+        "cpu_usage": 3.983040584,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.192004866666664,
+        "memory_usage": 2453632,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 14.98199204650756,
+        "timestamp": 1712094067.787642
+    },
+    {
+        "cpu_usage": 3.983040584,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.192004866666664,
+        "memory_usage": 2453632,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 14.98199204650756,
+        "timestamp": 1712094068.797216
+    },
+    {
+        "cpu_usage": 3.983040584,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.192004866666664,
+        "memory_usage": 2453632,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 14.98199204650756,
+        "timestamp": 1712094069.808438
+    },
+    {
+        "cpu_usage": 3.983040584,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.192004866666664,
+        "memory_usage": 2453632,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 14.98199204650756,
+        "timestamp": 1712094070.874207
+    },
+    {
+        "cpu_usage": 3.993378237,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.278151975,
+        "memory_usage": 3117032,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 19.03274355433478,
+        "timestamp": 1712094071.887046
+    },
+    {
+        "cpu_usage": 3.993378237,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.278151975,
+        "memory_usage": 3117032,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 19.03274355433478,
+        "timestamp": 1712094072.894618
+    },
+    {
+        "cpu_usage": 3.993378237,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.278151975,
+        "memory_usage": 3117032,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 19.03274355433478,
+        "timestamp": 1712094073.903071
+    },
+    {
+        "cpu_usage": 3.993378237,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.278151975,
+        "memory_usage": 3117032,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 19.03274355433478,
+        "timestamp": 1712094074.918807
+    },
+    {
+        "cpu_usage": 3.993378237,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.278151975,
+        "memory_usage": 3117032,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 19.03274355433478,
+        "timestamp": 1712094075.930238
+    },
+    {
+        "cpu_usage": 3.993378237,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.278151975,
+        "memory_usage": 3117032,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 19.03274355433478,
+        "timestamp": 1712094076.941875
+    },
+    {
+        "cpu_usage": 3.993378237,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.278151975,
+        "memory_usage": 3117032,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 19.03274355433478,
+        "timestamp": 1712094077.951183
+    },
+    {
+        "cpu_usage": 3.993378237,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.278151975,
+        "memory_usage": 3117032,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 19.03274355433478,
+        "timestamp": 1712094078.972356
+    },
+    {
+        "cpu_usage": 3.993378237,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.278151975,
+        "memory_usage": 3117032,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 19.03274355433478,
+        "timestamp": 1712094079.983486
+    },
+    {
+        "cpu_usage": 3.976746817,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.13955680833333,
+        "memory_usage": 3449900,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 21.065251171017675,
+        "timestamp": 1712094080.993361
+    },
+    {
+        "cpu_usage": 3.976746817,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.13955680833333,
+        "memory_usage": 3449900,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 21.065251171017675,
+        "timestamp": 1712094082.006475
+    },
+    {
+        "cpu_usage": 3.976746817,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.13955680833333,
+        "memory_usage": 3449900,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 21.065251171017675,
+        "timestamp": 1712094083.024478
+    },
+    {
+        "cpu_usage": 3.976746817,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.13955680833333,
+        "memory_usage": 3449900,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 21.065251171017675,
+        "timestamp": 1712094084.037136
+    },
+    {
+        "cpu_usage": 3.976746817,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.13955680833333,
+        "memory_usage": 3449900,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 21.065251171017675,
+        "timestamp": 1712094085.051161
+    },
+    {
+        "cpu_usage": 3.976746817,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.13955680833333,
+        "memory_usage": 3449900,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 21.065251171017675,
+        "timestamp": 1712094086.073262
+    },
+    {
+        "cpu_usage": 3.976746817,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.13955680833333,
+        "memory_usage": 3449900,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 21.065251171017675,
+        "timestamp": 1712094087.089506
+    },
+    {
+        "cpu_usage": 3.976746817,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.13955680833333,
+        "memory_usage": 3449900,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 21.065251171017675,
+        "timestamp": 1712094088.105453
+    },
+    {
+        "cpu_usage": 3.976746817,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.13955680833333,
+        "memory_usage": 3449900,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 21.065251171017675,
+        "timestamp": 1712094089.12044
+    },
+    {
+        "cpu_usage": 3.976746817,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.13955680833333,
+        "memory_usage": 3449900,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 21.065251171017675,
+        "timestamp": 1712094090.132824
+    },
+    {
+        "cpu_usage": 3.988230973,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.23525810833333,
+        "memory_usage": 3563888,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 21.761267244087026,
+        "timestamp": 1712094091.14722
+    },
+    {
+        "cpu_usage": 3.988230973,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.23525810833333,
+        "memory_usage": 3563888,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 21.761267244087026,
+        "timestamp": 1712094092.172505
+    },
+    {
+        "cpu_usage": 3.988230973,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.23525810833333,
+        "memory_usage": 3563888,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 21.761267244087026,
+        "timestamp": 1712094093.1907
+    },
+    {
+        "cpu_usage": 3.988230973,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.23525810833333,
+        "memory_usage": 3563888,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 21.761267244087026,
+        "timestamp": 1712094094.211563
+    },
+    {
+        "cpu_usage": 3.988230973,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.23525810833333,
+        "memory_usage": 3563888,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 21.761267244087026,
+        "timestamp": 1712094095.223668
+    },
+    {
+        "cpu_usage": 3.988230973,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.23525810833333,
+        "memory_usage": 3563888,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 21.761267244087026,
+        "timestamp": 1712094096.241513
+    },
+    {
+        "cpu_usage": 3.988230973,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.23525810833333,
+        "memory_usage": 3563888,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 21.761267244087026,
+        "timestamp": 1712094097.252434
+    },
+    {
+        "cpu_usage": 3.988230973,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.23525810833333,
+        "memory_usage": 3563888,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 21.761267244087026,
+        "timestamp": 1712094098.273701
+    },
+    {
+        "cpu_usage": 3.988230973,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.23525810833333,
+        "memory_usage": 3563888,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 21.761267244087026,
+        "timestamp": 1712094099.290082
+    },
+    {
+        "cpu_usage": 3.988230973,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.23525810833333,
+        "memory_usage": 3563888,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 21.761267244087026,
+        "timestamp": 1712094100.299586
+    },
+    {
+        "cpu_usage": 3.988759458,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.23966215,
+        "memory_usage": 2661232,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 16.249607381184873,
+        "timestamp": 1712094101.316251
+    },
+    {
+        "cpu_usage": 3.988759458,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.23966215,
+        "memory_usage": 2661232,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 16.249607381184873,
+        "timestamp": 1712094102.326231
+    },
+    {
+        "cpu_usage": 3.988759458,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.23966215,
+        "memory_usage": 2661232,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 16.249607381184873,
+        "timestamp": 1712094103.341489
+    },
+    {
+        "cpu_usage": 3.988759458,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.23966215,
+        "memory_usage": 2661232,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 16.249607381184873,
+        "timestamp": 1712094104.373465
+    },
+    {
+        "cpu_usage": 3.988759458,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.23966215,
+        "memory_usage": 2661232,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 16.249607381184873,
+        "timestamp": 1712094105.390061
+    },
+    {
+        "cpu_usage": 3.988759458,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.23966215,
+        "memory_usage": 2661232,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 16.249607381184873,
+        "timestamp": 1712094106.407574
+    },
+    {
+        "cpu_usage": 3.988759458,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.23966215,
+        "memory_usage": 2661232,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 16.249607381184873,
+        "timestamp": 1712094107.424534
+    },
+    {
+        "cpu_usage": 3.988759458,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.23966215,
+        "memory_usage": 2661232,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 16.249607381184873,
+        "timestamp": 1712094108.442507
+    },
+    {
+        "cpu_usage": 3.988759458,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.23966215,
+        "memory_usage": 2661232,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 16.249607381184873,
+        "timestamp": 1712094109.472205
+    },
+    {
+        "cpu_usage": 3.988759458,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.23966215,
+        "memory_usage": 2661232,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 16.249607381184873,
+        "timestamp": 1712094110.491516
+    },
+    {
+        "cpu_usage": 3.985897209,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.215810075,
+        "memory_usage": 2641064,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 16.12646062747692,
+        "timestamp": 1712094111.508644
+    },
+    {
+        "cpu_usage": 3.985897209,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.215810075,
+        "memory_usage": 2641064,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 16.12646062747692,
+        "timestamp": 1712094112.526261
+    },
+    {
+        "cpu_usage": 3.985897209,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.215810075,
+        "memory_usage": 2641064,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 16.12646062747692,
+        "timestamp": 1712094113.539754
+    },
+    {
+        "cpu_usage": 3.985897209,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.215810075,
+        "memory_usage": 2641064,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 16.12646062747692,
+        "timestamp": 1712094114.548904
+    },
+    {
+        "cpu_usage": 3.985897209,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.215810075,
+        "memory_usage": 2641064,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 16.12646062747692,
+        "timestamp": 1712094115.572549
+    },
+    {
+        "cpu_usage": 3.985897209,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.215810075,
+        "memory_usage": 2641064,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 16.12646062747692,
+        "timestamp": 1712094116.589976
+    },
+    {
+        "cpu_usage": 3.985897209,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.215810075,
+        "memory_usage": 2641064,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 16.12646062747692,
+        "timestamp": 1712094117.603876
+    },
+    {
+        "cpu_usage": 3.985897209,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.215810075,
+        "memory_usage": 2641064,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 16.12646062747692,
+        "timestamp": 1712094118.619711
+    },
+    {
+        "cpu_usage": 3.985897209,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.215810075,
+        "memory_usage": 2641064,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 16.12646062747692,
+        "timestamp": 1712094119.636693
+    },
+    {
+        "cpu_usage": 3.985897209,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.215810075,
+        "memory_usage": 2641064,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 16.12646062747692,
+        "timestamp": 1712094120.676775
+    },
+    {
+        "cpu_usage": 3.984770626,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.206421883333334,
+        "memory_usage": 2950248,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 18.014352629581307,
+        "timestamp": 1712094121.690681
+    },
+    {
+        "cpu_usage": 3.984770626,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.206421883333334,
+        "memory_usage": 2950248,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 18.014352629581307,
+        "timestamp": 1712094122.707132
+    },
+    {
+        "cpu_usage": 3.984770626,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.206421883333334,
+        "memory_usage": 2950248,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 18.014352629581307,
+        "timestamp": 1712094123.724351
+    },
+    {
+        "cpu_usage": 3.984770626,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.206421883333334,
+        "memory_usage": 2950248,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 18.014352629581307,
+        "timestamp": 1712094124.739545
+    },
+    {
+        "cpu_usage": 3.984770626,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.206421883333334,
+        "memory_usage": 2950248,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 18.014352629581307,
+        "timestamp": 1712094125.771261
+    },
+    {
+        "cpu_usage": 3.984770626,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.206421883333334,
+        "memory_usage": 2950248,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 18.014352629581307,
+        "timestamp": 1712094126.789045
+    },
+    {
+        "cpu_usage": 3.984770626,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.206421883333334,
+        "memory_usage": 2950248,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 18.014352629581307,
+        "timestamp": 1712094127.82211
+    },
+    {
+        "cpu_usage": 3.984770626,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.206421883333334,
+        "memory_usage": 2950248,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 18.014352629581307,
+        "timestamp": 1712094128.839367
+    },
+    {
+        "cpu_usage": 3.984770626,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.206421883333334,
+        "memory_usage": 2950248,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 18.014352629581307,
+        "timestamp": 1712094129.872238
+    },
+    {
+        "cpu_usage": 3.984770626,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.206421883333334,
+        "memory_usage": 2950248,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 18.014352629581307,
+        "timestamp": 1712094130.891912
+    },
+    {
+        "cpu_usage": 3.978008339,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.15006949166667,
+        "memory_usage": 2687600,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 16.41061162562019,
+        "timestamp": 1712094131.972022
+    },
+    {
+        "cpu_usage": 3.978008339,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.15006949166667,
+        "memory_usage": 2687600,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 16.41061162562019,
+        "timestamp": 1712094132.992278
+    },
+    {
+        "cpu_usage": 3.978008339,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.15006949166667,
+        "memory_usage": 2687600,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 16.41061162562019,
+        "timestamp": 1712094134.074497
+    },
+    {
+        "cpu_usage": 3.978008339,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.15006949166667,
+        "memory_usage": 2687600,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 16.41061162562019,
+        "timestamp": 1712094135.093889
+    },
+    {
+        "cpu_usage": 3.978008339,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.15006949166667,
+        "memory_usage": 2687600,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 16.41061162562019,
+        "timestamp": 1712094136.111528
+    },
+    {
+        "cpu_usage": 3.978008339,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.15006949166667,
+        "memory_usage": 2687600,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 16.41061162562019,
+        "timestamp": 1712094137.173525
+    },
+    {
+        "cpu_usage": 3.978008339,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.15006949166667,
+        "memory_usage": 2687600,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 16.41061162562019,
+        "timestamp": 1712094138.190401
+    },
+    {
+        "cpu_usage": 3.978008339,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.15006949166667,
+        "memory_usage": 2687600,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 16.41061162562019,
+        "timestamp": 1712094139.271074
+    },
+    {
+        "cpu_usage": 3.978008339,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.15006949166667,
+        "memory_usage": 2687600,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 16.41061162562019,
+        "timestamp": 1712094140.288482
+    },
+    {
+        "cpu_usage": 3.999682071,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.330683924999995,
+        "memory_usage": 3769932,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 23.019381569801155,
+        "timestamp": 1712094141.302318
+    },
+    {
+        "cpu_usage": 3.999682071,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.330683924999995,
+        "memory_usage": 3769932,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 23.019381569801155,
+        "timestamp": 1712094142.318088
+    },
+    {
+        "cpu_usage": 3.999682071,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.330683924999995,
+        "memory_usage": 3769932,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 23.019381569801155,
+        "timestamp": 1712094143.334306
+    },
+    {
+        "cpu_usage": 3.999682071,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.330683924999995,
+        "memory_usage": 3769932,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 23.019381569801155,
+        "timestamp": 1712094144.348494
+    },
+    {
+        "cpu_usage": 3.999682071,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.330683924999995,
+        "memory_usage": 3769932,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 23.019381569801155,
+        "timestamp": 1712094145.368809
+    },
+    {
+        "cpu_usage": 3.999682071,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.330683924999995,
+        "memory_usage": 3769932,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 23.019381569801155,
+        "timestamp": 1712094146.38715
+    },
+    {
+        "cpu_usage": 3.999682071,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.330683924999995,
+        "memory_usage": 3769932,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 23.019381569801155,
+        "timestamp": 1712094147.400436
+    },
+    {
+        "cpu_usage": 3.999682071,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.330683924999995,
+        "memory_usage": 3769932,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 23.019381569801155,
+        "timestamp": 1712094148.408893
+    },
+    {
+        "cpu_usage": 3.999682071,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.330683924999995,
+        "memory_usage": 3769932,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 23.019381569801155,
+        "timestamp": 1712094149.427996
+    },
+    {
+        "cpu_usage": 3.999682071,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.330683924999995,
+        "memory_usage": 3769932,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 23.019381569801155,
+        "timestamp": 1712094150.440691
+    },
+    {
+        "cpu_usage": 3.962593394,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.02161161666667,
+        "memory_usage": 3646844,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 22.26780047001907,
+        "timestamp": 1712094151.454262
+    },
+    {
+        "cpu_usage": 3.962593394,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.02161161666667,
+        "memory_usage": 3646844,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 22.26780047001907,
+        "timestamp": 1712094152.471381
+    },
+    {
+        "cpu_usage": 3.962593394,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.02161161666667,
+        "memory_usage": 3646844,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 22.26780047001907,
+        "timestamp": 1712094153.489354
+    },
+    {
+        "cpu_usage": 3.962593394,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.02161161666667,
+        "memory_usage": 3646844,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 22.26780047001907,
+        "timestamp": 1712094154.502305
+    },
+    {
+        "cpu_usage": 3.962593394,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.02161161666667,
+        "memory_usage": 3646844,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 22.26780047001907,
+        "timestamp": 1712094155.517282
+    },
+    {
+        "cpu_usage": 3.962593394,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.02161161666667,
+        "memory_usage": 3646844,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 22.26780047001907,
+        "timestamp": 1712094156.528636
+    },
+    {
+        "cpu_usage": 3.962593394,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.02161161666667,
+        "memory_usage": 3646844,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 22.26780047001907,
+        "timestamp": 1712094157.569525
+    },
+    {
+        "cpu_usage": 3.962593394,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.02161161666667,
+        "memory_usage": 3646844,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 22.26780047001907,
+        "timestamp": 1712094158.579036
+    },
+    {
+        "cpu_usage": 3.962593394,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.02161161666667,
+        "memory_usage": 3646844,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 22.26780047001907,
+        "timestamp": 1712094159.589547
+    },
+    {
+        "cpu_usage": 3.962593394,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.02161161666667,
+        "memory_usage": 3646844,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 22.26780047001907,
+        "timestamp": 1712094160.603068
+    },
+    {
+        "cpu_usage": 3.987727745,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.23106454166667,
+        "memory_usage": 3512852,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 21.449639034931963,
+        "timestamp": 1712094161.61206
+    },
+    {
+        "cpu_usage": 3.987727745,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.23106454166667,
+        "memory_usage": 3512852,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 21.449639034931963,
+        "timestamp": 1712094162.620599
+    },
+    {
+        "cpu_usage": 3.987727745,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.23106454166667,
+        "memory_usage": 3512852,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 21.449639034931963,
+        "timestamp": 1712094163.632209
+    },
+    {
+        "cpu_usage": 3.987727745,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.23106454166667,
+        "memory_usage": 3512852,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 21.449639034931963,
+        "timestamp": 1712094164.642705
+    },
+    {
+        "cpu_usage": 3.987727745,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.23106454166667,
+        "memory_usage": 3512852,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 21.449639034931963,
+        "timestamp": 1712094165.653689
+    },
+    {
+        "cpu_usage": 3.987727745,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.23106454166667,
+        "memory_usage": 3512852,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 21.449639034931963,
+        "timestamp": 1712094166.670605
+    },
+    {
+        "cpu_usage": 3.987727745,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.23106454166667,
+        "memory_usage": 3512852,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 21.449639034931963,
+        "timestamp": 1712094167.681679
+    },
+    {
+        "cpu_usage": 3.987727745,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.23106454166667,
+        "memory_usage": 3512852,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 21.449639034931963,
+        "timestamp": 1712094168.693023
+    },
+    {
+        "cpu_usage": 3.987727745,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.23106454166667,
+        "memory_usage": 3512852,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 21.449639034931963,
+        "timestamp": 1712094169.706474
+    },
+    {
+        "cpu_usage": 3.98387079,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.19892325,
+        "memory_usage": 2750948,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 16.797417484103516,
+        "timestamp": 1712094170.720311
+    },
+    {
+        "cpu_usage": 3.98387079,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.19892325,
+        "memory_usage": 2750948,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 16.797417484103516,
+        "timestamp": 1712094171.72929
+    },
+    {
+        "cpu_usage": 3.98387079,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.19892325,
+        "memory_usage": 2750948,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 16.797417484103516,
+        "timestamp": 1712094172.738629
+    },
+    {
+        "cpu_usage": 3.98387079,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.19892325,
+        "memory_usage": 2750948,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 16.797417484103516,
+        "timestamp": 1712094173.746963
+    },
+    {
+        "cpu_usage": 3.98387079,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.19892325,
+        "memory_usage": 2750948,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 16.797417484103516,
+        "timestamp": 1712094174.758463
+    },
+    {
+        "cpu_usage": 3.98387079,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.19892325,
+        "memory_usage": 2750948,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 16.797417484103516,
+        "timestamp": 1712094175.772403
+    },
+    {
+        "cpu_usage": 3.98387079,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.19892325,
+        "memory_usage": 2750948,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 16.797417484103516,
+        "timestamp": 1712094176.785963
+    },
+    {
+        "cpu_usage": 3.98387079,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.19892325,
+        "memory_usage": 2750948,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 16.797417484103516,
+        "timestamp": 1712094177.797316
+    },
+    {
+        "cpu_usage": 3.98387079,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.19892325,
+        "memory_usage": 2750948,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 16.797417484103516,
+        "timestamp": 1712094178.808485
+    },
+    {
+        "cpu_usage": 3.98387079,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.19892325,
+        "memory_usage": 2750948,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 16.797417484103516,
+        "timestamp": 1712094179.822892
+    },
+    {
+        "cpu_usage": 3.983574399,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.196453325,
+        "memory_usage": 2768612,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 16.905274696395136,
+        "timestamp": 1712094180.83599
+    },
+    {
+        "cpu_usage": 3.983574399,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.196453325,
+        "memory_usage": 2768612,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 16.905274696395136,
+        "timestamp": 1712094181.848573
+    },
+    {
+        "cpu_usage": 3.983574399,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.196453325,
+        "memory_usage": 2768612,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 16.905274696395136,
+        "timestamp": 1712094182.867437
+    },
+    {
+        "cpu_usage": 3.983574399,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.196453325,
+        "memory_usage": 2768612,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 16.905274696395136,
+        "timestamp": 1712094183.880343
+    },
+    {
+        "cpu_usage": 3.983574399,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.196453325,
+        "memory_usage": 2768612,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 16.905274696395136,
+        "timestamp": 1712094184.889041
+    },
+    {
+        "cpu_usage": 3.983574399,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.196453325,
+        "memory_usage": 2768612,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 16.905274696395136,
+        "timestamp": 1712094185.900139
+    },
+    {
+        "cpu_usage": 3.983574399,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.196453325,
+        "memory_usage": 2768612,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 16.905274696395136,
+        "timestamp": 1712094186.914336
+    },
+    {
+        "cpu_usage": 3.983574399,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.196453325,
+        "memory_usage": 2768612,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 16.905274696395136,
+        "timestamp": 1712094187.92731
+    },
+    {
+        "cpu_usage": 3.983574399,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.196453325,
+        "memory_usage": 2768612,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 16.905274696395136,
+        "timestamp": 1712094188.937191
+    },
+    {
+        "cpu_usage": 3.983574399,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.196453325,
+        "memory_usage": 2768612,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 16.905274696395136,
+        "timestamp": 1712094189.947924
+    },
+    {
+        "cpu_usage": 3.97537977,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.128164749999996,
+        "memory_usage": 2898268,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 17.696960312160655,
+        "timestamp": 1712094190.972001
+    },
+    {
+        "cpu_usage": 3.97537977,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.128164749999996,
+        "memory_usage": 2898268,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 17.696960312160655,
+        "timestamp": 1712094191.987772
+    },
+    {
+        "cpu_usage": 3.97537977,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.128164749999996,
+        "memory_usage": 2898268,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 17.696960312160655,
+        "timestamp": 1712094193.000188
+    },
+    {
+        "cpu_usage": 3.97537977,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.128164749999996,
+        "memory_usage": 2898268,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 17.696960312160655,
+        "timestamp": 1712094194.012655
+    },
+    {
+        "cpu_usage": 3.97537977,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.128164749999996,
+        "memory_usage": 2898268,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 17.696960312160655,
+        "timestamp": 1712094195.07299
+    },
+    {
+        "cpu_usage": 3.97537977,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.128164749999996,
+        "memory_usage": 2898268,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 17.696960312160655,
+        "timestamp": 1712094196.088118
+    },
+    {
+        "cpu_usage": 3.97537977,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.128164749999996,
+        "memory_usage": 2898268,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 17.696960312160655,
+        "timestamp": 1712094197.101108
+    },
+    {
+        "cpu_usage": 3.97537977,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.128164749999996,
+        "memory_usage": 2898268,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 17.696960312160655,
+        "timestamp": 1712094198.169265
+    },
+    {
+        "cpu_usage": 3.97537977,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.128164749999996,
+        "memory_usage": 2898268,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 17.696960312160655,
+        "timestamp": 1712094199.183033
+    },
+    {
+        "cpu_usage": 3.97537977,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.128164749999996,
+        "memory_usage": 2898268,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 17.696960312160655,
+        "timestamp": 1712094200.196435
+    },
+    {
+        "cpu_usage": 3.971483456,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.09569546666667,
+        "memory_usage": 3299860,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 20.149099895415628,
+        "timestamp": 1712094201.211426
+    },
+    {
+        "cpu_usage": 3.971483456,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.09569546666667,
+        "memory_usage": 3299860,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 20.149099895415628,
+        "timestamp": 1712094202.281883
+    },
+    {
+        "cpu_usage": 3.971483456,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.09569546666667,
+        "memory_usage": 3299860,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 20.149099895415628,
+        "timestamp": 1712094203.292611
+    },
+    {
+        "cpu_usage": 3.971483456,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.09569546666667,
+        "memory_usage": 3299860,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 20.149099895415628,
+        "timestamp": 1712094204.371712
+    },
+    {
+        "cpu_usage": 3.971483456,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.09569546666667,
+        "memory_usage": 3299860,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 20.149099895415628,
+        "timestamp": 1712094205.387693
+    },
+    {
+        "cpu_usage": 3.971483456,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.09569546666667,
+        "memory_usage": 3299860,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 20.149099895415628,
+        "timestamp": 1712094206.473166
+    },
+    {
+        "cpu_usage": 3.971483456,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.09569546666667,
+        "memory_usage": 3299860,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 20.149099895415628,
+        "timestamp": 1712094207.489014
+    },
+    {
+        "cpu_usage": 3.971483456,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.09569546666667,
+        "memory_usage": 3299860,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 20.149099895415628,
+        "timestamp": 1712094208.504684
+    },
+    {
+        "cpu_usage": 3.971483456,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.09569546666667,
+        "memory_usage": 3299860,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 20.149099895415628,
+        "timestamp": 1712094209.570686
+    },
+    {
+        "cpu_usage": 3.971483456,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.09569546666667,
+        "memory_usage": 3299860,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 20.149099895415628,
+        "timestamp": 1712094210.585535
+    },
+    {
+        "cpu_usage": 4.001122288,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.34268573333334,
+        "memory_usage": 4066716,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 24.83155859045083,
+        "timestamp": 1712094211.674384
+    },
+    {
+        "cpu_usage": 4.001122288,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.34268573333334,
+        "memory_usage": 4066716,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 24.83155859045083,
+        "timestamp": 1712094212.687576
+    },
+    {
+        "cpu_usage": 4.001122288,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.34268573333334,
+        "memory_usage": 4066716,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 24.83155859045083,
+        "timestamp": 1712094213.700633
+    },
+    {
+        "cpu_usage": 4.001122288,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.34268573333334,
+        "memory_usage": 4066716,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 24.83155859045083,
+        "timestamp": 1712094214.712944
+    },
+    {
+        "cpu_usage": 4.001122288,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.34268573333334,
+        "memory_usage": 4066716,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 24.83155859045083,
+        "timestamp": 1712094215.724919
+    },
+    {
+        "cpu_usage": 4.001122288,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.34268573333334,
+        "memory_usage": 4066716,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 24.83155859045083,
+        "timestamp": 1712094216.73632
+    },
+    {
+        "cpu_usage": 4.001122288,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.34268573333334,
+        "memory_usage": 4066716,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 24.83155859045083,
+        "timestamp": 1712094217.747135
+    },
+    {
+        "cpu_usage": 4.001122288,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.34268573333334,
+        "memory_usage": 4066716,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 24.83155859045083,
+        "timestamp": 1712094218.758374
+    },
+    {
+        "cpu_usage": 4.001122288,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.34268573333334,
+        "memory_usage": 4066716,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 24.83155859045083,
+        "timestamp": 1712094219.768954
+    },
+    {
+        "cpu_usage": 3.960931944,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.0077662,
+        "memory_usage": 4191000,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 25.59044252231516,
+        "timestamp": 1712094220.778083
+    },
+    {
+        "cpu_usage": 3.960931944,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.0077662,
+        "memory_usage": 4191000,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 25.59044252231516,
+        "timestamp": 1712094221.792954
+    },
+    {
+        "cpu_usage": 3.960931944,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.0077662,
+        "memory_usage": 4191000,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 25.59044252231516,
+        "timestamp": 1712094222.805685
+    },
+    {
+        "cpu_usage": 3.960931944,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.0077662,
+        "memory_usage": 4191000,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 25.59044252231516,
+        "timestamp": 1712094223.82003
+    },
+    {
+        "cpu_usage": 3.960931944,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.0077662,
+        "memory_usage": 4191000,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 25.59044252231516,
+        "timestamp": 1712094224.831501
+    },
+    {
+        "cpu_usage": 3.960931944,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.0077662,
+        "memory_usage": 4191000,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 25.59044252231516,
+        "timestamp": 1712094225.843456
+    },
+    {
+        "cpu_usage": 3.960931944,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.0077662,
+        "memory_usage": 4191000,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 25.59044252231516,
+        "timestamp": 1712094226.856014
+    },
+    {
+        "cpu_usage": 3.960931944,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.0077662,
+        "memory_usage": 4191000,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 25.59044252231516,
+        "timestamp": 1712094227.868529
+    },
+    {
+        "cpu_usage": 3.960931944,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.0077662,
+        "memory_usage": 4191000,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 25.59044252231516,
+        "timestamp": 1712094228.879392
+    },
+    {
+        "cpu_usage": 3.960931944,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.0077662,
+        "memory_usage": 4191000,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 25.59044252231516,
+        "timestamp": 1712094229.892375
+    },
+    {
+        "cpu_usage": 3.966311005,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.05259170833333,
+        "memory_usage": 3563692,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 21.76007045889629,
+        "timestamp": 1712094230.905894
+    },
+    {
+        "cpu_usage": 3.966311005,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.05259170833333,
+        "memory_usage": 3563692,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 21.76007045889629,
+        "timestamp": 1712094231.919248
+    },
+    {
+        "cpu_usage": 3.966311005,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.05259170833333,
+        "memory_usage": 3563692,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 21.76007045889629,
+        "timestamp": 1712094232.933551
+    },
+    {
+        "cpu_usage": 3.966311005,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.05259170833333,
+        "memory_usage": 3563692,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 21.76007045889629,
+        "timestamp": 1712094233.946582
+    },
+    {
+        "cpu_usage": 3.966311005,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.05259170833333,
+        "memory_usage": 3563692,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 21.76007045889629,
+        "timestamp": 1712094234.967765
+    },
+    {
+        "cpu_usage": 3.966311005,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.05259170833333,
+        "memory_usage": 3563692,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 21.76007045889629,
+        "timestamp": 1712094235.981541
+    },
+    {
+        "cpu_usage": 3.966311005,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.05259170833333,
+        "memory_usage": 3563692,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 21.76007045889629,
+        "timestamp": 1712094236.992714
+    },
+    {
+        "cpu_usage": 3.966311005,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.05259170833333,
+        "memory_usage": 3563692,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 21.76007045889629,
+        "timestamp": 1712094238.005499
+    },
+    {
+        "cpu_usage": 3.966311005,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.05259170833333,
+        "memory_usage": 3563692,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 21.76007045889629,
+        "timestamp": 1712094239.018928
+    },
+    {
+        "cpu_usage": 3.966311005,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.05259170833333,
+        "memory_usage": 3563692,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 21.76007045889629,
+        "timestamp": 1712094240.033098
+    },
+    {
+        "cpu_usage": 3.971523245,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.09602704166667,
+        "memory_usage": 2921436,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 17.838425206543143,
+        "timestamp": 1712094241.045077
+    },
+    {
+        "cpu_usage": 3.971523245,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.09602704166667,
+        "memory_usage": 2921436,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 17.838425206543143,
+        "timestamp": 1712094242.067661
+    },
+    {
+        "cpu_usage": 3.971523245,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.09602704166667,
+        "memory_usage": 2921436,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 17.838425206543143,
+        "timestamp": 1712094243.078923
+    },
+    {
+        "cpu_usage": 3.971523245,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.09602704166667,
+        "memory_usage": 2921436,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 17.838425206543143,
+        "timestamp": 1712094244.091238
+    },
+    {
+        "cpu_usage": 3.971523245,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.09602704166667,
+        "memory_usage": 2921436,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 17.838425206543143,
+        "timestamp": 1712094245.10458
+    },
+    {
+        "cpu_usage": 3.971523245,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.09602704166667,
+        "memory_usage": 2921436,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 17.838425206543143,
+        "timestamp": 1712094246.118968
+    },
+    {
+        "cpu_usage": 3.971523245,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.09602704166667,
+        "memory_usage": 2921436,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 17.838425206543143,
+        "timestamp": 1712094247.134245
+    },
+    {
+        "cpu_usage": 3.971523245,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.09602704166667,
+        "memory_usage": 2921436,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 17.838425206543143,
+        "timestamp": 1712094248.146235
+    },
+    {
+        "cpu_usage": 3.971523245,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.09602704166667,
+        "memory_usage": 2921436,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 17.838425206543143,
+        "timestamp": 1712094249.158858
+    },
+    {
+        "cpu_usage": 3.971523245,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.09602704166667,
+        "memory_usage": 2921436,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 17.838425206543143,
+        "timestamp": 1712094250.172835
+    },
+    {
+        "cpu_usage": 3.96612158,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.051013166666664,
+        "memory_usage": 2909112,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 17.763174284652184,
+        "timestamp": 1712094251.195726
+    },
+    {
+        "cpu_usage": 3.96612158,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.051013166666664,
+        "memory_usage": 2909112,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 17.763174284652184,
+        "timestamp": 1712094252.212612
+    },
+    {
+        "cpu_usage": 3.96612158,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.051013166666664,
+        "memory_usage": 2909112,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 17.763174284652184,
+        "timestamp": 1712094253.226271
+    },
+    {
+        "cpu_usage": 3.96612158,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.051013166666664,
+        "memory_usage": 2909112,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 17.763174284652184,
+        "timestamp": 1712094254.242414
+    },
+    {
+        "cpu_usage": 3.96612158,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.051013166666664,
+        "memory_usage": 2909112,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 17.763174284652184,
+        "timestamp": 1712094255.352619
+    },
+    {
+        "cpu_usage": 3.96612158,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.051013166666664,
+        "memory_usage": 2909112,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 17.763174284652184,
+        "timestamp": 1712094256.36331
+    },
+    {
+        "cpu_usage": 3.96612158,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.051013166666664,
+        "memory_usage": 2909112,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 17.763174284652184,
+        "timestamp": 1712094257.376651
+    },
+    {
+        "cpu_usage": 3.96612158,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.051013166666664,
+        "memory_usage": 2909112,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 17.763174284652184,
+        "timestamp": 1712094258.39212
+    },
+    {
+        "cpu_usage": 3.96612158,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.051013166666664,
+        "memory_usage": 2909112,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 17.763174284652184,
+        "timestamp": 1712094259.406303
+    },
+    {
+        "cpu_usage": 3.96612158,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.051013166666664,
+        "memory_usage": 2909112,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 17.763174284652184,
+        "timestamp": 1712094260.421551
+    },
+    {
+        "cpu_usage": 3.972056305,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.10046920833333,
+        "memory_usage": 2916996,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 17.81131435834484,
+        "timestamp": 1712094261.432265
+    },
+    {
+        "cpu_usage": 3.972056305,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.10046920833333,
+        "memory_usage": 2916996,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 17.81131435834484,
+        "timestamp": 1712094262.452288
+    },
+    {
+        "cpu_usage": 3.972056305,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.10046920833333,
+        "memory_usage": 2916996,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 17.81131435834484,
+        "timestamp": 1712094263.468977
+    },
+    {
+        "cpu_usage": 3.972056305,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.10046920833333,
+        "memory_usage": 2916996,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 17.81131435834484,
+        "timestamp": 1712094264.484855
+    },
+    {
+        "cpu_usage": 3.972056305,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.10046920833333,
+        "memory_usage": 2916996,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 17.81131435834484,
+        "timestamp": 1712094265.498911
+    },
+    {
+        "cpu_usage": 3.972056305,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.10046920833333,
+        "memory_usage": 2916996,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 17.81131435834484,
+        "timestamp": 1712094266.512906
+    },
+    {
+        "cpu_usage": 3.972056305,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.10046920833333,
+        "memory_usage": 2916996,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 17.81131435834484,
+        "timestamp": 1712094267.530064
+    },
+    {
+        "cpu_usage": 3.972056305,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.10046920833333,
+        "memory_usage": 2916996,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 17.81131435834484,
+        "timestamp": 1712094268.553173
+    },
+    {
+        "cpu_usage": 3.972056305,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.10046920833333,
+        "memory_usage": 2916996,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 17.81131435834484,
+        "timestamp": 1712094269.57189
+    },
+    {
+        "cpu_usage": 3.972056305,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.10046920833333,
+        "memory_usage": 2916996,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 17.81131435834484,
+        "timestamp": 1712094270.656642
+    },
+    {
+        "cpu_usage": 3.953132951,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 32.94277459166667,
+        "memory_usage": 3166980,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 19.337728384471884,
+        "timestamp": 1712094271.675664
+    },
+    {
+        "cpu_usage": 3.953132951,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 32.94277459166667,
+        "memory_usage": 3166980,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 19.337728384471884,
+        "timestamp": 1712094272.693297
+    },
+    {
+        "cpu_usage": 3.953132951,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 32.94277459166667,
+        "memory_usage": 3166980,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 19.337728384471884,
+        "timestamp": 1712094273.754811
+    },
+    {
+        "cpu_usage": 3.953132951,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 32.94277459166667,
+        "memory_usage": 3166980,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 19.337728384471884,
+        "timestamp": 1712094274.7734
+    },
+    {
+        "cpu_usage": 3.953132951,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 32.94277459166667,
+        "memory_usage": 3166980,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 19.337728384471884,
+        "timestamp": 1712094275.788379
+    },
+    {
+        "cpu_usage": 3.953132951,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 32.94277459166667,
+        "memory_usage": 3166980,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 19.337728384471884,
+        "timestamp": 1712094276.853377
+    },
+    {
+        "cpu_usage": 3.953132951,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 32.94277459166667,
+        "memory_usage": 3166980,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 19.337728384471884,
+        "timestamp": 1712094277.874037
+    },
+    {
+        "cpu_usage": 3.953132951,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 32.94277459166667,
+        "memory_usage": 3166980,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 19.337728384471884,
+        "timestamp": 1712094278.959228
+    },
+    {
+        "cpu_usage": 3.953132951,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 32.94277459166667,
+        "memory_usage": 3166980,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 19.337728384471884,
+        "timestamp": 1712094279.974489
+    },
+    {
+        "cpu_usage": 3.953132951,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 32.94277459166667,
+        "memory_usage": 3166980,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 19.337728384471884,
+        "timestamp": 1712094281.057476
+    },
+    {
+        "cpu_usage": 4.008581917,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.40484930833333,
+        "memory_usage": 4350316,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 26.563233488882844,
+        "timestamp": 1712094282.07599
+    },
+    {
+        "cpu_usage": 4.008581917,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.40484930833333,
+        "memory_usage": 4350316,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 26.563233488882844,
+        "timestamp": 1712094283.093491
+    },
+    {
+        "cpu_usage": 4.008581917,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.40484930833333,
+        "memory_usage": 4350316,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 26.563233488882844,
+        "timestamp": 1712094284.154022
+    },
+    {
+        "cpu_usage": 4.008581917,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.40484930833333,
+        "memory_usage": 4350316,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 26.563233488882844,
+        "timestamp": 1712094285.16902
+    },
+    {
+        "cpu_usage": 4.008581917,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.40484930833333,
+        "memory_usage": 4350316,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 26.563233488882844,
+        "timestamp": 1712094286.181805
+    },
+    {
+        "cpu_usage": 4.008581917,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.40484930833333,
+        "memory_usage": 4350316,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 26.563233488882844,
+        "timestamp": 1712094287.1967
+    },
+    {
+        "cpu_usage": 4.008581917,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.40484930833333,
+        "memory_usage": 4350316,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 26.563233488882844,
+        "timestamp": 1712094288.25296
+    },
+    {
+        "cpu_usage": 4.008581917,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.40484930833333,
+        "memory_usage": 4350316,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 26.563233488882844,
+        "timestamp": 1712094289.268072
+    },
+    {
+        "cpu_usage": 4.008581917,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.40484930833333,
+        "memory_usage": 4350316,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 26.563233488882844,
+        "timestamp": 1712094290.281606
+    },
+    {
+        "cpu_usage": 3.971014986,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.091791549999996,
+        "memory_usage": 4499712,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 27.475452470286754,
+        "timestamp": 1712094291.296948
+    },
+    {
+        "cpu_usage": 3.971014986,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.091791549999996,
+        "memory_usage": 4499712,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 27.475452470286754,
+        "timestamp": 1712094292.312442
+    },
+    {
+        "cpu_usage": 3.971014986,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.091791549999996,
+        "memory_usage": 4499712,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 27.475452470286754,
+        "timestamp": 1712094293.327452
+    },
+    {
+        "cpu_usage": 3.971014986,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.091791549999996,
+        "memory_usage": 4499712,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 27.475452470286754,
+        "timestamp": 1712094294.352227
+    },
+    {
+        "cpu_usage": 3.971014986,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.091791549999996,
+        "memory_usage": 4499712,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 27.475452470286754,
+        "timestamp": 1712094295.365989
+    },
+    {
+        "cpu_usage": 3.971014986,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.091791549999996,
+        "memory_usage": 4499712,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 27.475452470286754,
+        "timestamp": 1712094296.381815
+    },
+    {
+        "cpu_usage": 3.971014986,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.091791549999996,
+        "memory_usage": 4499712,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 27.475452470286754,
+        "timestamp": 1712094297.396687
+    },
+    {
+        "cpu_usage": 3.971014986,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.091791549999996,
+        "memory_usage": 4499712,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 27.475452470286754,
+        "timestamp": 1712094298.411208
+    },
+    {
+        "cpu_usage": 3.971014986,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.091791549999996,
+        "memory_usage": 4499712,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 27.475452470286754,
+        "timestamp": 1712094299.420533
+    },
+    {
+        "cpu_usage": 3.971014986,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.091791549999996,
+        "memory_usage": 4499712,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 27.475452470286754,
+        "timestamp": 1712094300.43505
+    },
+    {
+        "cpu_usage": 3.990055609,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.25046340833334,
+        "memory_usage": 3827404,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 23.37030829674997,
+        "timestamp": 1712094301.452183
+    },
+    {
+        "cpu_usage": 3.990055609,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.25046340833334,
+        "memory_usage": 3827404,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 23.37030829674997,
+        "timestamp": 1712094302.463237
+    },
+    {
+        "cpu_usage": 3.990055609,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.25046340833334,
+        "memory_usage": 3827404,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 23.37030829674997,
+        "timestamp": 1712094303.477513
+    },
+    {
+        "cpu_usage": 3.990055609,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.25046340833334,
+        "memory_usage": 3827404,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 23.37030829674997,
+        "timestamp": 1712094304.491946
+    },
+    {
+        "cpu_usage": 3.990055609,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.25046340833334,
+        "memory_usage": 3827404,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 23.37030829674997,
+        "timestamp": 1712094305.503618
+    },
+    {
+        "cpu_usage": 3.990055609,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.25046340833334,
+        "memory_usage": 3827404,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 23.37030829674997,
+        "timestamp": 1712094306.517329
+    },
+    {
+        "cpu_usage": 3.990055609,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.25046340833334,
+        "memory_usage": 3827404,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 23.37030829674997,
+        "timestamp": 1712094307.530868
+    },
+    {
+        "cpu_usage": 3.990055609,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.25046340833334,
+        "memory_usage": 3827404,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 23.37030829674997,
+        "timestamp": 1712094308.55222
+    },
+    {
+        "cpu_usage": 3.990055609,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.25046340833334,
+        "memory_usage": 3827404,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 23.37030829674997,
+        "timestamp": 1712094309.570084
+    },
+    {
+        "cpu_usage": 3.990055609,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.25046340833334,
+        "memory_usage": 3827404,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 23.37030829674997,
+        "timestamp": 1712094310.58258
+    },
+    {
+        "cpu_usage": 3.98527005,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.21058375,
+        "memory_usage": 3689172,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 22.52625722284287,
+        "timestamp": 1712094311.592917
+    },
+    {
+        "cpu_usage": 3.98527005,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.21058375,
+        "memory_usage": 3689172,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 22.52625722284287,
+        "timestamp": 1712094312.60672
+    },
+    {
+        "cpu_usage": 3.98527005,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.21058375,
+        "memory_usage": 3689172,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 22.52625722284287,
+        "timestamp": 1712094313.621026
+    },
+    {
+        "cpu_usage": 3.98527005,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.21058375,
+        "memory_usage": 3689172,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 22.52625722284287,
+        "timestamp": 1712094314.635671
+    },
+    {
+        "cpu_usage": 3.98527005,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.21058375,
+        "memory_usage": 3689172,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 22.52625722284287,
+        "timestamp": 1712094315.650307
+    },
+    {
+        "cpu_usage": 3.98527005,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.21058375,
+        "memory_usage": 3689172,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 22.52625722284287,
+        "timestamp": 1712094316.661784
+    },
+    {
+        "cpu_usage": 3.98527005,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.21058375,
+        "memory_usage": 3689172,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 22.52625722284287,
+        "timestamp": 1712094317.675674
+    },
+    {
+        "cpu_usage": 3.98527005,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.21058375,
+        "memory_usage": 3689172,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 22.52625722284287,
+        "timestamp": 1712094318.687752
+    },
+    {
+        "cpu_usage": 3.98527005,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.21058375,
+        "memory_usage": 3689172,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 22.52625722284287,
+        "timestamp": 1712094319.702019
+    },
+    {
+        "cpu_usage": 3.98527005,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.21058375,
+        "memory_usage": 3689172,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 22.52625722284287,
+        "timestamp": 1712094320.756016
+    },
+    {
+        "cpu_usage": 3.990470749,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.25392290833334,
+        "memory_usage": 3282752,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 20.04463764519569,
+        "timestamp": 1712094321.771345
+    },
+    {
+        "cpu_usage": 3.990470749,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.25392290833334,
+        "memory_usage": 3282752,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 20.04463764519569,
+        "timestamp": 1712094322.785116
+    },
+    {
+        "cpu_usage": 3.990470749,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.25392290833334,
+        "memory_usage": 3282752,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 20.04463764519569,
+        "timestamp": 1712094323.79625
+    },
+    {
+        "cpu_usage": 3.990470749,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.25392290833334,
+        "memory_usage": 3282752,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 20.04463764519569,
+        "timestamp": 1712094324.806061
+    },
+    {
+        "cpu_usage": 3.990470749,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.25392290833334,
+        "memory_usage": 3282752,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 20.04463764519569,
+        "timestamp": 1712094325.872805
+    },
+    {
+        "cpu_usage": 3.990470749,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.25392290833334,
+        "memory_usage": 3282752,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 20.04463764519569,
+        "timestamp": 1712094326.891378
+    },
+    {
+        "cpu_usage": 3.990470749,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.25392290833334,
+        "memory_usage": 3282752,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 20.04463764519569,
+        "timestamp": 1712094327.903622
+    },
+    {
+        "cpu_usage": 3.990470749,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.25392290833334,
+        "memory_usage": 3282752,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 20.04463764519569,
+        "timestamp": 1712094328.916464
+    },
+    {
+        "cpu_usage": 3.990470749,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.25392290833334,
+        "memory_usage": 3282752,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 20.04463764519569,
+        "timestamp": 1712094329.933319
+    },
+    {
+        "cpu_usage": 3.983930831,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.199423591666665,
+        "memory_usage": 3326648,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 20.31266867954538,
+        "timestamp": 1712094330.952297
+    },
+    {
+        "cpu_usage": 3.983930831,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.199423591666665,
+        "memory_usage": 3326648,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 20.31266867954538,
+        "timestamp": 1712094331.966058
+    },
+    {
+        "cpu_usage": 3.983930831,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.199423591666665,
+        "memory_usage": 3326648,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 20.31266867954538,
+        "timestamp": 1712094332.979723
+    },
+    {
+        "cpu_usage": 3.983930831,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.199423591666665,
+        "memory_usage": 3326648,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 20.31266867954538,
+        "timestamp": 1712094333.994228
+    },
+    {
+        "cpu_usage": 3.983930831,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.199423591666665,
+        "memory_usage": 3326648,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 20.31266867954538,
+        "timestamp": 1712094335.006281
+    },
+    {
+        "cpu_usage": 3.983930831,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.199423591666665,
+        "memory_usage": 3326648,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 20.31266867954538,
+        "timestamp": 1712094336.019591
+    },
+    {
+        "cpu_usage": 3.983930831,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.199423591666665,
+        "memory_usage": 3326648,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 20.31266867954538,
+        "timestamp": 1712094337.032703
+    },
+    {
+        "cpu_usage": 3.983930831,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.199423591666665,
+        "memory_usage": 3326648,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 20.31266867954538,
+        "timestamp": 1712094338.052273
+    },
+    {
+        "cpu_usage": 3.983930831,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.199423591666665,
+        "memory_usage": 3326648,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 20.31266867954538,
+        "timestamp": 1712094339.067287
+    },
+    {
+        "cpu_usage": 3.983930831,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.199423591666665,
+        "memory_usage": 3326648,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 20.31266867954538,
+        "timestamp": 1712094340.085565
+    },
+    {
+        "cpu_usage": 3.983930831,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.199423591666665,
+        "memory_usage": 3326648,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 20.31266867954538,
+        "timestamp": 1712094341.154505
+    },
+    {
+        "cpu_usage": 3.983930831,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.199423591666665,
+        "memory_usage": 3326648,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 20.31266867954538,
+        "timestamp": 1712094342.174687
+    },
+    {
+        "cpu_usage": 3.983930831,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.199423591666665,
+        "memory_usage": 3326648,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 20.31266867954538,
+        "timestamp": 1712094343.25673
+    },
+    {
+        "cpu_usage": 3.983930831,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.199423591666665,
+        "memory_usage": 3326648,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 20.31266867954538,
+        "timestamp": 1712094344.271635
+    },
+    {
+        "cpu_usage": 3.983930831,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.199423591666665,
+        "memory_usage": 3326648,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 20.31266867954538,
+        "timestamp": 1712094345.289767
+    },
+    {
+        "cpu_usage": 3.983930831,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.199423591666665,
+        "memory_usage": 3326648,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 20.31266867954538,
+        "timestamp": 1712094346.359342
+    },
+    {
+        "cpu_usage": 3.983930831,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.199423591666665,
+        "memory_usage": 3326648,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 20.31266867954538,
+        "timestamp": 1712094347.376315
+    },
+    {
+        "cpu_usage": 3.983930831,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.199423591666665,
+        "memory_usage": 3326648,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 20.31266867954538,
+        "timestamp": 1712094348.451115
+    },
+    {
+        "cpu_usage": 3.983930831,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.199423591666665,
+        "memory_usage": 3326648,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 20.31266867954538,
+        "timestamp": 1712094349.471406
+    },
+    {
+        "cpu_usage": 3.983930831,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.199423591666665,
+        "memory_usage": 3326648,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 20.31266867954538,
+        "timestamp": 1712094350.562366
+    },
+    {
+        "cpu_usage": 3.993956632,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.282971933333336,
+        "memory_usage": 3365768,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 20.551537233941218,
+        "timestamp": 1712094351.651725
+    },
+    {
+        "cpu_usage": 3.993956632,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.282971933333336,
+        "memory_usage": 3365768,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 20.551537233941218,
+        "timestamp": 1712094352.671956
+    },
+    {
+        "cpu_usage": 3.993956632,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.282971933333336,
+        "memory_usage": 3365768,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 20.551537233941218,
+        "timestamp": 1712094353.776185
+    },
+    {
+        "cpu_usage": 3.993956632,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.282971933333336,
+        "memory_usage": 3365768,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 20.551537233941218,
+        "timestamp": 1712094354.856746
+    },
+    {
+        "cpu_usage": 3.993956632,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.282971933333336,
+        "memory_usage": 3365768,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 20.551537233941218,
+        "timestamp": 1712094355.877278
+    },
+    {
+        "cpu_usage": 3.993956632,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.282971933333336,
+        "memory_usage": 3365768,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 20.551537233941218,
+        "timestamp": 1712094356.953119
+    },
+    {
+        "cpu_usage": 3.993956632,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.282971933333336,
+        "memory_usage": 3365768,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 20.551537233941218,
+        "timestamp": 1712094357.972349
+    },
+    {
+        "cpu_usage": 3.993956632,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.282971933333336,
+        "memory_usage": 3365768,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 20.551537233941218,
+        "timestamp": 1712094359.054903
+    },
+    {
+        "cpu_usage": 3.993956632,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.282971933333336,
+        "memory_usage": 3365768,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 20.551537233941218,
+        "timestamp": 1712094360.072003
+    },
+    {
+        "cpu_usage": 3.993956632,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.282971933333336,
+        "memory_usage": 3365768,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 20.551537233941218,
+        "timestamp": 1712094361.156317
+    },
+    {
+        "cpu_usage": 3.991243489,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.260362408333336,
+        "memory_usage": 4450996,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 27.17799028991999,
+        "timestamp": 1712094362.174887
+    },
+    {
+        "cpu_usage": 3.991243489,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.260362408333336,
+        "memory_usage": 4450996,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 27.17799028991999,
+        "timestamp": 1712094363.253159
+    },
+    {
+        "cpu_usage": 3.991243489,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.260362408333336,
+        "memory_usage": 4450996,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 27.17799028991999,
+        "timestamp": 1712094364.272954
+    },
+    {
+        "cpu_usage": 3.991243489,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.260362408333336,
+        "memory_usage": 4450996,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 27.17799028991999,
+        "timestamp": 1712094365.283676
+    },
+    {
+        "cpu_usage": 3.991243489,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.260362408333336,
+        "memory_usage": 4450996,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 27.17799028991999,
+        "timestamp": 1712094366.298085
+    },
+    {
+        "cpu_usage": 3.991243489,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.260362408333336,
+        "memory_usage": 4450996,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 27.17799028991999,
+        "timestamp": 1712094367.310788
+    },
+    {
+        "cpu_usage": 3.991243489,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.260362408333336,
+        "memory_usage": 4450996,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 27.17799028991999,
+        "timestamp": 1712094368.353086
+    },
+    {
+        "cpu_usage": 3.991243489,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.260362408333336,
+        "memory_usage": 4450996,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 27.17799028991999,
+        "timestamp": 1712094369.369482
+    },
+    {
+        "cpu_usage": 3.991243489,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.260362408333336,
+        "memory_usage": 4450996,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 27.17799028991999,
+        "timestamp": 1712094370.382075
+    },
+    {
+        "cpu_usage": 3.990314454,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.252620449999995,
+        "memory_usage": 4859160,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 29.670258813345963,
+        "timestamp": 1712094371.395288
+    },
+    {
+        "cpu_usage": 3.990314454,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.252620449999995,
+        "memory_usage": 4859160,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 29.670258813345963,
+        "timestamp": 1712094372.405739
+    },
+    {
+        "cpu_usage": 3.990314454,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.252620449999995,
+        "memory_usage": 4859160,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 29.670258813345963,
+        "timestamp": 1712094373.420542
+    },
+    {
+        "cpu_usage": 3.990314454,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.252620449999995,
+        "memory_usage": 4859160,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 29.670258813345963,
+        "timestamp": 1712094374.436947
+    },
+    {
+        "cpu_usage": 3.990314454,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.252620449999995,
+        "memory_usage": 4859160,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 29.670258813345963,
+        "timestamp": 1712094375.451859
+    },
+    {
+        "cpu_usage": 3.990314454,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.252620449999995,
+        "memory_usage": 4859160,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 29.670258813345963,
+        "timestamp": 1712094376.466824
+    },
+    {
+        "cpu_usage": 3.990314454,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.252620449999995,
+        "memory_usage": 4859160,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 29.670258813345963,
+        "timestamp": 1712094377.481963
+    },
+    {
+        "cpu_usage": 3.990314454,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.252620449999995,
+        "memory_usage": 4859160,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 29.670258813345963,
+        "timestamp": 1712094378.496855
+    },
+    {
+        "cpu_usage": 3.990314454,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.252620449999995,
+        "memory_usage": 4859160,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 29.670258813345963,
+        "timestamp": 1712094379.508973
+    },
+    {
+        "cpu_usage": 3.990314454,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.252620449999995,
+        "memory_usage": 4859160,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 29.670258813345963,
+        "timestamp": 1712094380.522724
+    },
+    {
+        "cpu_usage": 3.962666074,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.02221728333333,
+        "memory_usage": 4037376,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 24.652407174653945,
+        "timestamp": 1712094381.541978
+    },
+    {
+        "cpu_usage": 3.962666074,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.02221728333333,
+        "memory_usage": 4037376,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 24.652407174653945,
+        "timestamp": 1712094382.555867
+    },
+    {
+        "cpu_usage": 3.962666074,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.02221728333333,
+        "memory_usage": 4037376,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 24.652407174653945,
+        "timestamp": 1712094383.57118
+    },
+    {
+        "cpu_usage": 3.962666074,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.02221728333333,
+        "memory_usage": 4037376,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 24.652407174653945,
+        "timestamp": 1712094384.584539
+    },
+    {
+        "cpu_usage": 3.962666074,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.02221728333333,
+        "memory_usage": 4037376,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 24.652407174653945,
+        "timestamp": 1712094385.597894
+    },
+    {
+        "cpu_usage": 3.962666074,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.02221728333333,
+        "memory_usage": 4037376,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 24.652407174653945,
+        "timestamp": 1712094386.611501
+    },
+    {
+        "cpu_usage": 3.962666074,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.02221728333333,
+        "memory_usage": 4037376,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 24.652407174653945,
+        "timestamp": 1712094387.625498
+    },
+    {
+        "cpu_usage": 3.962666074,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.02221728333333,
+        "memory_usage": 4037376,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 24.652407174653945,
+        "timestamp": 1712094388.640549
+    },
+    {
+        "cpu_usage": 3.962666074,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.02221728333333,
+        "memory_usage": 4037376,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 24.652407174653945,
+        "timestamp": 1712094389.653231
+    },
+    {
+        "cpu_usage": 3.962666074,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.02221728333333,
+        "memory_usage": 4037376,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 24.652407174653945,
+        "timestamp": 1712094390.670662
+    },
+    {
+        "cpu_usage": 3.983722706,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.19768921666667,
+        "memory_usage": 3850896,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 23.513751550325306,
+        "timestamp": 1712094391.689473
+    },
+    {
+        "cpu_usage": 3.983722706,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.19768921666667,
+        "memory_usage": 3850896,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 23.513751550325306,
+        "timestamp": 1712094392.70402
+    },
+    {
+        "cpu_usage": 3.983722706,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.19768921666667,
+        "memory_usage": 3850896,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 23.513751550325306,
+        "timestamp": 1712094393.719646
+    },
+    {
+        "cpu_usage": 3.983722706,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.19768921666667,
+        "memory_usage": 3850896,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 23.513751550325306,
+        "timestamp": 1712094394.749471
+    },
+    {
+        "cpu_usage": 3.983722706,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.19768921666667,
+        "memory_usage": 3850896,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 23.513751550325306,
+        "timestamp": 1712094395.763629
+    },
+    {
+        "cpu_usage": 3.983722706,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.19768921666667,
+        "memory_usage": 3850896,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 23.513751550325306,
+        "timestamp": 1712094396.777603
+    },
+    {
+        "cpu_usage": 3.983722706,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.19768921666667,
+        "memory_usage": 3850896,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 23.513751550325306,
+        "timestamp": 1712094397.790658
+    },
+    {
+        "cpu_usage": 3.983722706,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.19768921666667,
+        "memory_usage": 3850896,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 23.513751550325306,
+        "timestamp": 1712094398.80523
+    },
+    {
+        "cpu_usage": 3.983722706,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.19768921666667,
+        "memory_usage": 3850896,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 23.513751550325306,
+        "timestamp": 1712094399.838444
+    },
+    {
+        "cpu_usage": 3.983722706,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.19768921666667,
+        "memory_usage": 3850896,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 23.513751550325306,
+        "timestamp": 1712094400.858496
+    },
+    {
+        "cpu_usage": 3.978341432,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.15284526666667,
+        "memory_usage": 3431368,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 20.952093910024224,
+        "timestamp": 1712094401.880511
+    },
+    {
+        "cpu_usage": 3.978341432,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.15284526666667,
+        "memory_usage": 3431368,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 20.952093910024224,
+        "timestamp": 1712094402.896391
+    },
+    {
+        "cpu_usage": 3.978341432,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.15284526666667,
+        "memory_usage": 3431368,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 20.952093910024224,
+        "timestamp": 1712094403.910615
+    },
+    {
+        "cpu_usage": 3.978341432,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.15284526666667,
+        "memory_usage": 3431368,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 20.952093910024224,
+        "timestamp": 1712094404.926422
+    },
+    {
+        "cpu_usage": 3.978341432,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.15284526666667,
+        "memory_usage": 3431368,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 20.952093910024224,
+        "timestamp": 1712094405.948907
+    },
+    {
+        "cpu_usage": 3.978341432,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.15284526666667,
+        "memory_usage": 3431368,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 20.952093910024224,
+        "timestamp": 1712094406.962981
+    },
+    {
+        "cpu_usage": 3.978341432,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.15284526666667,
+        "memory_usage": 3431368,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 20.952093910024224,
+        "timestamp": 1712094407.977037
+    },
+    {
+        "cpu_usage": 3.978341432,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.15284526666667,
+        "memory_usage": 3431368,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 20.952093910024224,
+        "timestamp": 1712094408.989722
+    },
+    {
+        "cpu_usage": 3.978341432,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.15284526666667,
+        "memory_usage": 3431368,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 20.952093910024224,
+        "timestamp": 1712094410.004393
+    },
+    {
+        "cpu_usage": 3.984899412,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.2074951,
+        "memory_usage": 3339844,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 20.393244074325732,
+        "timestamp": 1712094411.022318
+    },
+    {
+        "cpu_usage": 3.984899412,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.2074951,
+        "memory_usage": 3339844,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 20.393244074325732,
+        "timestamp": 1712094412.039322
+    },
+    {
+        "cpu_usage": 3.984899412,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.2074951,
+        "memory_usage": 3339844,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 20.393244074325732,
+        "timestamp": 1712094413.054533
+    },
+    {
+        "cpu_usage": 3.984899412,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.2074951,
+        "memory_usage": 3339844,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 20.393244074325732,
+        "timestamp": 1712094414.069183
+    },
+    {
+        "cpu_usage": 3.984899412,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.2074951,
+        "memory_usage": 3339844,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 20.393244074325732,
+        "timestamp": 1712094415.086444
+    },
+    {
+        "cpu_usage": 3.984899412,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.2074951,
+        "memory_usage": 3339844,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 20.393244074325732,
+        "timestamp": 1712094416.149083
+    },
+    {
+        "cpu_usage": 3.984899412,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.2074951,
+        "memory_usage": 3339844,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 20.393244074325732,
+        "timestamp": 1712094417.166599
+    },
+    {
+        "cpu_usage": 3.984899412,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.2074951,
+        "memory_usage": 3339844,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 20.393244074325732,
+        "timestamp": 1712094418.254606
+    },
+    {
+        "cpu_usage": 3.984899412,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.2074951,
+        "memory_usage": 3339844,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 20.393244074325732,
+        "timestamp": 1712094419.273626
+    },
+    {
+        "cpu_usage": 3.984899412,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.2074951,
+        "memory_usage": 3339844,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 20.393244074325732,
+        "timestamp": 1712094420.292608
+    },
+    {
+        "cpu_usage": 3.970423152,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.086859600000004,
+        "memory_usage": 3165124,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 19.32639556144124,
+        "timestamp": 1712094421.307597
+    },
+    {
+        "cpu_usage": 3.970423152,
+        "cpu_usage_unit": "cores",
+        "cpu_usage_percentage": 33.086859600000004,
+        "memory_usage": 3165124,
+        "memory_usage_unit": "Ki",
+        "memory_usage_percentage": 19.32639556144124,
+        "timestamp": 1712094422.354633
+    }
+]
