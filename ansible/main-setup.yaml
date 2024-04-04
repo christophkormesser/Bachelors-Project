@@ -115,6 +115,9 @@
         args:
           chdir: "{{ path }}"
 
+    - block:
+      - include_tasks: vanilla/ingress.yaml
+        when: setup == 'v'
 
     - block:
       - include_tasks: istio/istio.yaml
