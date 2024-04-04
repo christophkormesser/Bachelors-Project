@@ -58,6 +58,9 @@
     status_code: 200
     return_content: yes
   register: grafana_api_key_response
+  retries: 5
+  delay: 3
+  until: grafana_api_key_response.status == 200
 
 - name: Extract API Key
   set_fact:
