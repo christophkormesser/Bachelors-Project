@@ -146,3 +146,8 @@
     - block:
       - include_tasks: observability.yaml
       when: setup == 'k' or setup == 'ke' or setup == 'v'
+
+    - block:
+      - name: Remind user to execute minikube tunnel
+        debug:
+          msg: "minikube tunnel"
