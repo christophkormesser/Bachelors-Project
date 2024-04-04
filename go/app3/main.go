@@ -5,7 +5,6 @@ import (
 	"net/http"
 	"strconv"
 	"strings"
-	"time"
 
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
@@ -30,24 +29,13 @@ func main() {
 
 		shared.ReceivedRequestCounter.With(prometheus.Labels{"dst_pod": env["POD_NAME"], "handler": "/action", "source": strings.Split(c.Request().RemoteAddr, ":")[0], "response_code": strconv.Itoa(c.Response().Status)}).Inc()
 
-		return c.String(http.StatusOK, "Request from "+c.Request().RemoteAddr+" went through to "+c.Path()+"!\n"+
-			"Node: "+env["NODE_NAME"]+"\n"+
-			"Pod Name: "+env["POD_NAME"]+"\n"+
-			"Pod Namespace: "+env["POD_NAMESPACE"]+"\n"+
-			"Pod IP: "+env["POD_IP"]+"\n")
+		return c.String(http.StatusOK, "App3 Payload have a great day!")
 	})
 
 	// Expose Root Endpoint
 	e.GET("/", func(c echo.Context) error {
 		return c.String(http.StatusOK, "Welcome to APP3!\n")
 	})
-
-	// Closure to include map as an argument in the scheduler later
-	heartbeatTask := func() {
-		shared.Heartbeat(env, "app2", "1323", "/action")
-	}
-	// Starts the scheduler with the above heartbeatTask function
-	go shared.StartScheduler(time.Duration(shared.REQUEST_INTERVAL)*time.Millisecond, heartbeatTask)
 
 	e.Logger.Fatal(e.Start(":1323"))
 }
