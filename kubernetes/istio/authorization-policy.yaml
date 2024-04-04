@@ -22,4 +22,44 @@ spec:
   rules:
   - from:
     - source:
-        principals: ["cluster.local/ns/default/sa/service-account1", "cluster.local/ns/default/sa/service-account2", "cluster.local/ns/default/sa/service-account3"]
+        principals: ["cluster.local/ns/default/sa/service-account1"]
+
+---
+
+# allows traffic from app2 to app3
+apiVersion: security.istio.io/v1
+kind: AuthorizationPolicy
+metadata:
+  name: allow-workload2-to-workload3
+  namespace: default
+spec:
+  selector:
+    matchLabels:
+      app: app3
+  action: ALLOW
+  rules:
+  - from:
+    - source:
+        principals: ["cluster.local/ns/default/sa/service-account2"]
+
+---
+
+# Allows External Traffic to App1
+apiVersion: security.istio.io/v1
+kind: AuthorizationPolicy
+metadata:
+  name: allow-external-to-app1
+  namespace: default
+spec:
+  action: ALLOW
+  selector:
+    matchLabels:
+      app: app1
+  rules:
+  - from:
+    - source:
+        principals: ["cluster.local/ns/istio-system/sa/istio-ingressgateway-service-account"]
+    to:
+    - operation:
+        methods: ["GET"]
+        paths: ["/", "/action"]
