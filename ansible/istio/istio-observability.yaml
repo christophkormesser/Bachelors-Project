@@ -77,11 +77,11 @@
   poll: 0
   register: tunnel_task
 
-- name: Start pipeline
-  command: python data/scripts/pipeline.py
-  register: script_output
-  args:
-    chdir: "{{ path }}"
+# - name: Start pipeline
+#   command: python data/scripts/pipeline.py
+#   register: script_output
+#   args:
+#     chdir: "{{ path }}"
 
 # - name: Clean up Port Forward Task if it's still running
 #   ansible.builtin.async_status:
