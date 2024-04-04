@@ -71,12 +71,6 @@
 #   poll: 0
 #   register: pf_task
 
-- name: start minikube tunnel for external access
-  command: minikube tunnel
-  async: 900
-  poll: 0
-  register: tunnel_task
-
 # - name: Start pipeline
 #   command: python data/scripts/pipeline.py
 #   register: script_output
@@ -87,8 +81,3 @@
 #   ansible.builtin.async_status:
 #     jid: '{{ pf_task.ansible_job_id }}'
 #     mode: cleanup
-
-- name: Clean up Minikube Tunnel Task if it's still running
-  ansible.builtin.async_status:
-    jid: '{{ tunnel_task.ansible_job_id }}'
-    mode: cleanup
