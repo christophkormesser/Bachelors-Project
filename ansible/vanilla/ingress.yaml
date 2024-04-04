@@ -1,0 +1,11 @@
+- name: Vanilla Setup
+  debug: 
+    msg: "Setting up Vanilla Setup..."
+
+- name: Enbale Ingress addon
+  command: minikube addons enable ingress
+
+- name: Apply Ingress Config for app1
+  command: kubectl apply -f kubernetes/vanilla/app1-ingress.yaml
+  args:
+    chdir: "{{ path }}"
