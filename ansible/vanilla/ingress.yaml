@@ -5,6 +5,13 @@
 - name: Enbale Ingress addon
   command: minikube addons enable ingress
 
+- name: Wait for Ingress pod to be up
+  command: kubectl get pod -l app.kubernetes.io/component=controller -n ingress-nginx -o jsonpath='{.items[*].status.conditions[?(@.type=="Ready")].status}'
+  register: ingress_pod_status
+  until: ingress_pod_status.stdout == 'True'
+  retries: 10
+  delay: 3
+
 - name: Apply Ingress Config for app1
   command: kubectl apply -f kubernetes/vanilla/app1-ingress.yaml
   args:
