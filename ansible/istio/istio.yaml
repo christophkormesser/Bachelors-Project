@@ -72,7 +72,7 @@
   delay: 4
   ignore_errors: yes
 
-- name: Apply Istio Policies
+- name: Apply Istio Configs and Policies
   command: kubectl apply -f kubernetes/istio/
   register: istio_apply
   until: istio_apply is succeeded
