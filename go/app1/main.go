@@ -38,7 +38,9 @@ func main() {
 			"Pod Name: "+env["POD_NAME"]+"\n"+
 			"Pod Namespace: "+env["POD_NAMESPACE"]+"\n"+
 			"Pod IP: "+env["POD_IP"]+"\n\n"+
-			"Response: "+response,
+			"Response: \n"+
+			"App1: *waving hand*\n"+
+			response,
 		)
 	})
 

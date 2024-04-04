@@ -29,7 +29,7 @@ func main() {
 
 		shared.ReceivedRequestCounter.With(prometheus.Labels{"dst_pod": env["POD_NAME"], "handler": "/action", "source": strings.Split(c.Request().RemoteAddr, ":")[0], "response_code": strconv.Itoa(c.Response().Status)}).Inc()
 
-		return c.String(http.StatusOK, "App3 Payload have a great day!")
+		return c.String(http.StatusOK, "App3: Have a great day!")
 	})
 
 	// Expose Root Endpoint

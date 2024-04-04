@@ -29,7 +29,7 @@ func main() {
 
 		shared.ReceivedRequestCounter.With(prometheus.Labels{"dst_pod": env["POD_NAME"], "handler": "/action", "source": strings.Split(c.Request().RemoteAddr, ":")[0], "response_code": strconv.Itoa(c.Response().Status)}).Inc()
 
-		response := "App2 Payload hello! " + shared.Call(env, "app3", "1323", "/action")
+		response := "App2: Hello! \n" + shared.Call(env, "app3", "1323", "/action")
 
 		return c.String(http.StatusOK, response)
 	})
