@@ -9,7 +9,7 @@
     warmup_plan_path: "{{ playbook_dir }}/../data/Warmup.jmx"
     jmeter_results_path: "{{ playbook_dir }}/../data"
     users: [10, 20, 50, 100]
-    durations: [10, 10, 10, 10] # Duration in minutes for each user count
+    durations: [600, 600, 600, 600] # Duration in seconds for each user count
 
   
   tasks:
