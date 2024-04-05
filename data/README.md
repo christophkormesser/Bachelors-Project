@@ -18,7 +18,7 @@
 5. Start Ansible test script
     * Starts metric gathering script for 55 minutes
     * Starts jmeter with loop
-        * 10, 20, 50 and 100 users
+        * 1, 5, 10, 50 and 100 users
         * run each for 10 minutes
         * stops metrics
 
