@@ -1,0 +1,36 @@
+---
+- name: Automated JMeter testing and metrics gathering
+  hosts: localhost
+  vars:
+    path: "{{ playbook_dir }}/.."
+    jmeter_path: "jmeter"
+    python_path: "/Users/christoph/Code/FH/6. Semester/Bachelors-Project/.venv/bin/python"
+    test_plan_path: "/data/HTTP\ Request.jmx"
+    warmup_plan_path: "/data/HTTP\ Warmup.jmx"
+    jmeter_results_path: "/Users/christoph/Code/FH/6. Semester/Bachelors-Project/data/"
+    users: [10, 20, 50, 100]
+    durations: [10, 10, 10, 10] # Duration in minutes for each user count
+
+  
+  tasks:
+    - name: Start metric gathering
+      command: "{{ python_path }} data/scripts/node_metrics.py 50" 
+      async: 3000
+      poll: 0
+      args:
+        chdir: "{{ path }}"
+
+    - name: Run JMeter tests with increasing loads
+      shell: >
+        {{ jmeter_path }} -n -t {{ test_plan_path }}
+        -Jusers={{ item.0 }} -Jduration={{ item.1 }} 
+        -l {{ jmeter_results_path }}/result_{{ item.0 }}_users.jtl
+      loop: "{{ users|zip(durations)|list }}"
+      loop_control:
+        label: "{{ item.0 }} users"
+      args:
+        chdir: "{{ path }}"
+
+    - name: Stop CPU metrics gathering script
+      shell: pkill -f node_metrics
+      ignore_errors: yes
