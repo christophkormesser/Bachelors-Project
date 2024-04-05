@@ -32,7 +32,7 @@ def calculate_averages(metrics_filename, earliest_ts: float, latest_ts: float, u
     count = 0
 
     for entry in metrics_data:
-        timestamp = entry.get('timestamp')
+        timestamp = (entry.get('timestamp'))*1000 # easier to input values which are in milliseconds
         if earliest_ts <= timestamp <= latest_ts:
             cpu_usage = entry['cpu_usage']
             if cpu_usage > 101:
