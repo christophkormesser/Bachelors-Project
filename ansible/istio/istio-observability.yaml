@@ -25,11 +25,6 @@
   args:
     chdir: "{{ path }}"
 
-# - name: Set Up Jaeger
-#   command: kubectl apply -f kubernetes/istio/observability/jaeger.yaml
-#   args:
-#     chdir: "{{ path }}"
-
 - name: Set Up Kiali
   command: helm install --namespace istio-system --set auth.strategy="anonymous" --repo https://kiali.org/helm-charts kiali-server kiali-server
 
@@ -38,46 +33,11 @@
   args:
     chdir: "{{ path }}"
 
-# - name: Enable tracing and set sample rate to 100%
-#   command: istioctl install -f kubernetes/istio/istioctl/tracing.yaml -y
-#   args:
-#     chdir: "{{ path }}"
-
-# # Restart pods again one after the other instead of simultaneously to distribute request times
-# - name: Restart Pod 1
-#   command: kubectl delete pod -l app=app1 -n default
-
-# - name: Restart Pod 2
-#   command: kubectl delete pod -l app=app2 -n default
-
-# - name: Restart Pod 3
-#   command: kubectl delete pod -l app=app3 -n default
-
 - name: Alert user to import config file in /config into Grafana
   debug:
     msg: Import the dashboard json file from config/Requests-1703960621987.json
-
-# - name: Alert user to use Jaeger URL
-#   debug:
-#     msg: Query URL for Jaeger':' http://tracing.istio-system.svc.cluster.local:80
   
 - name: Inform user to open Kiali dashboard
   debug:
     msg: command':' istioctl d kiali
 
-# - name: Portforward Jaeger for the traces script
-#   ansible.builtin.shell: istioctl d jaeger
-#   async: 1200
-#   poll: 0
-#   register: pf_task
-
-# - name: Start pipeline
-#   command: python data/scripts/pipeline.py
-#   register: script_output
-#   args:
-#     chdir: "{{ path }}"
-
-# - name: Clean up Port Forward Task if it's still running
-#   ansible.builtin.async_status:
-#     jid: '{{ pf_task.ansible_job_id }}'
-#     mode: cleanup
