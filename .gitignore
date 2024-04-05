@@ -11,7 +11,7 @@ test.go
 *.pem
 .idea
 *.log
-data/istio/traces/raw/*.json
+*.jtl
 
 ### macOS ###
 # General
