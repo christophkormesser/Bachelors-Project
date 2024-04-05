@@ -4,10 +4,10 @@
   vars:
     path: "{{ playbook_dir }}/.."
     jmeter_path: "jmeter"
-    python_path: "/Users/christoph/Code/FH/6. Semester/Bachelors-Project/.venv/bin/python"
-    test_plan_path: "/data/HTTP\ Request.jmx"
-    warmup_plan_path: "/data/HTTP\ Warmup.jmx"
-    jmeter_results_path: "/Users/christoph/Code/FH/6. Semester/Bachelors-Project/data/"
+    python_path: "python"
+    test_plan_path: "{{ playbook_dir }}/../data/HTTP_Request.jmx"
+    warmup_plan_path: "{{ playbook_dir }}/../data/Warmup.jmx"
+    jmeter_results_path: "{{ playbook_dir }}/../data"
     users: [10, 20, 50, 100]
     durations: [10, 10, 10, 10] # Duration in minutes for each user count
 
@@ -20,11 +20,22 @@
       args:
         chdir: "{{ path }}"
 
+    - name: Debug JMeter command
+      debug:
+        msg: >
+          {{ jmeter_path }} -n -t "{{ test_plan_path }}"
+          -Jusers={{ item.0 }} -Jduration={{ item.1 }} 
+          -l "{{ jmeter_results_path }}/result_{{ item.0 }}_users.jtl"
+      loop: "{{ users|zip(durations)|list }}"
+      loop_control:
+        label: "{{ item.0 }} users"
+
+
     - name: Run JMeter tests with increasing loads
       shell: >
-        {{ jmeter_path }} -n -t {{ test_plan_path }}
+        {{ jmeter_path }} -n -t "{{ test_plan_path }}"
         -Jusers={{ item.0 }} -Jduration={{ item.1 }} 
-        -l {{ jmeter_results_path }}/result_{{ item.0 }}_users.jtl
+        -l "{{ jmeter_results_path }}/result_{{ item.0 }}_users.jtl"
       loop: "{{ users|zip(durations)|list }}"
       loop_control:
         label: "{{ item.0 }} users"
