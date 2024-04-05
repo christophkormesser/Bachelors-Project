@@ -16,10 +16,11 @@
 
 4. !!! Change ENVS!!
 5. Start Ansible test script
-    * Start metric gathering script for 55 minutes
-    * Go to directory of environment (e.g. data/vanilla)
-    * Start jmeter `jmeter -n -t ../HTTP\ Request.jmx -Jusers=10 -Jduration=10 -l results-10.jtl`
-        * run for 10 minutes
+    * Starts metric gathering script for 55 minutes
+    * Starts jmeter with loop
+        * 10, 20, 50 and 100 users
+        * run each for 10 minutes
+        * stops metrics
 
 6. After successful test run, create plot `jmeter -g results.jtl -o ./graph`
-7. Remove node metrics, which are out of time range
+7. Remove node metrics, which are out of time range -> average_node_metrics.py
