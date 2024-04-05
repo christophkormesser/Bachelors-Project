@@ -13,10 +13,10 @@ load_dotenv()
     
 #     return min(timestamps), max(timestamps)
 
-def calculate_averages(metrics_filename, earliest_ts: float, latest_ts: float):
+def calculate_averages(metrics_filename, earliest_ts: float, latest_ts: float, users: str):
 
     logger = logging.getLogger(__name__)
-    temp_name = f"data/{os.getenv('ENVIRONMENT')}/logs/{os.getenv('PREFIX')}_average_node_metrics_{int(datetime.now().timestamp())}.log"
+    temp_name = f"data/{os.getenv('ENVIRONMENT')}/logs/{os.getenv('PREFIX')}_average_node_metrics_{users}-{int(datetime.now().timestamp())}.log"
     logging.basicConfig(filename=temp_name, encoding="utf-8", level=logging.DEBUG)
 
     # get time frame from collected traces
@@ -78,7 +78,7 @@ def save_to_file(metrics_instances, start_time):
     average_metrics_folder = f"data/{os.getenv('ENVIRONMENT')}/metrics/averages"
     if not os.path.exists(average_metrics_folder):
         os.makedirs(average_metrics_folder)
-    file_path = os.path.join(average_metrics_folder, f"{os.getenv('PREFIX')}-average_node_metrics-{start_time}.json")
+    file_path = os.path.join(average_metrics_folder, f"{os.getenv('PREFIX')}-average_node_metrics-{users}-{start_time}.json")
     with open(file_path, 'w') as file:
         json.dump(metrics_instances, file, ensure_ascii=False, indent=4)
 
@@ -86,4 +86,5 @@ if __name__ == "__main__":
     metrics_filename = input("Enter the metrics JSON file path: ")
     et = float(input("Earliest Timestamp: "))
     lt = float(input("Latest Timestamp: "))
-    calculate_averages(metrics_filename, earliest_ts=et, latest_ts=lt)
+    users = input("Users: ")
+    calculate_averages(metrics_filename, earliest_ts=et, latest_ts=lt, users=users)
