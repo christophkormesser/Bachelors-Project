@@ -73,7 +73,7 @@
 # Start Port Forward Asynchronously
 - name: Port Forward Admin API
   ansible.builtin.shell: kubectl port-forward -n kong service/kong-cp-kong-admin 8001
-  async: 120
+  async: 300
   poll: 0
   register: pf_task
 
