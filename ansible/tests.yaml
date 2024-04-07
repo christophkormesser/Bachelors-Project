@@ -5,8 +5,8 @@
     path: "{{ playbook_dir }}/.."
     jmeter_path: "jmeter"
     python_path: "python"
-    test_plan_path: "{{ playbook_dir }}/../data/HTTP_Request.jmx"
-    warmup_plan_path: "{{ playbook_dir }}/../data/Warmup.jmx"
+    test_plan_path: "{{ playbook_dir }}/../data/Kong_Request.jmx"
+    warmup_plan_path: "{{ playbook_dir }}/../data/Kong_Warmup.jmx"
     jmeter_results_path: "{{ playbook_dir }}/../data"
     users: [1, 5, 10, 50, 100]
     durations: [600, 600, 600, 600, 600] # Duration in seconds for each user count
