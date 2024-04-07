@@ -13,13 +13,13 @@ The current focus lies on Authentication and Authorization on various levels lik
   - [x] Istio Authentication mTLS
   - [x] Istio Authorization ACL
   - [x] Istio Observability with Grafana, Jaeger & Prometheus
-  - [ ] Define Metrics to Gather
+  - [x] Define Metrics to Gather
 - [x] Kong Gateway Running exposing Applications
   - [x] Kong Authentication Key-Auth
   - [ ] Kong Authentication JWT/OAuth2
   - [x] Kong Authorization ACL
   - [x] Kong Observability with Grafana & Prometheus
-  - [ ] Define Metrics to Gather
+  - [x] Define Metrics to Gather
 
 ## Host
 

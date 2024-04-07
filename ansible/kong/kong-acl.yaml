@@ -34,3 +34,31 @@
     curl -X POST http://localhost:8001/consumers/max/acls
        --data group=group2
 
+# users for jmeter
+
+- name: Create Kong Consumer
+  uri:
+    url: "http://localhost:8001/consumers/"
+    method: POST
+    body: username=user{{ item }}
+    body_format: form-urlencoded
+    status_code: [200, 201]
+  loop: "{{ range(1, 101) | list }}"
+
+- name: Create Key for Consumer
+  uri:
+    url: "http://localhost:8001/consumers/user{{ item }}/key-auth"
+    method: POST
+    body: key=password{{ item }}
+    body_format: form-urlencoded
+    status_code: [200, 201]
+  loop: "{{ range(1, 101) | list }}"
+
+- name: Associate Consumer with ACL Group
+  uri:
+    url: "http://localhost:8001/consumers/user{{ item }}/acls"
+    method: POST
+    body: group=group1
+    body_format: form-urlencoded
+    status_code: [200, 201]
+  loop: "{{ range(1, 101) | list }}"

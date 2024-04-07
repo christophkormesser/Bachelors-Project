@@ -1,0 +1,47 @@
+---
+- name: Automated JMeter testing and metrics gathering
+  hosts: localhost
+  vars:
+    path: "{{ playbook_dir }}/.."
+    jmeter_path: "jmeter"
+    python_path: "python"
+    test_plan_path: "{{ playbook_dir }}/../data/Kong_Request.jmx"
+    warmup_plan_path: "{{ playbook_dir }}/../data/Kong_Warmup.jmx"
+    jmeter_results_path: "{{ playbook_dir }}/../data"
+    users: [1, 5, 10, 50, 100]
+    durations: [600, 600, 600, 600, 600] # Duration in seconds for each user count
+
+  
+  tasks:
+    - name: Start metric gathering
+      command: "{{ python_path }} data/scripts/node_metrics.py 50" 
+      async: 3000
+      poll: 0
+      args:
+        chdir: "{{ path }}"
+
+    - name: Debug JMeter command
+      debug:
+        msg: >
+          {{ jmeter_path }} -n -t "{{ test_plan_path }}"
+          -Jusers={{ item.0 }} -Jduration={{ item.1 }} 
+          -l "{{ jmeter_results_path }}/result_{{ item.0 }}_users.jtl"
+      loop: "{{ users|zip(durations)|list }}"
+      loop_control:
+        label: "{{ item.0 }} users"
+
+
+    - name: Run JMeter tests with increasing loads
+      shell: >
+        {{ jmeter_path }} -n -t "{{ test_plan_path }}"
+        -Jusers={{ item.0 }} -Jduration={{ item.1 }} 
+        -l "{{ jmeter_results_path }}/result_{{ item.0 }}_users.jtl"
+      loop: "{{ users|zip(durations)|list }}"
+      loop_control:
+        label: "{{ item.0 }} users"
+      args:
+        chdir: "{{ path }}"
+
+    - name: Stop CPU metrics gathering script
+      shell: pkill -f node_metrics
+      ignore_errors: yes
