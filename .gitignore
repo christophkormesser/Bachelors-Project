@@ -12,6 +12,7 @@ test.go
 .idea
 *.log
 *.jtl
+**/graph/*
 
 ### macOS ###
 # General
