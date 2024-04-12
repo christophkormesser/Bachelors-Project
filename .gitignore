@@ -12,6 +12,8 @@ test.go
 .idea
 *.log
 *.jtl
+data/**/graph/
+!*.zip
 
 ### macOS ###
 # General
