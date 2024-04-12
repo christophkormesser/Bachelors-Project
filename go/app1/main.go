@@ -28,19 +28,27 @@ func main() {
 	e.GET("/action", func(c echo.Context) error {
 
 		// Prometheus Counter
-		shared.ReceivedRequestCounter.With(prometheus.Labels{"dst_pod": env["POD_NAME"], "handler": "/action", "source": strings.Split(c.Request().RemoteAddr, ":")[0], "response_code": strconv.Itoa(c.Response().Status)}).Inc()
+		shared.ReceivedRequestCounter.With(
+			prometheus.Labels{
+				"dst_pod":       env["POD_NAME"],
+				"handler":       "/action",
+				"source":        strings.Split(c.Request().RemoteAddr, ":")[0],
+				"response_code": strconv.Itoa(c.Response().Status),
+			},
+		).Inc()
 
 		// Call App2
 		response := shared.Call(env, "app2", "1323", "/action")
 
-		return c.String(http.StatusOK, "Request from "+c.Request().RemoteAddr+" went through to "+c.Path()+"!\n"+
-			"Node: "+env["NODE_NAME"]+"\n"+
-			"Pod Name: "+env["POD_NAME"]+"\n"+
-			"Pod Namespace: "+env["POD_NAMESPACE"]+"\n"+
-			"Pod IP: "+env["POD_IP"]+"\n\n"+
-			"Response: \n"+
-			"App1: *waving hand*\n"+
-			response,
+		return c.String(http.StatusOK,
+			"Request from "+c.Request().RemoteAddr+" went through to "+c.Path()+"!\n"+
+				"Node: "+env["NODE_NAME"]+"\n"+
+				"Pod Name: "+env["POD_NAME"]+"\n"+
+				"Pod Namespace: "+env["POD_NAMESPACE"]+"\n"+
+				"Pod IP: "+env["POD_IP"]+"\n\n"+
+				"Response: \n"+
+				"App1: *waving hand*\n"+
+				response,
 		)
 	})
 
