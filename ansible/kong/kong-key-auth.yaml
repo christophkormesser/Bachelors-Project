@@ -30,6 +30,26 @@
   debug:
     msg: "{{ (max_key.stdout | from_json).key }}"
 
+# users for jmeter
+
+- name: Create multiple Kong Consumers
+  uri:
+    url: "http://localhost:8001/consumers/"
+    method: POST
+    body: username=user{{ item }}
+    body_format: form-urlencoded
+    status_code: [200, 201]
+  loop: "{{ range(1, 101) | list }}"
+
+- name: Create Keys for Kong Consumers
+  uri:
+    url: "http://localhost:8001/consumers/user{{ item }}/key-auth"
+    method: POST
+    body: key=password{{ item }}
+    body_format: form-urlencoded
+    status_code: [200, 201]
+  loop: "{{ range(1, 101) | list }}"
+
 
 - name: Configure Service app1 to use key auth
   command: >
