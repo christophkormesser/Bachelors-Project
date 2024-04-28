@@ -13,6 +13,7 @@ test.go
 *.log
 *.jtl
 data/**/graph/
+data/custom_plots/
 !*.zip
 
 ### macOS ###
