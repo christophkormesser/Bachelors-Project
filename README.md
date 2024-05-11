@@ -62,12 +62,12 @@ ansible-playbook ansible/main-setup.yaml
 
 Decide which setup you want implement at the beginning of the playbook:
 
-| Option               | Applications | Observability | Authentication | Authorization |
-|----------------------|--------------|---------------|----------------|---------------|
-| (i) Istio            | x            | x             | x              | x             |
-| (k) Kong OSS DB-less | x            | x             | x              |               |
-| (ke) Kong Enterprise | x            | x             | x              | x             |
-| (v) Vanilla          | x            | x             |                |               |
+| Option                 | Applications | Observability | Authentication | Authorization |
+|------------------------|--------------|---------------|----------------|---------------|
+| (i) Istio              | x            | x             | x              | x             |
+| (k) Kong OSS DB-less   | x            | x             | x              |               |
+| (ke) Kong Enterprise   | x            | x             | x              | x             |
+| (v) Vanilla (Baseline) | x            | x             |                |               |
 
 ### Istio
 

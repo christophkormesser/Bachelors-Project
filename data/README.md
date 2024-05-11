@@ -8,7 +8,7 @@
 2. Start metric gathering script for 10 minutes
 3. Get metric averages
 
-### Vanilla/ Istio/ Kong
+### Vanilla(Baseline)/ Istio/ Kong
 
 1. Start ansible script to setup and start cluster
 2. Start minikube tunnel
