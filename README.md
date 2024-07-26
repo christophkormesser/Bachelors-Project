@@ -1,9 +1,9 @@
 # Documentation Bachelor Project
 
-## Abstract
+## About the project
 
-This project's purpose is to accompany my bachelor's thesis with the current working title "A Comparative Analysis of Centralized and Decentralized Security Models in a Microservices Architecture". It consists of three dummy web applications written in Go which expose APIs.
-The current focus lies on Authentication and Authorization on various levels like Service-to-Service Communication as well as User (Human) to Service Communication. To implement these functionalities I use [Istio Service Mesh](https://istio.io/) and [Kong Gateway](https://konghq.com/products/kong-gateway).
+This project's purpose is to accompany my bachelor's thesis with the title "A Comparative Analysis of Centralized and Decentralized Security Models in a Microservices Architecture". For the practical experiment I created three mock web applications written in Go and deployed them in a Kubernetes cluster.
+The focus lied on Authentication and Authorization on various levels like service-to-service communication as well as user-to-service communication. To implement such functionalities I use [Istio Service Mesh](https://istio.io/) and [Kong Gateway](https://konghq.com/products/kong-gateway). The cluster was then tested on performance with the load testing tool [Jmeter](https://jmeter.apache.org).
 
 ## Roadmap
 
@@ -40,7 +40,7 @@ The current focus lies on Authentication and Authorization on various levels lik
 - [Istioctl](https://istio.io/latest/docs/ops/diagnostic-tools/istioctl/) 1.20.2
 - [Ansible](https://www.ansible.com) 9.2.0
 
-# Getting Started
+## Getting Started
 
 Clone the [git repository](https://github.com/christophkormesser/Bachelors-Project)
 
@@ -48,14 +48,16 @@ Clone the [git repository](https://github.com/christophkormesser/Bachelors-Proje
 git clone https://github.com/christophkormesser/Bachelors-Project
 ```
 
-## Run the Ansible Playbook
+### Run the Ansible Playbook
 
 Install Minikube, Kubectl, Docker, Istioctl & Ansible (macOS)
+
 ```shell
 brew install minikube kubectl docker istioctl ansible
 ```
 
 Change to the root directory of this repository and run the main playbook with
+
 ```shell
 ansible-playbook ansible/main-setup.yaml
 ```
@@ -69,11 +71,8 @@ Decide which setup you want implement at the beginning of the playbook:
 | (ke) Kong Enterprise   | x            | x             | x              | x             |
 | (v) Vanilla (Baseline) | x            | x             |                |               |
 
-### Istio
+#### Expose Services
 
-⚙️tbd
-
-### Kong Enterprise
 After the playbook is finished make the services in the cluster accessible to your host machine
 
 ```shell
@@ -86,6 +85,6 @@ To make changes to Kong, you might need to forward the port to the Admin API
 kubectl port-forward -n kong service/kong-cp-kong-admin 8001
 ```
 
-## Manual Installation
+### Manual Installation
 
 see [Manual Installation](docs/Manual-Installation-Start.md)
